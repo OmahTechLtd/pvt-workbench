@@ -44,6 +44,7 @@ def list_methods():
                 "inputs": entry["inputs"],
                 "optional_inputs": entry.get("optional_inputs", []),
                 "source": entry["source"],
+                "valid_range": entry.get("valid_range"),
                 "status": entry["status"],
             }
             for key, entry in registry.items()
