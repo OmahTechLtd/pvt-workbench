@@ -1,9 +1,9 @@
 import math
-
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from registry import REGISTRIES, run_method
+from analyze import router as analyze_router
 
 app = FastAPI(title="Oil Properties Workbench API")
 app.add_middleware(
@@ -12,6 +12,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.include_router(analyze_router)
 
 class CalcRequest(BaseModel):
     prop: str

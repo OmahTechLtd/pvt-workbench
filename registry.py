@@ -160,4 +160,3 @@ def run_method(key, row, registry=RS_REGISTRY):
 
 def calc_aae(df, method, prop="rs"):
     return aae(df[f"{method}_{prop}"], df[MEASURED_COLUMN[prop]])
-    
