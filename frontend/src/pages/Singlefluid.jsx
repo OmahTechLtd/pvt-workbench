@@ -321,14 +321,14 @@ function SingleFluid() {
                 {hasMeasured && (
                   <ReferenceLine
                     y={measuredNum}
-                    stroke="#16a34a"
+                    stroke="var(--c3)"
                     strokeDasharray="5 5"
                     ifOverflow="extendDomain"
-                    label={{ value: "Measured", position: "insideTopRight", fill: "#16a34a", fontSize: 12 }}
+                    label={{ value: "Measured", position: "insideTopRight", fill: "var(--c3)", fontSize: 12 }}
                   />
                 )}
                 <Tooltip />
-                <Bar dataKey="value" fill="#2563eb">
+                <Bar dataKey="value" fill="var(--c1)">
                   <LabelList dataKey="value" position="top" fontSize={12} formatter={(v) => v.toFixed(digits)} />
                 </Bar>
               </BarChart>

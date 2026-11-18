@@ -27,7 +27,7 @@ const RESERVOIR_INPUTS = [
 ];
 
 // Distinct colours that also differ in lightness, with a legend as the main cue
-const METHOD_COLOURS = ["#2563eb", "#d97706", "#16a34a", "#9333ea", "#0f766e"];
+const METHOD_COLOURS = ["var(--c1)", "var(--c2)", "var(--c3)", "var(--c4)", "var(--c5)"];
 
 const fmt = (v, d = 2) => (v === null || v === undefined ? "–" : Number(v).toFixed(d));
 const range = (r, d = 0) => (r ? `${Number(r[0]).toFixed(d)} to ${Number(r[1]).toFixed(d)}` : "–");

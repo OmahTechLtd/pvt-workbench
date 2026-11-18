@@ -54,10 +54,10 @@ const SHRINKAGE = {
   near_critical: (p) => (p > 0.96 ? 100 - ((1 - p) / 0.04) * 45 : 55 - ((0.96 - p) / 0.96) * 40),
 };
 const SHRINK_COLOURS = {
-  ordinary_black: "#2563eb",
-  low_shrinkage: "#0f766e",
-  volatile: "#d97706",
-  near_critical: "#9333ea",
+  ordinary_black: "var(--c1)",
+  low_shrinkage: "var(--c5)",
+  volatile: "var(--c2)",
+  near_critical: "var(--c4)",
 };
 
 function quad(p0, p1, p2, n = 30) {
@@ -130,55 +130,55 @@ function Envelope({ type }) {
   const pi = pb === null ? null : Math.min(pb + 0.14, 0.97);
   const region = [...g.bubble, ...g.dew.slice(1), [g.A[0], 0.03]];
   const label = (u, v, text, opts = {}) => (
-    <text x={X(u)} y={Y(v)} fontSize="12" fill="#374151" textAnchor={opts.anchor || "start"} {...opts.props}>
+    <text x={X(u)} y={Y(v)} fontSize="12" fill="var(--plot-text)" textAnchor={opts.anchor || "start"} {...opts.props}>
       {text}
     </text>
   );
   return (
     <svg viewBox={`0 0 ${W} ${H}`} width="100%" role="img" aria-label={`Schematic p-T diagram for ${type.name}`}>
-      <rect x={L} y={T} width={R - L} height={B - T} fill="#fff" stroke="#9ca3af" />
-      <path d={path(region) + "Z"} fill="#eff6ff" stroke="none" />
+      <rect x={L} y={T} width={R - L} height={B - T} fill="var(--plot-bg)" stroke="var(--plot-line)" />
+      <path d={path(region) + "Z"} fill="var(--plot-region)" stroke="none" />
       {g.quality.map((q, i) => (
-        <path key={i} d={path(q)} fill="none" stroke="#9ca3af" strokeWidth="1" strokeDasharray="4 3" />
+        <path key={i} d={path(q)} fill="none" stroke="var(--plot-line)" strokeWidth="1" strokeDasharray="4 3" />
       ))}
-      <path d={path(g.bubble)} fill="none" stroke="#2563eb" strokeWidth="2.5" />
-      <path d={path(g.dew)} fill="none" stroke="#b45309" strokeWidth="2.5" />
+      <path d={path(g.bubble)} fill="none" stroke="var(--c1)" strokeWidth="2.5" />
+      <path d={path(g.dew)} fill="none" stroke="var(--dew)" strokeWidth="2.5" />
 
       {/* reservoir temperature and pressure decline */}
-      <line x1={X(type.tRes)} x2={X(type.tRes)} y1={Y(0.97)} y2={Y(0.06)} stroke="#111827" strokeWidth="1.5" />
+      <line x1={X(type.tRes)} x2={X(type.tRes)} y1={Y(0.97)} y2={Y(0.06)} stroke="var(--plot-ink)" strokeWidth="1.5" />
       {pb !== null && (
         <>
-          <circle cx={X(type.tRes)} cy={Y(pi)} r="5" fill="#111827" />
-          <circle cx={X(type.tRes)} cy={Y(pb)} r="5" fill="#fff" stroke="#111827" strokeWidth="2" />
+          <circle cx={X(type.tRes)} cy={Y(pi)} r="5" fill="var(--plot-ink)" />
+          <circle cx={X(type.tRes)} cy={Y(pb)} r="5" fill="var(--plot-bg)" stroke="var(--plot-ink)" strokeWidth="2" />
           {label(type.left ? type.tRes - 0.015 : type.tRes + 0.015, pi, "Initial pressure, pi", { anchor: type.left ? "end" : "start" })}
           {label(type.left ? type.tRes - 0.015 : type.tRes + 0.015, type.left ? pb : pb - 0.035, "Bubble point, pb", { anchor: type.left ? "end" : "start" })}
         </>
       )}
-      <text x={X(type.tRes) - 6} y={Y(0.1)} fontSize="12" fill="#374151" textAnchor="end">
+      <text x={X(type.tRes) - 6} y={Y(0.1)} fontSize="12" fill="var(--plot-text)" textAnchor="end">
         Reservoir
       </text>
-      <text x={X(type.tRes) - 6} y={Y(0.1) + 14} fontSize="12" fill="#374151" textAnchor="end">
+      <text x={X(type.tRes) - 6} y={Y(0.1) + 14} fontSize="12" fill="var(--plot-text)" textAnchor="end">
         temperature
       </text>
 
-      <circle cx={X(g.C[0])} cy={Y(g.C[1])} r="5" fill="#dc2626" />
+      <circle cx={X(g.C[0])} cy={Y(g.C[1])} r="5" fill="var(--red)" />
       {label(g.C[0] + 0.015, g.C[1] + 0.045, "Critical point")}
-      <circle cx={X(g.D[0])} cy={Y(g.D[1])} r="4" fill="#2563eb" />
+      <circle cx={X(g.D[0])} cy={Y(g.D[1])} r="4" fill="var(--c1)" />
       {(type.cbLeft ? label(g.D[0] - 0.015, g.D[1] + 0.012, "Cricondenbar", { anchor: "end" }) : label(g.D[0] - 0.02, g.D[1] + 0.05, "Cricondenbar"))}
-      <circle cx={X(g.E[0])} cy={Y(g.E[1])} r="4" fill="#b45309" />
+      <circle cx={X(g.E[0])} cy={Y(g.E[1])} r="4" fill="var(--dew)" />
       {label(g.E[0] + 0.015, g.E[1], "Cricondentherm")}
 
       {label(g.C[0] - 0.2 * type.s, 0.3, "Two-phase region", { props: { fontWeight: 600 } })}
       {label(g.A[0] + 0.02 * type.s, 0.5, "Bubble-point curve", {
-        props: { fill: "#1d4ed8", transform: `rotate(-62 ${X(g.A[0] + 0.05)} ${Y(0.5)})` },
+        props: { fill: "var(--blue-text)", transform: `rotate(-62 ${X(g.A[0] + 0.05)} ${Y(0.5)})` },
       })}
-      {label(g.E[0] + 0.045 * type.s, 0.2, "Dew-point curve", { props: { fill: "#92400e" } })}
-      {label(Math.max(g.C[0] - 0.07 * type.s, type.tRes + 0.08), 0.1, "Quality lines (dashed)", { props: { fill: "#6b7280" } })}
+      {label(g.E[0] + 0.045 * type.s, 0.2, "Dew-point curve", { props: { fill: "var(--dew-text)" } })}
+      {label(Math.max(g.C[0] - 0.07 * type.s, type.tRes + 0.08), 0.1, "Quality lines (dashed)", { props: { fill: "var(--plot-line-text)" } })}
 
-      <text x={(L + R) / 2} y={H - 8} fontSize="13" fill="#111827" textAnchor="middle">
+      <text x={(L + R) / 2} y={H - 8} fontSize="13" fill="var(--plot-ink)" textAnchor="middle">
         Temperature
       </text>
-      <text transform={`translate(14 ${(T + B) / 2}) rotate(-90)`} fontSize="13" fill="#111827" textAnchor="middle">
+      <text transform={`translate(14 ${(T + B) / 2}) rotate(-90)`} fontSize="13" fill="var(--plot-ink)" textAnchor="middle">
         Pressure
       </text>
     </svg>
@@ -204,7 +204,7 @@ function Shrinkage({ selected }) {
   };
   return (
     <svg viewBox={`0 0 ${w} ${h}`} width="100%" role="img" aria-label="Schematic liquid shrinkage curves">
-      <rect x={l} y={t} width={r - l} height={b - t} fill="#fff" stroke="#9ca3af" />
+      <rect x={l} y={t} width={r - l} height={b - t} fill="var(--plot-bg)" stroke="var(--plot-line)" />
       {TYPES.map((tp) => (
         <path
           key={tp.key}
@@ -227,14 +227,14 @@ function Shrinkage({ selected }) {
           {tp.name}
         </text>
       ))}
-      <text x={l - 6} y={y(100) + 4} fontSize="12" textAnchor="end" fill="#374151">100%</text>
-      <text x={l - 6} y={y(0) + 4} fontSize="12" textAnchor="end" fill="#374151">0%</text>
-      <text x={r} y={b + 16} fontSize="12" textAnchor="end" fill="#374151">Bubble point, pb</text>
-      <text x={l} y={b + 16} fontSize="12" fill="#374151">0</text>
-      <text x={(l + r) / 2} y={h - 6} fontSize="13" textAnchor="middle" fill="#111827">
+      <text x={l - 6} y={y(100) + 4} fontSize="12" textAnchor="end" fill="var(--plot-text)">100%</text>
+      <text x={l - 6} y={y(0) + 4} fontSize="12" textAnchor="end" fill="var(--plot-text)">0%</text>
+      <text x={r} y={b + 16} fontSize="12" textAnchor="end" fill="var(--plot-text)">Bubble point, pb</text>
+      <text x={l} y={b + 16} fontSize="12" fill="var(--plot-text)">0</text>
+      <text x={(l + r) / 2} y={h - 6} fontSize="13" textAnchor="middle" fill="var(--plot-ink)">
         Pressure
       </text>
-      <text transform={`translate(14 ${(t + b) / 2}) rotate(-90)`} fontSize="13" textAnchor="middle" fill="#111827">
+      <text transform={`translate(14 ${(t + b) / 2}) rotate(-90)`} fontSize="13" textAnchor="middle" fill="var(--plot-ink)">
         Liquid volume
       </text>
     </svg>

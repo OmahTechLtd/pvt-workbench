@@ -1,4 +1,5 @@
-import { NavLink, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import SingleFluid from "./pages/Singlefluid.jsx";
 import Dataset from "./pages/Dataset.jsx";
@@ -10,34 +11,83 @@ import Viscosity from "./pages/Viscosity.jsx";
 import LabPVT from "./pages/LabPVT.jsx";
 import MaterialBalance from "./pages/MaterialBalance.jsx";
 import SurfaceTension from "./pages/SurfaceTension.jsx";
-import Placeholder from "./pages/Placeholder.jsx";
+import Library from "./pages/Library.jsx";
+import About from "./pages/About.jsx";
+import { GROUPS } from "./nav.js";
 
-const NAV = [
-  { to: "/", label: "Home" },
-  { to: "/single", label: "Single Fluid Analysis" },
-  { to: "/dataset", label: "Dataset Analysis" },
-  { to: "/classification", label: "Oil Classification" },
-  { to: "/phase", label: "Phase Diagrams" },
-  { to: "/fraction", label: "Plus Fraction" },
-  { to: "/properties", label: "Oil Properties" },
-  { to: "/viscosity", label: "Oil Viscosity" },
-  { to: "/lab", label: "Lab PVT Analysis" },
-  { to: "/balance", label: "Material Balance" },
-  { to: "/tension", label: "Surface Tension" },
-  { to: "/library", label: "Method Library" },
-  { to: "/about", label: "About" },
-];
+function useTheme() {
+  const [theme, setTheme] = useState(() => {
+    try {
+      const t = localStorage.getItem("pvt-theme");
+      return t === "light" || t === "dark" ? t : "auto";
+    } catch (e) {
+      return "auto";
+    }
+  });
+  useEffect(() => {
+    const root = document.documentElement;
+    if (theme === "auto") root.removeAttribute("data-theme");
+    else root.setAttribute("data-theme", theme);
+    try {
+      if (theme === "auto") localStorage.removeItem("pvt-theme");
+      else localStorage.setItem("pvt-theme", theme);
+    } catch (e) {
+      /* storage can be blocked, the theme still applies for this visit */
+    }
+  }, [theme]);
+  return [theme, setTheme];
+}
 
 function App() {
+  const [theme, setTheme] = useTheme();
+  const [open, setOpen] = useState(false);
+  const loc = useLocation();
+
+  useEffect(() => {
+    setOpen(false);
+    window.scrollTo(0, 0);
+  }, [loc.pathname]);
+
   return (
     <div className="layout">
-      <nav className="sidebar">
-        <h2>PVT Workbench</h2>
-        {NAV.map((item) => (
-          <NavLink key={item.to} to={item.to} end={item.to === "/"}>
-            {item.label}
-          </NavLink>
-        ))}
+      <nav className={"sidebar" + (open ? " open" : "")} aria-label="Main">
+        <Link to="/" className="brand">
+          <strong>PVT Workbench</strong>
+          <span>Estimate. Compare. Evaluate.</span>
+        </Link>
+        <button className="menubtn" onClick={() => setOpen((o) => !o)} aria-expanded={open}>
+          {open ? "Close" : "Menu"}
+        </button>
+        <div className="navwrap">
+          <div className="navgroup">
+            <NavLink to="/" end className="navlink">
+              Home
+            </NavLink>
+          </div>
+          {GROUPS.map((g, i) => (
+            <div className="navgroup" key={g.title}>
+              <h3>
+                {g.step ? <b>{g.step}</b> : null}
+                {g.title}
+              </h3>
+              {g.items.map((item) => (
+                <NavLink key={item.to} to={item.to} className="navlink">
+                  {item.label}
+                </NavLink>
+              ))}
+            </div>
+          ))}
+          <div className="sidebar-foot">
+            <small>Appearance</small>
+            <div className="themeswitch" role="group" aria-label="Theme">
+              {[["auto", "Auto"], ["light", "Light"], ["dark", "Dark"]].map(([k, l]) => (
+                <button key={k} className={theme === k ? "on" : ""} onClick={() => setTheme(k)} aria-pressed={theme === k}>
+                  {l}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
       </nav>
       <main className="content">
         <Routes>
@@ -52,8 +102,8 @@ function App() {
           <Route path="/lab" element={<LabPVT />} />
           <Route path="/balance" element={<MaterialBalance />} />
           <Route path="/tension" element={<SurfaceTension />} />
-          <Route path="/library" element={<Placeholder title="Method Library" />} />
-          <Route path="/about" element={<Placeholder title="About" />} />
+          <Route path="/library" element={<Library />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </main>
     </div>

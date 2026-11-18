@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import DataTable from "../components/DataTable.jsx";
 import {
   CartesianGrid,
   Legend,
@@ -11,18 +12,19 @@ import {
 } from "recharts";
 
 const API = "http://127.0.0.1:8000";
-const COLOURS = ["#2563eb", "#d97706", "#16a34a", "#9333ea"];
+const COLOURS = ["var(--c1)", "var(--c2)", "var(--c3)", "var(--c4)"];
 
 const f = (v, d = 3) => (v === null || v === undefined || Number.isNaN(v) ? "n/a" : Number(v).toFixed(d));
 
-// Lines of numbers separated by spaces, commas or tabs. Lines that are not all numbers are ignored.
-const parse = (text) =>
+// Rows of numbers from the data tables. A dash marks a blank cell. The first `need` values in a row must be numbers
+// (all of them when `need` is left out); rows that do not meet that are ignored.
+const parse = (text, need) =>
   text
     .split("\n")
     .map((l) => l.trim())
     .filter(Boolean)
-    .map((l) => l.split(/[\s,;]+/).map(Number))
-    .filter((r) => r.length && r.every(Number.isFinite));
+    .map((l) => l.split(/[\s,;]+/).map((t) => (/^(-|–|n\/a|na)$/i.test(t) ? null : Number(t))))
+    .filter((r) => r.length && r.every((v) => v === null || Number.isFinite(v)) && r.slice(0, need ?? r.length).every((v) => v !== null && Number.isFinite(v)));
 
 const num = (v) => (v === "" || v === null || v === undefined ? null : Number(v));
 
@@ -50,20 +52,6 @@ function Num({ label, value, onChange, hint }) {
       <span>{label}</span>
       <input type="number" step="any" value={value} onChange={(e) => onChange(e.target.value)} />
       {hint && <small className="note">{hint}</small>}
-    </label>
-  );
-}
-
-function Lines({ label, value, onChange, rows = 6 }) {
-  return (
-    <label className="field">
-      <span>{label}</span>
-      <textarea
-        rows={rows}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        style={{ width: "100%", boxSizing: "border-box", fontFamily: "monospace", fontSize: 13, padding: 8, border: "1px solid #cbd5e1", borderRadius: 6 }}
-      />
     </label>
   );
 }
@@ -179,13 +167,13 @@ export default function LabPVT() {
   };
 
   const cceBody = () => ({ psat: Number(t.psat), rho_sat: num(t.rhoSat), points: parse(t.cce).map(([p, vrel]) => ({ p, vrel })) });
-  const dlRows = () => parse(t.dl).map(([p, rsd, bod, z]) => ({ p, rsd, bod, z: z ?? null }));
+  const dlRows = () => parse(t.dl, 3).map(([p, rsd, bod, z]) => ({ p, rsd, bod, z: z ?? null }));
   const dlBody = () => ({ t_f: Number(t.tF), rsdb: Number(t.rsdb), bodb: Number(t.bodb), rows: dlRows() });
 
   const runCce = () => guard(async () => { const r = await post("/lab/cce", cceBody()); setOut((o) => ({ ...o, cce: r })); });
   const runDl = () => guard(async () => { const r = await post("/lab/dl", dlBody()); setOut((o) => ({ ...o, dl: r })); });
   const runSep = () => guard(async () => {
-    const tests = parse(t.sep).map(([pressure, temperature, a, b, api, bofb]) => ({ pressure, temperature, gor_separator: a, gor_stock_tank: b, api: api ?? null, bofb: bofb ?? null }));
+    const tests = parse(t.sep, 4).map(([pressure, temperature, a, b, api, bofb]) => ({ pressure, temperature, gor_separator: a, gor_stock_tank: b, api: api ?? null, bofb: bofb ?? null }));
     const r = await post("/lab/separator", { tests });
     setOut((o) => ({ ...o, sep: r }));
   });
@@ -268,8 +256,8 @@ export default function LabPVT() {
               <Num label="Differential Bo at pb, Bodb (bbl/STB)" value={t.bodb} onChange={set("bodb")} />
             </div>
             <div>
-              <Lines label="Constant composition. Pressure, relative volume" value={t.cce} onChange={set("cce")} rows={7} />
-              <Lines label="Differential liberation. Pressure, Rsd, Bod, z (optional)" value={t.dl} onChange={set("dl")} rows={7} />
+              <DataTable label="Constant composition" columns={[{ label: "Pressure", unit: "psig" }, { label: "Relative volume", unit: "V / Vsat" }]} value={t.cce} onChange={set("cce")} minRows={6} />
+              <DataTable label="Differential liberation" columns={[{ label: "Pressure", unit: "psig" }, { label: "Rsd", unit: "scf/STB" }, { label: "Bod", unit: "bbl/STB" }, { label: "z", unit: "gas", optional: true }]} value={t.dl} onChange={set("dl")} minRows={6} />
             </div>
           </div>
         </section>
@@ -339,7 +327,7 @@ export default function LabPVT() {
         <section className="card">
           <h2>Separator tests</h2>
           <p>Total solution gas-oil ratio for each separator pressure and the separator pressure that gives the lowest oil formation volume factor.</p>
-          <Lines label="One row per test. Separator pressure (psig), temperature (°F), separator GOR, stock tank GOR, stock tank °API, Bofb" value={t.sep} onChange={set("sep")} rows={5} />
+          <DataTable label="Separator tests, one row per test" columns={[{ label: "Separator pressure", unit: "psig" }, { label: "Temperature", unit: "°F" }, { label: "Separator GOR", unit: "scf/STB" }, { label: "Stock tank GOR", unit: "scf/STB" }, { label: "Stock tank gravity", unit: "°API", optional: true }, { label: "Bofb", unit: "bbl/STB", optional: true }]} value={t.sep} onChange={set("sep")} minRows={4} />
           <button className="primary" onClick={runSep}>Calculate</button>
           {out.sep && (
             <>
@@ -401,7 +389,7 @@ export default function LabPVT() {
               <Num label="New bubble point (psig)" value={t.psatNew} onChange={set("psatNew")} />
               <Num label="Slope of relative volume above the old bubble point" value={t.slope} onChange={set("slope")}
                    hint="Leave blank to fit a straight line to the constant composition points above the old bubble point." />
-              <Lines label="Pressures to calculate (psig)" value={t.pNew} onChange={set("pNew")} rows={5} />
+              <DataTable label="Pressures to calculate" columns={[{ label: "Pressure", unit: "psig" }]} value={t.pNew} onChange={set("pNew")} minRows={5} />
             </div>
             <div>
               <Num label="New differential Rsdb (scf/STB)" value={t.rsdbNew} onChange={set("rsdbNew")} />
@@ -442,12 +430,12 @@ export default function LabPVT() {
               <Num label="Dew-point pressure (psig)" value={g.pd} onChange={setg("pd")} />
               <Num label="z-factor at the dew point" value={g.zd} onChange={setg("zd")} />
               <Num label="Initial water saturation (fraction)" value={g.swi} onChange={setg("swi")} />
-              <Lines label="Plant products. Name, mole fraction in the gas, molecular weight, liquid specific gravity" value={g.gpm} onChange={setg("gpm")} rows={8} />
+              <DataTable label="Plant products" columns={[{ label: "Component", text: true }, { label: "Mole fraction", unit: "in the gas" }, { label: "Molecular weight", unit: "lb/lb-mol" }, { label: "Liquid specific gravity", unit: "water = 1" }]} value={g.gpm} onChange={setg("gpm")} minRows={6} />
             </div>
             <div>
-              <Lines label="Constant composition. Pressure (psig), relative volume" value={g.cce} onChange={setg("cce")} rows={5} />
-              <Lines label="Depletion. Pressure (psig), cumulative gas produced (% of initial)" value={g.cvd} onChange={setg("cvd")} rows={4} />
-              <Lines label="Liquid dropout. Pressure (psig), percent of hydrocarbon pore space" value={g.ldo} onChange={setg("ldo")} rows={4} />
+              <DataTable label="Constant composition" columns={[{ label: "Pressure", unit: "psig" }, { label: "Relative volume", unit: "V / Vdew" }]} value={g.cce} onChange={setg("cce")} minRows={5} />
+              <DataTable label="Depletion" columns={[{ label: "Pressure", unit: "psig" }, { label: "Cumulative gas produced", unit: "% of initial" }]} value={g.cvd} onChange={setg("cvd")} minRows={4} />
+              <DataTable label="Liquid dropout" columns={[{ label: "Pressure", unit: "psig" }, { label: "Liquid dropout", unit: "% of HC pore space" }]} value={g.ldo} onChange={setg("ldo")} minRows={4} />
             </div>
           </div>
           <p className="note">Pressure in the z-factor equations is gauge plus 15.025 psi, the base pressure of the laboratory report.</p>

@@ -351,7 +351,7 @@ function Dataset() {
                   />
                 </YAxis>
                 <Tooltip />
-                <Bar dataKey="aae" fill="#2563eb">
+                <Bar dataKey="aae" fill="var(--c1)">
                   <LabelList dataKey="aae" position="top" fontSize={12} />
                 </Bar>
               </BarChart>

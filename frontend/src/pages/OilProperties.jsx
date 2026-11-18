@@ -1,3 +1,4 @@
+import DataTable from "../components/DataTable.jsx";
 import { useEffect, useState } from "react";
 
 const API = "http://127.0.0.1:8000";
@@ -170,7 +171,7 @@ function OilProperties() {
     if (body.co !== undefined) body.co = Number(body.co);
     if (body.measured !== undefined && tab.key === "co") body.measured = body.measured;
     if (tab.lists && sep.trim()) {
-      const lines = sep.trim().split("\n").map((l) => l.split(",").map(Number));
+      const lines = sep.trim().split("\n").map((l) => l.trim().split(/[\s,;]+/).map(Number)).filter((l) => l.length >= 2 && l.every(Number.isFinite));
       body.sep_rates = lines.map((l) => l[0]);
       body.sep_gravities = lines.map((l) => l[1]);
     }
@@ -212,10 +213,13 @@ function OilProperties() {
           </label>
         ))}
         {tab.lists && (
-          <label className="field">
-            <span>Separators, one per line as gas-oil ratio (scf/STB), gas gravity. Stock tank last.</span>
-            <textarea rows="4" value={sepText} onChange={(e) => { setSepText(e.target.value); setRes(null); }} />
-          </label>
+          <DataTable
+            label="Separators, in order, stock tank last"
+            columns={[{ label: "Gas-oil ratio", unit: "scf/STB" }, { label: "Gas gravity", unit: "air = 1" }]}
+            value={sepText}
+            onChange={(v) => { setSepText(v); setRes(null); }}
+            minRows={3}
+          />
         )}
         <p>
           <button className="primary" onClick={() => run()}>

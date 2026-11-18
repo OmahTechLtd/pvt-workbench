@@ -41,6 +41,7 @@ The Vasquez-Beggs methods accept optional separator pressure and temperature. Wh
 - **Oil classification.** Applies published limits for ordinary black oil, low-shrinkage oil, volatile oil and near-critical oil, shows which limits a fluid passes, and classifies the reservoir as undersaturated, saturated or gas-cap from initial and bubble-point pressure. It can also classify every oil in the public dataset and show how each Bo method performs inside each class.
 - **Phase diagrams.** Schematic pressure-temperature diagrams for the four oil types, with the reservoir temperature line, initial pressure, bubble point and quality lines, plus a liquid-shrinkage chart. They are not computed from a composition and carry no numeric axes.
 - **Laboratory PVT analysis.** Constant composition expansion (Y-function smoothing, density, compressibility), differential liberation, separator tests with the optimum separator pressure, adjustment of differential data to separator conditions (Bo and Rs for material balance), correction to a new bubble point, and gas condensate tests (plant products, z-factor, two-phase z-factor, liquid dropout). Each page states its pressure basis and loads a published example or a practice data set.
+- **Material balance.** The general material balance equation solved for the initial oil in place, the water influx or the gas cap ratio at a single pressure, with the four drive indexes (depletion, segregation, water and expansion). Straight-line analysis (Havlena and Odeh) for volumetric undersaturated, volumetric saturated, gas cap and pot aquifer reservoirs. Oil and gas saturations with the field relative permeability ratio, the Tracy form, and the average reservoir pressure from production. Each page loads a published example or a practice data set, and the checks table says where a published example disagrees with itself.
 - **Plus fraction characterization.** Boiling point, critical temperature, critical pressure and critical volume of a heptanes-plus fraction (Riazi and Daubert), the acentric factor (Edmister) and the critical compressibility factor (four methods and the real gas equation).
 
 ## Project status
@@ -53,14 +54,17 @@ Working now
 - Dataset analysis, which scores the correlations against the public dataset (Bo) or an uploaded CSV (Rs, Pb or Bo)
 - A script that converts a public PVT dataset into the workbench format
 - Laboratory PVT analysis, with its own checks table
+- Material balance, with its own checks table
 - Checks against published worked examples, shown on the pages where they apply
+- A workflow-ordered sidebar (describe the fluid, estimate properties, check against lab data, use it in the reservoir), a Home page that routes by what the user has, a Method Library built from the API, and an About page
+- Light and dark themes (Auto follows the computer, the choice is remembered in the browser)
+- One data-entry table for every block of numbers, with a column per quantity, units in the headers, optional columns marked, and paste from Excel
 
 Still being built
 
-- Method library, showing each method's source and verification record
-- About page
-- Material balance
-- Page order and grouping in the sidebar
+- A method recommendation per region and oil type, with the evidence behind it
+- A current-fluid carry-over so a fluid entered once is used on every page
+- Valid ranges for each method in the library (the registry does not hold them yet)
 
 The original Streamlit prototype (`app.py`, `plots.py`, `compare.py`) is still in the repository.
 
@@ -186,6 +190,7 @@ To rebuild the dataset file, place the workbook at `data/PVTData.xlsx` and run `
 | `analyze.py` | Dataset analysis |
 | `oil_properties.py` | Gravity, compressibility, Bo above the bubble point, density and total formation volume factor |
 | `lab_pvt.py` | Laboratory PVT analysis: constant composition, differential liberation, separator tests, adjustment to separator conditions, new bubble point, gas condensate |
+| `material_balance.py` | Material balance: drive indexes, general equation, straight-line analysis, saturations, Tracy form, average pressure |
 | `viscosity.py` | Dead, saturated and undersaturated oil viscosity |
 | `surface_tension.py` | Surface tension of a hydrocarbon mixture |
 | `classification.py` | Oil and reservoir classification |
@@ -193,7 +198,7 @@ To rebuild the dataset file, place the workbook at `data/PVTData.xlsx` and run `
 | `check_classification_fraction.py` | Checks for classification and plus fraction characterization |
 | `prepare_dataset.py` | Converts the public workbook into the workbench format |
 | `data/` | Worked example data and the converted dataset |
-| `frontend/` | React application built with Vite and Recharts. One page per feature in `src/pages/`. |
+| `frontend/` | React application built with Vite and Recharts. One page per feature in `src/pages/`. `src/nav.js` holds the sidebar groups that Home also uses. `src/components/DataTable.jsx` is the shared data-entry table. Colours and both themes are defined once in `src/index.css`. |
 
 ## Intended use
 

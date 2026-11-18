@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import DataTable from "../components/DataTable.jsx";
 import {
   CartesianGrid,
   Legend,
@@ -11,7 +12,7 @@ import {
 } from "recharts";
 
 const API = "http://127.0.0.1:8000";
-const COLOURS = ["#2563eb", "#d97706", "#16a34a", "#9333ea"];
+const COLOURS = ["var(--c1)", "var(--c2)", "var(--c3)", "var(--c4)"];
 
 const f = (v, d = 3) => (v === null || v === undefined || Number.isNaN(v) ? "n/a" : Number(v).toFixed(d));
 const big = (v, d = 2) => (v === null || v === undefined ? "n/a" : (Math.abs(v) >= 1e6 ? (v / 1e6).toFixed(d) + " million" : Number(v).toLocaleString(undefined, { maximumFractionDigits: 0 })));
@@ -39,20 +40,6 @@ function Num({ label, value, onChange, hint }) {
       <span>{label}</span>
       <input type="number" step="any" value={value} onChange={(e) => onChange(e.target.value)} />
       {hint && <small className="note">{hint}</small>}
-    </label>
-  );
-}
-
-function Lines({ label, value, onChange, rows = 6 }) {
-  return (
-    <label className="field">
-      <span>{label}</span>
-      <textarea
-        rows={rows}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        style={{ width: "100%", boxSizing: "border-box", fontFamily: "monospace", fontSize: 13, padding: 8, border: "1px solid #cbd5e1", borderRadius: 6 }}
-      />
     </label>
   );
 }
@@ -117,6 +104,7 @@ const TABS = [
 
 const NP_UNITS = [["1", "STB"], ["1000", "MSTB"], ["1000000", "MMSTB"]];
 const GP_UNITS = [["1", "scf"], ["1000", "Mscf"], ["1000000", "MMscf"], ["1000000000", "Bscf"]];
+const unitName = (list, v) => (list.find(([k]) => k === v) || list[0])[1];
 const SOURCE = "Source: Ahmed, Reservoir Engineering Handbook, pp. 751 to 818.";
 
 const CASES = [
@@ -355,8 +343,17 @@ export default function MaterialBalance() {
               <input type="checkbox" checked={s.efw} onChange={(e) => setS((o) => ({ ...o, efw: e.target.checked }))} />
             </label>
           </div>
-          <Lines label={s.mode === "pvt" ? "Pressure, Bo, Rs, Bg, Bt, Np, Gp, Wp. Use a dash for a blank. Use Bt or Bo, not both needed." : "Pressure, F (bbl), Eo (bbl/STB), Eg (bbl/STB)"}
-                 value={s.rows} onChange={(v) => setS((o) => ({ ...o, rows: v }))} rows={9} />
+          <DataTable
+            label="Production history"
+            columns={s.mode === "pvt"
+              ? [{ label: "Pressure", unit: "psi" }, { label: "Bo", unit: "bbl/STB", optional: true }, { label: "Rs", unit: "scf/STB", optional: true }, { label: "Bg", unit: "bbl/scf", optional: true },
+                 { label: "Bt", unit: "bbl/STB", optional: true }, { label: "Np", unit: unitName(NP_UNITS, units.np), optional: true },
+                 s.basis === "rp" ? { label: "Rp", unit: "scf/STB", optional: true } : { label: "Gp", unit: unitName(GP_UNITS, units.gp), optional: true },
+                 { label: "Wp", unit: unitName(NP_UNITS, units.wp), optional: true }]
+              : [{ label: "Pressure", unit: "psi" }, { label: "F", unit: "bbl" }, { label: "Eo", unit: "bbl/STB" }, { label: "Eg", unit: "bbl/STB", optional: true }]}
+            value={s.rows} onChange={(v) => setS((o) => ({ ...o, rows: v }))} minRows={6}
+            hint={s.mode === "pvt" ? "Give Bt, or Bo with Rs and Bg. Leave a cell empty if you do not have it." : "Eg is only needed for the gas cap case."}
+          />
           <button className="primary" onClick={runSeries}>Calculate</button>
 
           {out.series && (
@@ -475,7 +472,11 @@ export default function MaterialBalance() {
               <Num label="Or give the oil in the drainage area N (STB)" value={st.n} onChange={(v) => setSt((o) => ({ ...o, n: v }))} />
             </div>
           </div>
-          <Lines label="Pressure, Bo, Rs, Bg, Np, Qo (STB/day), Qg (MMscf/day), μo/μg. Use a dash for a blank." value={st.rows} onChange={(v) => setSt((o) => ({ ...o, rows: v }))} rows={9} />
+          <DataTable label="Field data by pressure"
+            columns={[{ label: "Pressure", unit: "psi" }, { label: "Bo", unit: "bbl/STB" }, { label: "Rs", unit: "scf/STB" }, { label: "Bg", unit: "bbl/scf" },
+                      { label: "Np", unit: unitName(NP_UNITS, units.np), optional: true }, { label: "Qo", unit: "STB/day", optional: true }, { label: "Qg", unit: "MMscf/day", optional: true }, { label: "μo / μg", unit: "ratio", optional: true }]}
+            value={st.rows} onChange={(v) => setSt((o) => ({ ...o, rows: v }))} minRows={6}
+            hint="The rates and the viscosity ratio are only needed for the relative permeability ratio." />
           <button className="primary" onClick={runSat}>Calculate</button>
           {out.sat && (
             <>
@@ -509,7 +510,11 @@ export default function MaterialBalance() {
             </div>
           </div>
           {unitPanel()}
-          <Lines label="Pressure, Bo, Rs, Bg, Np, Gp, Wp, We (bbl). Wp and We can be left off." value={tr.rows} onChange={(v) => setTr((o) => ({ ...o, rows: v }))} rows={7} />
+          <DataTable label="Production history"
+            columns={[{ label: "Pressure", unit: "psi" }, { label: "Bo", unit: "bbl/STB" }, { label: "Rs", unit: "scf/STB" }, { label: "Bg", unit: "bbl/scf" },
+                      { label: "Np", unit: unitName(NP_UNITS, units.np) }, { label: "Gp", unit: unitName(GP_UNITS, units.gp) },
+                      { label: "Wp", unit: unitName(NP_UNITS, units.wp), optional: true }, { label: "We", unit: "bbl", optional: true }]}
+            value={tr.rows} onChange={(v) => setTr((o) => ({ ...o, rows: v }))} minRows={6} />
           <button className="primary" onClick={runTracy}>Calculate</button>
           {out.tracy && (
             <>
@@ -544,7 +549,9 @@ export default function MaterialBalance() {
               <Num label="Cumulative water Wp" value={av.wp} onChange={(v) => setAv((o) => ({ ...o, wp: v }))} />
             </div>
           </div>
-          <Lines label="PVT table. Pressure, Bo, Rs, Bg" value={av.pvt} onChange={(v) => setAv((o) => ({ ...o, pvt: v }))} rows={7} />
+          <DataTable label="PVT table"
+            columns={[{ label: "Pressure", unit: "psi" }, { label: "Bo", unit: "bbl/STB" }, { label: "Rs", unit: "scf/STB" }, { label: "Bg", unit: "bbl/scf" }]}
+            value={av.pvt} onChange={(v) => setAv((o) => ({ ...o, pvt: v }))} minRows={6} />
           <button className="primary" onClick={runAvg}>Calculate</button>
           {out.avg && (
             <>
