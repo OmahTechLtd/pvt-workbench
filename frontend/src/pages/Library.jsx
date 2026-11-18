@@ -53,7 +53,7 @@ export default function Library() {
       <h1>Method Library</h1>
       <p className="subtitle">
         {total ? `${total} published correlations` : "The published correlations"} behind the property calculators. Each one is coded from its source and
-        reproduces the worked example printed there. Use Single Fluid Analysis to run them side by side and Dataset Analysis to see which fits your own data.
+        reproduces the worked example printed there. Use Oil Properties to run them side by side and Dataset Analysis to see which fits your own data.
       </p>
 
       <div className="callout">

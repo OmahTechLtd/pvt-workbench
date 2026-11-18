@@ -32,7 +32,7 @@ const PROP_NAMES = {
   bo: "Oil formation volume factor (Bo)",
 };
 
-function SingleFluid() {
+function SingleFluid({ embedded = false }) {
   const [methods, setMethods] = useState(null);
   const [error, setError] = useState(null);
   const [prop, setProp] = useState("rs");
@@ -147,10 +147,12 @@ function SingleFluid() {
 
   return (
     <div>
-      <h1>Single Fluid Analysis</h1>
-      <p className="subtitle">
-        Enter fluid properties, select methods and compare predictions.
-      </p>
+      {!embedded && <h1>Single Fluid Analysis</h1>}
+      {!embedded && (
+        <p className="subtitle">
+          Enter fluid properties, select methods and compare predictions.
+        </p>
+      )}
 
       <div className="segmented">
         {Object.keys(methods).map((p) => (

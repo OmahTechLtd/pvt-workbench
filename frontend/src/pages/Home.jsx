@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { GROUPS } from "../nav.js";
 
 const STARTS = [
-  { to: "/single", title: "I have gravity, gas-oil ratio and temperature", text: "Estimate Rs, bubble point and Bo with every method that applies, side by side." },
+  { to: "/properties", title: "I have gravity, gas-oil ratio and temperature", text: "Estimate Rs, bubble point and Bo with every method that applies, side by side." },
   { to: "/lab", title: "I have a PVT lab report", text: "Check the report for consistency and adjust it to a new bubble point or separator conditions." },
   { to: "/balance", title: "I have production history", text: "Find the oil in place and see which drive is pushing the reservoir." },
 ];

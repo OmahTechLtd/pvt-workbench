@@ -750,3 +750,52 @@ details {
     white-space: nowrap;
   }
 }
+
+/* Top-level view switch, used where one page holds two large areas. */
+.viewswitch {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 22px;
+}
+
+.viewswitch button {
+  text-align: left;
+  font-family: inherit;
+  color: var(--text);
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 14px 16px;
+  cursor: pointer;
+}
+
+.viewswitch button strong {
+  display: block;
+  font-family: var(--serif);
+  font-size: 17px;
+  margin-bottom: 2px;
+}
+
+.viewswitch button span {
+  display: block;
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.viewswitch button:hover {
+  border-color: var(--accent);
+}
+
+.viewswitch button.on {
+  border-color: var(--accent);
+  border-width: 2px;
+  padding: 13px 15px;
+  background: var(--accent-soft);
+}
+
+@media (max-width: 900px) {
+  .viewswitch {
+    grid-template-columns: 1fr;
+  }
+}

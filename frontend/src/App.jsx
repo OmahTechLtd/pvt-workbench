@@ -1,12 +1,11 @@
 import { useEffect, useState } from "react";
-import { Link, NavLink, Route, Routes, useLocation } from "react-router-dom";
+import { Link, NavLink, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home.jsx";
-import SingleFluid from "./pages/Singlefluid.jsx";
 import Dataset from "./pages/Dataset.jsx";
 import Classification from "./pages/Classification.jsx";
 import PlusFraction from "./pages/PlusFraction.jsx";
 import PhaseDiagram from "./pages/PhaseDiagram.jsx";
-import OilProperties from "./pages/OilProperties.jsx";
+import Properties from "./pages/Properties.jsx";
 import Viscosity from "./pages/Viscosity.jsx";
 import LabPVT from "./pages/LabPVT.jsx";
 import MaterialBalance from "./pages/MaterialBalance.jsx";
@@ -92,12 +91,12 @@ function App() {
       <main className="content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/single" element={<SingleFluid />} />
+          <Route path="/single" element={<Navigate to="/properties" replace />} />
           <Route path="/dataset" element={<Dataset />} />
           <Route path="/classification" element={<Classification />} />
           <Route path="/phase" element={<PhaseDiagram />} />
           <Route path="/fraction" element={<PlusFraction />} />
-          <Route path="/properties" element={<OilProperties />} />
+          <Route path="/properties" element={<Properties />} />
           <Route path="/viscosity" element={<Viscosity />} />
           <Route path="/lab" element={<LabPVT />} />
           <Route path="/balance" element={<MaterialBalance />} />

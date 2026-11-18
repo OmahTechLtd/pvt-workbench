@@ -139,7 +139,7 @@ function Verification({ sections }) {
   ));
 }
 
-function OilProperties() {
+function OilProperties({ embedded = false }) {
   const [tab, setTab] = useState(TABS[0]);
   const [vals, setVals] = useState({});
   const [sepText, setSepText] = useState("");
@@ -192,8 +192,8 @@ function OilProperties() {
 
   return (
     <div>
-      <h1>Oil Properties</h1>
-      <p className="subtitle">Gravity, compressibility, formation volume factor, density and total formation volume factor, each checked against published worked examples further down the page.</p>
+      {!embedded && <h1>Oil Properties</h1>}
+      {!embedded && <p className="subtitle">Gravity, compressibility, formation volume factor, density and total formation volume factor, each checked against published worked examples further down the page.</p>}
 
       <div className="segmented">
         {TABS.map((t) => (

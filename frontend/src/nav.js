@@ -15,8 +15,7 @@ export const GROUPS = [
     title: "Estimate properties",
     blurb: "No lab report yet? Compare published correlations side by side.",
     items: [
-      { to: "/single", label: "Single Fluid Analysis", text: "Rs, bubble point and Bo for one fluid, from every method that applies." },
-      { to: "/properties", label: "Oil Properties", text: "Compressibility, density, gravity and two-phase factors." },
+      { to: "/properties", label: "Oil Properties", text: "Rs, bubble point and Bo from every method that applies, plus gravity, compressibility, density and two-phase factors." },
       { to: "/viscosity", label: "Oil Viscosity", text: "Dead, saturated and undersaturated oil viscosity." },
       { to: "/tension", label: "Surface Tension", text: "Oil-gas interfacial tension." },
     ],

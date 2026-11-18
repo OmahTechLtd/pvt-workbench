@@ -50,7 +50,7 @@ Working now
 
 - A calculation engine in Python for the bubble-point correlations and the other oil properties above
 - One FastAPI service (`api.py`) that holds every route
-- A page for each feature, including single fluid analysis with a reference line, an error column and a bar chart
+- A page for each feature, including oil properties, which compares correlations on one fluid with a reference line, an error column and a bar chart
 - Dataset analysis, which scores the correlations against the public dataset (Bo) or an uploaded CSV (Rs, Pb or Bo)
 - A script that converts a public PVT dataset into the workbench format
 - Laboratory PVT analysis, with its own checks table
