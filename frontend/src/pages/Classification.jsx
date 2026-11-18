@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import {
   Bar,
   BarChart,
@@ -140,7 +141,7 @@ function ClassifyFluid() {
                     <th>Class</th>
                     <th>Property</th>
                     <th>Your value</th>
-                    <th>Book limit</th>
+                    <th>Published limit</th>
                     <th>Within limit</th>
                   </tr>
                 </thead>
@@ -172,6 +173,11 @@ function ClassifyFluid() {
                   {n}
                 </p>
               ))}
+              {result.oil.matches.length === 1 && (
+                <p>
+                  <Link to={`/phase?type=${result.oil.matches[0]}`}>See the phase diagram for this oil type</Link>
+                </p>
+              )}
             </section>
           )}
 
@@ -190,7 +196,7 @@ function ClassifyFluid() {
                     ` Pressures within ${result.pressure_state.tolerance_psi} psi are treated as equal.`}
                 </p>
               )}
-              <p className="note">Based on Chapter 1 of Ahmed, page 3.</p>
+              <p className="note">Source: Ahmed, Reservoir Engineering Handbook, p. 3.</p>
             </section>
           )}
         </>
@@ -224,9 +230,9 @@ function ClassifyFluid() {
             </tbody>
           </table>
           <p className="note">
-            These are typical values quoted in the book, not sharp cut-offs, and the ranges leave gaps. Ranges
+            These are typical values quoted in the source, not sharp cut-offs, and the ranges leave gaps. Ranges
             written as "between" are treated as including both ends. Ordinary black oil has no Bo limit in the
-            book, and near-critical oil has no gravity limit.
+            source, and near-critical oil has no gravity limit.
           </p>
         </section>
       )}
@@ -312,8 +318,8 @@ function ClassifyDataset() {
           <strong>
             {data.outside.n} of {data.rows_used} oils ({outsideShare}%) fit none of the four classes
           </strong>{" "}
-          when the limits in the book are applied as written. {data.n_in_gor_gap} oils have a gas-oil ratio between
-          700 and 2,000 scf/STB, where the book gives no class.
+          when the limits in the source are applied as written. {data.n_in_gor_gap} oils have a gas-oil ratio between
+          700 and 2,000 scf/STB, where the source gives no class.
         </p>
         <table>
           <thead>
@@ -341,7 +347,7 @@ function ClassifyDataset() {
         </table>
         <p className="note">
           {data.n_gor_2000_plus} oils have a gas-oil ratio of 2,000 scf/STB or more, and {data.n_gor_2000_plus_bo_below_2}{" "}
-          of them have Bo below 2.0. The book's volatile oil needs both, so no oil in this dataset meets the printed
+          of them have Bo below 2.0. The published volatile oil needs both, so no oil in this dataset meets the printed
           limits for volatile oil.
         </p>
       </section>
@@ -373,7 +379,7 @@ function ClassifyDataset() {
         <h2>Bo accuracy by gas-oil ratio band, average absolute error (%)</h2>
         {aaeTable(data.gor_bands, "Gas-oil ratio band")}
         <p className="note">
-          These bands are not a classification from the book. They show how the error changes as the oil carries
+          These bands are not a classification from the source. They show how the error changes as the oil carries
           more gas.
         </p>
       </section>
@@ -393,7 +399,7 @@ function Classification() {
     <div>
       <h1>Oil Classification</h1>
       <p className="subtitle">
-        Classify a crude oil and its reservoir with the limits in Chapter 1 of Ahmed's Reservoir Engineering Handbook.
+        Classify a crude oil and its reservoir with published limits for each oil type.
       </p>
       <div className="segmented">
         <button className={tab === "fluid" ? "seg active" : "seg"} onClick={() => setTab("fluid")}>

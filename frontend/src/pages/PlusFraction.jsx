@@ -61,7 +61,7 @@ function PlusFraction() {
       <h1>Plus Fraction Characterization</h1>
       <p className="subtitle">
         Estimate the critical properties and acentric factor of a heptanes-plus fraction from its molecular weight and
-        specific gravity (Ahmed, Chapter 1).
+        specific gravity.
       </p>
 
       <section className="card">
@@ -146,7 +146,7 @@ function PlusFraction() {
           </table>
           <p className="note">
             Tb, Tc, pc and Vc come from the Riazi and Daubert equation (Eq. 1-2, Table 1-4). The acentric factor comes
-            from Edmister's equation (Eq. 1-3). The book prints the Nath equation without an acentric factor term. It
+            from Edmister's equation (Eq. 1-3). The source prints the Nath equation without an acentric factor term. It
             is calculated here as 0.2918 − 0.0928ω, in the same form as the other methods.
           </p>
         </section>
@@ -154,13 +154,13 @@ function PlusFraction() {
 
       {verification && (
         <section className="card">
-          <h2>Check against Example 1-1</h2>
+          <h2>Check against a published example</h2>
           <p>{verification.summary}</p>
           <table>
             <thead>
               <tr>
                 <th>Quantity</th>
-                <th>Book</th>
+                <th>Published</th>
                 <th>This tool</th>
                 <th>Difference</th>
                 <th>Result</th>
@@ -189,7 +189,7 @@ function PlusFraction() {
               </p>
             ))}
           <p className="note">
-            A row matches when it is within one unit of the last digit the book prints.
+            A row matches when it is within one unit of the last digit the source prints.
           </p>
         </section>
       )}

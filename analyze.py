@@ -12,13 +12,11 @@ from typing import Literal, Optional
 
 import numpy as np
 import pandas as pd
-from fastapi import APIRouter, HTTPException
+from fastapi import HTTPException
 from pydantic import BaseModel
 
 from metrics import summarize_errors
 from registry import REGISTRIES, MEASURED_COLUMN, run_method
-
-router = APIRouter()
 
 BUILTIN_CSV = Path(__file__).parent / "data" / "mendeley_pvt_bo.csv"
 MEASUREMENT_KEY = ["t_f", "rs_measured", "api", "gamma_g", "bo"]
@@ -48,7 +46,6 @@ def load_builtin() -> pd.DataFrame:
     return df
 
 
-@router.get("/dataset/builtin")
 def builtin_summary():
     df = load_builtin()
     regions = []
@@ -85,7 +82,6 @@ def column_or_blank(df, name):
     return df[name] if name in df.columns else pd.Series([None] * len(df), index=df.index)
 
 
-@router.post("/analyze")
 def analyze(req: AnalyzeRequest):
     if req.prop not in REGISTRIES:
         raise HTTPException(404, f"Unknown property: {req.prop}")

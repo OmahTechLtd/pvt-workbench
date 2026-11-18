@@ -1,4 +1,4 @@
-"""Characterization of undefined petroleum fractions (Ahmed, Chapter 1).
+"""Characterization of undefined petroleum fractions.
 
 Given the molecular weight M and specific gravity of a heptanes-plus (C7+) fraction,
 this module estimates boiling point, critical temperature, critical pressure and
@@ -16,10 +16,8 @@ The module name avoids "fractions" so it does not shadow the Python standard lib
 """
 import math
 
-from fastapi import APIRouter, HTTPException
+from fastapi import HTTPException
 from pydantic import BaseModel
-
-router = APIRouter()
 
 # Universal gas constant as printed under Eq. 1-4, psia ft3 / (lb-mol °R)
 R_GAS = 10.73
@@ -143,15 +141,15 @@ def verification() -> dict:
     add("tb", "Boiling point, Tb", "°R", calc["tb"])
     add("pc", "Critical pressure, pc", "psia", calc["pc"])
     add("tc", "Critical temperature, Tc (Table 1-4 constant a = 544.4)", "°R", calc["tc"],
-        "The worked line in the book prints a = 544.2, not the 544.4 given in Table 1-4.")
+        "The worked line in the source prints a = 544.2, not the 544.4 given in Table 1-4.")
     tc_544_2 = riazi_daubert("tc", m, g, {**RIAZI_DAUBERT["tc"], "a": 544.2})
     add("tc", "Critical temperature, Tc (with a = 544.2 as printed in the worked line)", "°R", tc_544_2,
-        "Using the constant printed in the worked line reproduces the book's answer.")
+        "Using the constant printed in the worked line reproduces the published answer.")
     add("vc", "Critical volume, Vc", "ft3/lb", calc["vc"],
         "Does not match. The printed constants give 0.0636. Table 1-1 lists 0.0626 to 0.0640 for C8 to C20, "
         "so 0.0636 looks consistent and 0.06035 looks out of line. The cause is not identified.")
     omega_book_inputs = edmister_omega(320.3, 1139.4, 825.26)
-    add("omega", "Acentric factor (from the book's printed Tc, pc and Tb)", "", omega_book_inputs)
+    add("omega", "Acentric factor (from the published printed Tc, pc and Tb)", "", omega_book_inputs)
     omega_chain = edmister_omega(calc["pc"], calc["tc"], calc["tb"])
     add("omega", "Acentric factor (from this tool's own Tc, pc and Tb)", "", omega_chain,
         "Differs only because Tc differs by 0.4 °R, which comes from the 544.2 versus 544.4 constant.")
@@ -168,14 +166,8 @@ class FractionRequest(BaseModel):
     gamma: float
 
 
-@router.post("/fraction/characterize")
 def fraction_characterize(req: FractionRequest):
     try:
         return characterize(req.m, req.gamma)
     except (ValueError, ZeroDivisionError, OverflowError) as e:
         raise HTTPException(400, str(e))
-
-
-@router.get("/fraction/verification")
-def fraction_verification():
-    return verification()

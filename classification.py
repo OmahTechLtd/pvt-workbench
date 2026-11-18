@@ -1,6 +1,6 @@
-"""Crude oil classification (Ahmed, Chapter 1).
+"""Crude oil classification.
 
-The book describes four types of crude oil and gives typical property limits for
+The source describes four types of crude oil and gives typical property limits for
 each (pp. 4 to 8). It also classifies an oil reservoir by where its initial pressure
 and temperature sit on the phase diagram (p. 3).
 
@@ -15,14 +15,12 @@ import math
 from typing import Optional
 
 import numpy as np
-from fastapi import APIRouter, HTTPException
+from fastapi import HTTPException
 from pydantic import BaseModel
 
 from analyze import load_builtin
 from metrics import summarize_errors
 from registry import REGISTRIES, run_method
-
-router = APIRouter()
 
 FAILURES = (ValueError, ZeroDivisionError, OverflowError, TypeError)
 
@@ -144,7 +142,7 @@ def classify(gor=None, bo=None, api=None, c7plus=None) -> dict:
     if len(given) < 3:
         notes.append("Only some properties were entered, so more than one class can still fit. More inputs narrow the result.")
     if values["gor"] is not None and 700 < values["gor"] < 2000:
-        notes.append("A gas-oil ratio between 700 and 2,000 scf/STB falls between the ranges the book gives.")
+        notes.append("A gas-oil ratio between 700 and 2,000 scf/STB falls between the ranges the source gives.")
 
     if len(matches) == 1:
         verdict = f"Consistent with {CLASS_BY_KEY[matches[0]]['name'].lower()}."
@@ -155,7 +153,7 @@ def classify(gor=None, bo=None, api=None, c7plus=None) -> dict:
         scored = [r for r in results if r["tested"] > 0]
         best = max(r["passed"] / r["tested"] for r in scored)
         closest = [r["name"].lower() for r in scored if r["passed"] / r["tested"] == best]
-        verdict = "Outside all four classes as the book states them."
+        verdict = "Outside all four classes as the source states them."
         if best > 0:
             notes.append("Closest on the properties entered: " + " and ".join(closest) + ".")
         notes.append(GAP_NOTE)
@@ -197,7 +195,6 @@ class ClassifyRequest(BaseModel):
     tc: Optional[float] = None
 
 
-@router.post("/classify")
 def classify_endpoint(req: ClassifyRequest):
     out = {"oil": None, "pressure_state": None, "reservoir_kind": None}
     any_oil = any(v is not None for v in (req.gor, req.bo, req.api, req.c7plus))
@@ -215,7 +212,6 @@ def classify_endpoint(req: ClassifyRequest):
     return out
 
 
-@router.get("/classify/criteria")
 def criteria():
     return [
         {
@@ -232,7 +228,6 @@ def criteria():
     ]
 
 
-@router.get("/classify/dataset")
 def classify_dataset(exclude_duplicates: bool = True):
     """Classify every oil in the built-in dataset and score the Bo methods inside each class.
 

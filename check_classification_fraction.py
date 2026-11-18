@@ -1,6 +1,6 @@
-"""Checks for the Chapter 1 modules. Run from the project folder with: python check_chapter1.py
+"""Checks for the fluid classification and plus fraction modules. Run from the project folder with: python check_classification_fraction.py
 
-Each check states what the book prints and what this code returns."""
+Each check states what the published example prints and what this code returns."""
 from classification import classify, reservoir_state, reservoir_kind
 from plus_fraction import RIAZI_DAUBERT, edmister_omega, riazi_daubert, verification
 
@@ -21,7 +21,7 @@ check("Tb = 825.26 degR", abs(tb - 825.26) <= 0.01)
 check("pc = 320.3 psia", abs(pc - 320.3) <= 0.1)
 tc_book = riazi_daubert("tc", m, g, {**RIAZI_DAUBERT["tc"], "a": 544.2})
 check("Tc = 1139.4 degR when the worked line's constant 544.2 is used", abs(tc_book - 1139.4) <= 0.1)
-check("Acentric factor = 0.5067 from the book's printed Tc, pc and Tb", abs(edmister_omega(320.3, 1139.4, 825.26) - 0.5067) <= 0.0001)
+check("Acentric factor = 0.5067 from the published printed Tc, pc and Tb", abs(edmister_omega(320.3, 1139.4, 825.26) - 0.5067) <= 0.0001)
 
 # Known differences, recorded so a future change to the code does not hide them
 vc = riazi_daubert("vc", m, g)

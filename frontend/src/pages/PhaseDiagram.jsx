@@ -260,7 +260,7 @@ function PhaseDiagram() {
     <div>
       <h1>Phase Diagrams</h1>
       <p className="subtitle">
-        Schematic pressure-temperature diagrams and liquid-shrinkage curves for the four oil types in Chapter 1.
+        Schematic pressure-temperature diagrams and liquid-shrinkage curves for the four oil types.
       </p>
 
       <div className="segmented">
@@ -296,7 +296,7 @@ function PhaseDiagram() {
 
       {info && (
         <section className="card">
-          <h2>Typical properties in the book</h2>
+          <h2>Typical properties</h2>
           <table>
             <thead>
               <tr>
@@ -326,7 +326,7 @@ function PhaseDiagram() {
       )}
 
       <p className="note">
-        These diagrams are schematic. They illustrate the descriptions on pages 3 to 8 of the book and are not computed from
+        These diagrams are schematic. They illustrate the descriptions on published descriptions (Ahmed, pp. 3 to 8) and are not computed from
         a fluid composition, so the axes carry no numbers and the shapes should not be read for values.
       </p>
     </div>
