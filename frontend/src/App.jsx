@@ -8,6 +8,7 @@ import PhaseDiagram from "./pages/PhaseDiagram.jsx";
 import OilProperties from "./pages/OilProperties.jsx";
 import Viscosity from "./pages/Viscosity.jsx";
 import LabPVT from "./pages/LabPVT.jsx";
+import MaterialBalance from "./pages/MaterialBalance.jsx";
 import SurfaceTension from "./pages/SurfaceTension.jsx";
 import Placeholder from "./pages/Placeholder.jsx";
 
@@ -21,6 +22,7 @@ const NAV = [
   { to: "/properties", label: "Oil Properties" },
   { to: "/viscosity", label: "Oil Viscosity" },
   { to: "/lab", label: "Lab PVT Analysis" },
+  { to: "/balance", label: "Material Balance" },
   { to: "/tension", label: "Surface Tension" },
   { to: "/library", label: "Method Library" },
   { to: "/about", label: "About" },
@@ -48,6 +50,7 @@ function App() {
           <Route path="/properties" element={<OilProperties />} />
           <Route path="/viscosity" element={<Viscosity />} />
           <Route path="/lab" element={<LabPVT />} />
+          <Route path="/balance" element={<MaterialBalance />} />
           <Route path="/tension" element={<SurfaceTension />} />
           <Route path="/library" element={<Placeholder title="Method Library" />} />
           <Route path="/about" element={<Placeholder title="About" />} />

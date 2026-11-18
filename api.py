@@ -8,6 +8,8 @@ from classification import ClassifyRequest, classify_dataset, classify_endpoint,
 from lab_pvt import (AdjustIn, CCEIn, DLIn, ExtrapolateIn, GPMIn, GasCondIn, NewPbIn, SepIn, compute_adjust,
                      compute_cce, compute_dl, compute_gas_condensate, compute_gpm, compute_new_pb, compute_separator,
                      estimate_new_pb_value, example_data as lab_examples, lab_checks)
+from material_balance import (AvgPIn, PointIn, SatIn, SeriesIn, TracyIn, average_pressure, example_data as mb_examples,
+                              mb_checks, point_balance, saturation_table, series_analysis, tracy_table)
 from oil_properties import (Inputs, compute_bo_above_pb, compute_compressibility, compute_density, compute_gravity,
                             compute_total_fvf, property_checks)
 from plus_fraction import FractionRequest, fraction_characterize, verification as fraction_checks
@@ -222,3 +224,40 @@ def lab_example_data():
 @app.get("/lab/verification")
 def lab_verification():
     return lab_checks()
+
+
+# ---- Material balance ----
+
+@app.post("/mb/series")
+def mb_series(i: SeriesIn):
+    return series_analysis(i)
+
+
+@app.post("/mb/point")
+def mb_point(i: PointIn):
+    return point_balance(i)
+
+
+@app.post("/mb/saturation")
+def mb_saturation(i: SatIn):
+    return saturation_table(i)
+
+
+@app.post("/mb/tracy")
+def mb_tracy(i: TracyIn):
+    return tracy_table(i)
+
+
+@app.post("/mb/average_pressure")
+def mb_average_pressure(i: AvgPIn):
+    return average_pressure(i)
+
+
+@app.get("/mb/examples")
+def mb_example_data():
+    return mb_examples()
+
+
+@app.get("/mb/verification")
+def mb_verification():
+    return mb_checks()
