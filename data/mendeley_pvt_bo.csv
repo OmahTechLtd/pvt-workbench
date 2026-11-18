@@ -1,0 +1,897 @@
+oil,region,t_f,rs_measured,api,gamma_g,bo
+Africa-1,Africa,193,150.0,38.3,0.933,1.164
+Africa-2,Africa,193,126.0,39.1,0.864,1.158
+Africa-3,Africa,193,117.0,39.0,0.835,1.159
+Africa-4,Africa,193,151.0,38.6,1.003,1.167
+Africa-5,Africa,211,722.0,37.6,0.867,1.471
+Africa-6,Africa,211,659.0,37.8,0.819,1.463
+Africa-7,Africa,211,586.0,37.5,0.768,1.47
+Africa-8,Africa,180,304.0,38.8,0.811,1.26
+Africa-9,Africa,180,387.0,37.4,0.989,1.299
+Africa-10,Africa,180,335.0,37.6,0.878,1.29
+Africa-11,Africa,180,380.0,36.9,0.949,1.311
+Africa-12,Africa,214,73.0,36.4,0.884,1.128
+Africa-13,Africa,214,66.0,36.4,0.841,1.124
+Africa-14,Africa,214,63.0,36.4,0.812,1.125
+Africa-15,Africa,180,274.0,38.7,0.947,1.23
+Africa-16,Africa,180,248.0,38.7,0.898,1.229
+Africa-17,Africa,180,232.0,38.6,0.865,1.231
+Africa-18,Africa,180,301.0,38.0,1.011,1.252
+Africa-19,Africa,180,271.0,38.0,0.949,1.253
+Africa-20,Africa,180,253.0,37.9,0.906,1.257
+Africa-21,Africa,180,334.0,37.3,1.081,1.274
+Africa-22,Africa,180,299.0,37.2,1.024,1.272
+Africa-23,Africa,180,290.0,37.1,0.988,1.28
+Africa-24,Africa,189,335.0,36.2,0.924,1.259
+Africa-25,Africa,189,217.0,36.4,0.878,1.255
+Africa-26,Africa,189,299.0,36.5,0.848,1.255
+Africa-27,Africa,203,72.0,34.6,0.863,1.121
+Africa-28,Africa,203,63.0,34.7,0.863,1.119
+Africa-29,Africa,203,57.0,34.7,0.809,1.122
+Africa-30,Africa,200,71.0,34.6,0.855,1.118
+Africa-31,Africa,153,327.0,36.8,0.967,1.228
+Africa-32,Africa,153,305.0,37.0,0.918,1.223
+Africa-33,Africa,153,286.0,37.1,0.885,1.22
+Africa-34,Africa,239,1038.0,42.3,0.878,1.685
+Africa-35,Africa,239,1002.0,42.6,0.853,1.674
+Africa-36,Africa,239,975.0,42.7,0.838,1.668
+Africa-37,Africa,239,1097.0,41.4,0.94,1.736
+Africa-38,Africa,148,94.0,39.8,0.997,1.119
+Africa-39,Africa,148,65.0,39.8,0.908,1.119
+Africa-40,Africa,148,51.0,39.6,0.874,1.123
+Africa-41,Africa,100,100.0,45.4,1.21,1.126
+Africa-42,Africa,100,73.0,45.4,1.075,1.124
+Africa-43,Africa,100,56.0,45.4,1.0001,1.125
+Africa-44,Africa,100,45.0,45.3,0.956,1.128
+Africa-45,Africa,186,271.0,42.4,1.025,1.259
+Africa-46,Africa,186,241.0,42.5,0.975,1.252
+Africa-47,Africa,186,220.0,42.4,0.929,1.253
+Africa-48,Africa,125,24.0,38.3,1.186,1.06
+Africa-49,Africa,125,17.0,38.3,1.132,1.06
+Africa-50,Africa,125,13.0,38.2,1.111,1.061
+Africa-51,Africa,277,291.0,35.8,0.983,1.248
+Africa-52,Africa,220,412.0,37.6,0.906,1.309
+Africa-53,Africa,231,360.0,37.3,0.914,1.292
+Africa-54,Africa,231,333.0,37.5,0.768,1.291
+Africa-55,Africa,240,502.0,37.2,0.936,1.414
+Africa-56,Africa,240,408.0,37.8,0.856,1.393
+Africa-57,Africa,240,386.0,38.0,0.832,1.398
+Africa-58,Africa,223,596.0,38.2,0.86,1.398
+Africa-59,Africa,223,567.0,38.2,0.837,1.392
+Africa-60,Africa,223,525.0,38.4,0.809,1.384
+Africa-61,Africa,236,564.0,40.0,0.889,1.475
+Africa-62,Africa,236,449.0,37.2,0.854,1.468
+Africa-63,Africa,220,391.0,36.8,0.997,1.314
+Africa-64,Africa,220,380.0,36.8,0.961,1.313
+Africa-65,Africa,240,445.0,36.4,0.911,1.373
+Africa-66,Africa,240,401.0,36.9,0.86,1.356
+Africa-67,Africa,240,367.0,37.2,0.81,1.325
+Africa-68,Africa,239,466.0,39.0,0.972,1.36
+Africa-69,Africa,128,325.0,43.7,1.006,1.227
+Africa-70,Africa,263,987.0,38.0,0.977,1.721
+Africa-71,Africa,263,935.0,39.5,0.932,1.694
+Africa-72,Africa,263,888.0,40.1,0.908,1.67
+Africa-73,Africa,263,850.0,40.3,0.888,1.65
+Africa-74,Africa,263,815.0,40.5,0.871,1.631
+Africa-75,Africa,234,443.0,38.3,0.876,1.345
+Africa-76,Africa,306,1474.0,42.9,0.927,2.073
+Africa-77,Africa,306,1393.0,43.9,0.9,2.027
+Africa-78,Africa,306,1290.0,43.8,0.855,1.985
+Africa-79,Africa,306,1356.0,43.5,0.886,2.011
+Africa-80,Africa,306,1317.0,43.9,0.872,1.991
+Africa-81,Africa,135,202.0,43.1,0.968,1.172
+Africa-82,Africa,178,144.0,35.9,0.761,1.241
+Africa-83,Africa,176,146.0,38.3,0.752,1.25
+Africa-84,Africa,288,598.0,47.8,0.764,1.668
+Africa-85,Africa,288,697.0,48.0,0.82,1.608
+Africa-86,Africa,213,741.0,42.7,1.005,1.631
+Africa-87,Africa,213,544.0,42.2,0.862,1.655
+Africa-88,Africa,213,458.0,42.1,0.792,1.668
+Africa-89,Africa,210,257.0,38.7,1.023,1.278
+Africa-90,Africa,210,129.0,38.8,0.812,1.28
+Africa-91,Africa,210,93.0,38.7,0.768,1.28
+Africa-92,Africa,291,1172.0,52.0,0.758,2.01
+Africa-93,Africa,262,2319.0,48.5,0.998,2.617
+Africa-94,Africa,262,1843.0,50.1,0.886,2.317
+Africa-95,Africa,262,1723.0,50.1,0.826,2.315
+Africa-96,Africa,262,1662.0,49.9,0.808,2.332
+Africa-97,Africa,262,1550.0,49.5,0.788,2.337
+Africa-98,Africa,130,240.0,35.6,0.835,1.158
+Africa-99,Africa,130,212.0,35.5,0.777,1.16
+Africa-100,Africa,220,432.0,34.8,0.869,1.287
+Africa-101,Africa,220,379.0,35.0,0.789,1.268
+Africa-102,Africa,220,360.0,35.2,0.757,1.266
+Africa-103,Africa,220,351.0,34.6,0.722,1.268
+Africa-104,Africa,220,460.0,34.2,0.843,1.27
+Africa-105,Africa,220,401.0,34.4,0.8,1.255
+Africa-106,Africa,220,380.0,34.6,0.722,1.256
+Africa-107,Africa,220,370.0,34.6,0.72,1.261
+Africa-108,Africa,250,843.0,36.3,0.858,1.5
+Africa-109,Africa,250,811.0,36.7,0.813,1.485
+Africa-110,Africa,250,779.0,36.9,0.76,1.478
+Africa-111,Africa,250,650.0,36.8,0.724,1.489
+Africa-112,Africa,240,526.0,35.6,0.8,1.387
+Africa-113,Africa,240,486.0,36.3,0.767,1.36
+Africa-114,Africa,240,469.0,36.7,0.73,1.358
+Africa-115,Africa,240,442.0,36.5,0.7,1.371
+Africa-116,Africa,220,464.0,35.5,0.836,1.291
+Africa-117,Africa,220,438.0,35.7,0.778,1.282
+Africa-118,Africa,220,398.0,35.4,0.742,1.272
+Africa-119,Africa,220,390.0,35.5,0.73,1.276
+Africa-120,Africa,220,421.0,34.8,0.857,1.261
+Africa-121,Africa,220,378.0,35.4,0.81,1.246
+Africa-122,Africa,220,368.0,35.4,0.742,1.241
+Africa-123,Africa,220,360.0,35.0,0.727,1.251
+Africa-124,Africa,220,478.0,35.9,0.858,1.29
+Africa-125,Africa,220,427.0,36.3,0.781,1.277
+Africa-126,Africa,220,409.0,35.7,0.756,1.274
+Africa-127,Africa,220,402.0,35.7,0.715,1.278
+Africa-128,Africa,231,434.0,35.2,0.792,1.301
+Africa-129,Africa,187,36.0,34.7,1.017,1.076
+Africa-130,Africa,130,15.0,34.2,1.251,1.047
+Africa-131,Africa,190,82.0,33.5,0.89,1.112
+Africa-132,Africa,190,72.0,33.5,0.849,1.107
+Africa-133,Africa,238,315.0,36.4,1.007,1.451
+Africa-134,Africa,238,413.0,36.6,1.056,1.484
+Africa-135,Africa,238,319.0,36.4,1.002,1.422
+Africa-136,Africa,238,410.0,36.4,1.032,1.498
+Africa-137,Africa,238,316.0,36.5,1.004,1.413
+Africa-138,Africa,238,402.0,36.4,1.028,1.421
+Africa-139,Africa,232,730.0,45.7,0.68,1.674
+Africa-140,Africa,236,1255.0,44.0,0.853,1.956
+Africa-141,Africa,236,849.0,46.1,0.835,1.626
+Africa-142,Africa,236,858.0,46.8,0.715,1.585
+Africa-143,Africa,238,1167.0,45.8,0.851,1.834
+Africa-144,Africa,235,1181.0,45.9,0.848,1.866
+Africa-145,Africa,237,996.0,46.0,0.874,1.71
+Africa-146,Africa,237,1121.0,44.8,0.939,1.757
+Africa-147,Africa,237,1023.0,46.0,0.886,1.71
+Africa-148,Africa,237,1016.0,45.4,0.874,1.735
+Africa-149,Africa,230,1125.0,44.4,0.935,1.758
+Africa-150,Africa,230,1015.0,45.7,0.869,1.692
+Africa-151,Africa,230,1029.0,44.9,0.83,1.741
+Africa-152,Africa,214,287.0,36.0,0.69,1.323
+Africa-153,Africa,214,393.0,36.7,0.72,1.309
+Africa-154,Africa,214,478.0,36.4,0.736,1.309
+Africa-155,Africa,214,408.0,36.3,0.75,1.314
+Africa-156,Africa,214,368.0,26.0,0.713,1.321
+Africa-157,Africa,214,497.0,36.1,0.74,1.321
+Africa-158,Africa,213,460.0,36.6,0.767,1.297
+Africa-159,Africa,213,420.0,37.0,0.733,1.295
+Africa-160,Africa,213,355.0,37.0,0.689,1.295
+Africa-161,Africa,213,388.0,37.0,0.712,1.294
+Africa-162,Africa,226,510.0,39.0,0.915,1.395
+Africa-163,Africa,226,400.0,38.9,0.762,1.398
+Africa-164,Africa,183,711.0,46.1,1.007,1.552
+Africa-165,Africa,183,455.0,46.5,0.8,1.545
+Africa-166,Africa,185,665.0,46.7,1.067,1.561
+Africa-167,Africa,185,457.0,46.4,0.809,1.572
+Africa-168,Africa,187,1142.0,48.0,0.833,2.066
+Africa-169,Africa,288,1924.0,41.1,0.751,2.172
+Africa-170,Africa,288,1842.0,41.3,0.726,2.129
+Africa-171,Africa,288,1745.0,41.7,0.708,2.1
+Africa-172,Africa,288,1665.0,42.1,0.699,2.123
+Africa-173,Africa,288,1734.0,39.6,0.759,2.064
+Africa-174,Africa,288,1625.0,40.0,0.718,2.013
+Africa-175,Africa,288,1506.0,40.4,0.692,1.981
+Africa-176,Africa,288,1410.0,40.6,0.683,1.982
+Africa-177,Africa,288,1704.0,40.9,0.744,2.038
+Africa-178,Africa,288,1584.0,40.9,0.709,1.985
+Africa-179,Africa,288,1464.0,40.6,0.684,1.948
+Africa-180,Africa,288,1370.0,40.2,0.672,1.955
+Africa-181,Africa,288,1651.0,41.1,0.714,2.008
+Africa-182,Africa,288,1555.0,41.7,0.688,1.961
+Africa-183,Africa,288,1420.0,41.1,0.669,1.929
+Africa-184,Africa,288,1338.0,41.3,0.657,1.94
+Africa-185,Africa,288,1596.0,41.5,0.743,1.972
+Africa-186,Africa,288,1515.0,42.3,0.725,1.939
+Africa-187,Africa,288,1414.0,41.5,0.707,1.919
+Africa-188,Africa,288,1316.0,42.1,0.697,1.923
+Africa-189,Africa,298,1552.0,40.6,0.745,2.09
+Africa-190,Africa,297,1786.0,41.5,0.7528,2.131
+Africa-191,Africa,297,1685.0,42.1,0.7285,2.089
+Africa-192,Africa,297,1566.0,41.9,0.707,2.071
+Africa-193,Africa,297,1482.0,42.1,0.693,2.09
+Africa-194,Africa,297,1923.0,40.4,0.721,2.22
+Africa-195,Africa,297,1806.0,40.2,0.717,2.109
+Africa-196,Africa,291,2236.0,40.9,0.702,2.546
+Africa-197,Africa,297,3366.0,45.4,0.7279,2.92
+Africa-198,Africa,297,3195.0,45.2,0.7136,2.888
+Africa-199,Africa,297,3020.0,45.2,0.7076,2.887
+Africa-200,Africa,180,541.0,36.6,0.66,1.33
+Africa-201,Africa,180,604.0,36.6,0.669,1.331
+Africa-202,Africa,170,224.0,22.9,0.589,1.145
+Africa-203,Africa,170,241.0,22.9,0.596,1.145
+Africa-204,Africa,214,604.0,37.6,0.647,1.354
+Africa-205,Africa,214,621.0,37.0,0.654,1.373
+Africa-206,Africa,186,410.0,39.9,0.693,1.3
+Africa-207,Africa,186,453.0,39.9,0.691,1.302
+Africa-208,Africa,186,482.0,38.3,0.689,1.309
+Africa-209,Africa,215,472.0,33.4,0.64,1.263
+Africa-210,Africa,215,433.0,33.4,0.628,1.264
+Africa-211,Africa,170,195.0,28.9,0.66,1.158
+Africa-212,Africa,170,234.0,28.9,0.646,1.156
+Africa-213,Africa,183,371.0,34.2,0.682,1.26
+Africa-214,Africa,183,408.0,34.1,0.686,1.267
+Africa-215,Africa,183,433.0,34.0,0.699,1.282
+Africa-216,Africa,188,400.0,33.3,0.69,1.261
+Africa-217,Africa,188,437.0,33.3,0.691,1.265
+Africa-218,Africa,188,450.0,32.9,0.714,1.269
+Africa-219,Africa,186,702.0,39.8,0.808,1.449
+Africa-220,Africa,186,621.0,39.8,0.744,1.441
+Africa-221,Africa,186,551.0,39.0,0.698,1.456
+Africa-222,Africa,196,729.0,47.8,0.706,1.525
+Africa-223,Africa,196,746.0,47.4,0.733,1.548
+Africa-224,Africa,156,372.0,49.9,0.71,1.258
+Africa-225,Africa,156,390.0,46.5,0.731,1.288
+Africa-226,Africa,215,492.0,46.0,0.661,1.405
+Africa-227,Africa,215,537.0,45.9,0.693,1.409
+Africa-228,Africa,215,618.0,44.1,0.704,1.419
+Africa-229,Africa,210,832.0,47.3,0.809,1.576
+Africa-230,Africa,210,717.0,48.2,0.727,1.536
+Africa-231,Africa,210,664.0,48.1,0.72,1.546
+Africa-232,Africa,176,449.0,37.4,0.692,1.36
+Africa-233,Africa,176,425.0,37.9,0.675,1.348
+Africa-234,Africa,176,405.0,38.4,0.659,1.343
+Africa-235,Africa,185,604.0,38.2,0.753,1.369
+Africa-236,Africa,185,534.0,38.3,0.701,1.365
+Africa-237,Africa,185,453.0,36.8,0.661,1.384
+Africa-238,Africa,185,367.0,36.1,0.645,1.284
+Africa-239,Africa,185,423.0,36.6,0.705,1.259
+Africa-240,Africa,185,391.0,36.0,0.647,1.305
+Africa-241,Africa,185,441.0,36.7,0.706,1.276
+Africa-242,Africa,212,984.0,41.2,0.708,1.615
+Africa-243,Africa,168,485.0,35.1,0.688,1.335
+Africa-244,Africa,230,2473.0,49.2,0.68,2.906
+Africa-245,Africa,234,2524.0,47.9,0.697,2.816
+Africa-246,Africa,234,2544.0,47.6,0.696,2.825
+Africa-247,Africa,234,2311.0,44.4,0.71,2.925
+Africa-248,Africa,193,214.0,37.2,1.163,1.19
+Africa-249,Africa,211,827.0,35.7,1.019,1.549
+Africa-250,Africa,180,504.0,34.8,1.157,1.137
+Africa-251,Africa,214,104.0,36.0,1.087,1.137
+Africa-252,Africa,180,374.0,37.2,1.142,1.273
+Africa-253,Africa,180,419.0,36.6,1.213,1.309
+Africa-254,Africa,180,457.0,35.5,1.266,1.34
+Africa-255,Africa,189,412.0,35.2,1.095,1.295
+Africa-256,Africa,203,104.0,34.2,1.089,1.136
+Africa-257,Africa,200,99.0,34.4,1.097,1.124
+Africa-258,Africa,153,403.0,35.5,1.084,1.262
+Africa-259,Africa,239,1175.0,37.9,0.983,1.772
+Africa-260,Africa,148,153.0,39.0,1.203,1.137
+Africa-261,Africa,100,183.0,44.3,1.473,1.151
+Africa-262,Africa,186,383.0,41.4,1.247,1.304
+Africa-263,Africa,125,45.0,38.2,1.403,1.064
+Africa-264,Africa,227,360.0,34.3,1.028,1.288
+Africa-265,Africa,220,473.0,36.4,1.026,1.349
+Africa-266,Africa,231,488.0,36.1,1.06,1.342
+Africa-267,Africa,240,597.0,36.4,1.013,1.426
+Africa-268,Africa,223,658.0,38.0,0.948,1.406
+Africa-269,Africa,236,708.0,36.2,1.002,1.502
+Africa-270,Africa,220,468.0,35.9,1.069,1.354
+Africa-271,Africa,240,554.0,36.0,1.015,1.398
+Africa-272,Africa,239,534.0,38.2,1.032,1.389
+Africa-273,Africa,128,417.0,42.3,1.161,1.274
+Africa-274,Africa,263,1105.0,37.5,1.054,1.795
+Africa-275,Africa,234,509.0,37.5,1.009,1.371
+Africa-276,Africa,306,1716.0,41.2,0.949,2.202
+Africa-277,Africa,135,291.0,42.1,1.217,1.206
+Africa-278,Africa,178,350.0,35.5,1.079,1.252
+Africa-279,Africa,176,370.0,38.0,1.081,1.261
+Africa-280,Africa,288,1016.0,45.0,1.029,1.734
+Africa-281,Africa,213,957.0,41.4,1.223,1.707
+Africa-282,Africa,210,366.0,38.0,1.231,1.314
+Africa-283,Africa,262,2450.0,48.0,1.055,2.7
+Africa-284,Africa,220,460.0,34.5,0.9,1.27
+Africa-285,Africa,220,500.0,34.0,0.89,1.28
+Africa-286,Africa,250,875.0,35.9,0.905,1.517
+Africa-287,Africa,240,560.0,35.1,0.82,1.404
+Africa-288,Africa,220,490.0,35.3,0.87,1.299
+Africa-289,Africa,220,470.0,34.6,0.925,1.3
+Africa-290,Africa,220,530.0,35.7,0.895,1.298
+Africa-291,Africa,236,1484.0,43.9,0.955,1.992
+Africa-292,Africa,236,847.0,40.7,0.858,1.626
+Africa-293,Africa,237,1299.0,42.2,1.059,1.899
+Africa-294,Africa,230,1260.0,42.9,1.041,1.859
+Africa-295,Africa,214,520.0,36.4,0.76,1.31
+Africa-296,Africa,214,540.0,35.8,0.82,1.323
+Africa-297,Africa,213,530.0,36.1,0.855,1.323
+Africa-298,Africa,226,595.0,38.3,0.842,1.423
+Africa-299,Africa,288,1978.0,40.6,0.77,2.198
+Africa-300,Africa,288,1790.0,39.3,0.774,2.11
+Africa-301,Africa,288,1770.0,40.8,0.77,2.1
+Africa-302,Africa,288,1730.0,40.9,0.73,2.035
+Africa-303,Africa,288,1679.0,40.9,0.764,2.01
+Africa-304,Africa,297,1837.0,41.1,0.77,2.178
+Africa-305,Africa,297,3533.0,44.9,0.7376,3.092
+Africa-306,Africa,214,663.0,36.6,0.698,1.367
+Africa-307,Africa,186,919.0,37.2,0.999,1.545
+Africa-308,Africa,210,1038.0,45.5,0.868,1.65
+Africa-309,Africa,176,678.0,36.4,0.825,1.412
+Africa-310,Africa,185,756.0,34.8,0.995,1.46
+Africa-311,Africa,185,548.0,34.8,0.899,1.345
+Africa-312,Africa,185,564.0,34.9,0.889,1.352
+Africa-313,Africa,212,1105.0,40.4,0.848,1.647
+Africa-314,Africa,168,683.0,33.0,0.911,1.397
+Africa-315,Africa,239,665.0,39.6,1.056,1.504
+Africa-316,Africa,156,429.0,35.6,1.073,1.284
+Africa-317,Africa,234,688.0,36.9,0.959,1.464
+Africa-318,Africa,229,441.0,36.1,1.02,1.338
+Africa-319,Africa,146,97.0,32.2,0.963,1.091
+Africa-320,Africa,145,103.0,36.7,1.15,1.106
+Africa-321,Africa,149,100.0,32.7,0.957,1.091
+Africa-322,Africa,141,100.0,36.9,1.132,1.103
+Africa-323,Africa,128,111.0,37.1,1.225,1.108
+Africa-324,Africa,148,129.0,37.0,1.228,1.128
+Africa-325,Africa,205,960.0,38.3,0.818,1.562
+Africa-326,Africa,214,862.0,38.5,0.826,1.52
+Africa-327,Africa,126,13.0,36.4,1.39,1.04
+Africa-328,Africa,178,551.0,38.3,1.07,1.377
+Africa-329,Africa,170,534.0,39.0,1.028,1.368
+Africa-330,Africa,179,763.0,36.7,1.069,1.488
+Africa-331,Africa,170,594.0,39.0,1.111,1.384
+Africa-332,Africa,170,784.0,38.2,1.078,1.465
+Africa-333,Africa,170,374.0,38.2,1.091,1.26
+Africa-334,Africa,175,527.0,38.2,1.04,1.345
+Africa-335,Africa,172,762.0,39.0,0.93,1.528
+Africa-336,Africa,205,882.0,40.8,1.01,1.563
+Africa-337,Africa,207,1096.0,35.8,0.987,1.649
+Africa-338,Africa,206,1090.0,35.8,0.828,1.681
+Africa-339,Africa,142,42.0,35.0,1.143,1.061
+Alaska-1,Alaska,152,288.0,35.0,0.911,1.185
+Alaska-2,Alaska,152,224.0,35.3,0.955,1.16
+Alaska-3,Alaska,152,140.0,34.9,1.094,1.129
+Alaska-4,Alaska,180,306.0,35.2,0.853,1.199
+Alaska-5,Alaska,180,236.0,34.9,0.888,1.179
+Alaska-6,Alaska,180,140.0,32.7,1.02,1.144
+Alaska-7,Alaska,180,309.0,35.4,0.878,1.205
+Alaska-8,Alaska,145,548.0,26.6,0.717,1.265
+Alaska-9,Alaska,147,453.0,25.7,0.727,1.219
+Alaska-10,Alaska,148,493.0,23.5,0.691,1.223
+Alaska-11,Alaska,150,465.0,26.5,0.691,1.224
+Alaska-12,Alaska,150,341.0,18.9,0.663,1.167
+Alaska-13,Alaska,150,373.0,21.2,0.673,1.176
+Alaska-14,Alaska,152,557.0,25.4,0.759,1.27
+Alaska-15,Alaska,154,396.0,20.6,0.69,1.202
+Alaska-16,Alaska,154,465.0,22.6,0.685,1.216
+Alaska-17,Alaska,155,517.0,25.8,0.733,1.266
+Alaska-18,Alaska,155,452.0,25.1,0.708,1.214
+Alaska-19,Alaska,155,486.0,24.0,0.704,1.243
+Alaska-20,Alaska,158,348.0,22.2,0.673,1.175
+Alaska-21,Alaska,158,495.0,22.5,0.754,1.255
+Alaska-22,Alaska,160,341.0,20.6,0.665,1.171
+Alaska-23,Alaska,160,455.0,23.7,0.689,1.225
+Alaska-24,Alaska,165,473.0,26.0,0.728,1.232
+Malaysia-1,Malaysia,214,634.0,45.3,0.717,1.425
+Malaysia-2,Malaysia,242,844.0,40.7,0.919,1.619
+Malaysia-3,Malaysia,214,664.0,42.9,0.75,1.438
+Malaysia-4,Malaysia,196,463.0,38.9,1.281,1.261
+Malaysia-5,Malaysia,211,267.0,38.0,1.263,1.176
+Malaysia-6,Malaysia,203,421.0,37.1,1.298,1.221
+Malaysia-7,Malaysia,209,355.0,35.0,1.228,1.24
+Malaysia-8,Malaysia,211,372.0,31.0,1.195,1.222
+Malaysia-9,Malaysia,211,260.0,38.0,1.168,1.17
+Malaysia-10,Malaysia,206,364.0,36.6,1.028,1.232
+Malaysia-11,Malaysia,205,313.0,38.2,1.174,1.192
+Malaysia-12,Malaysia,203,421.0,39.8,1.181,1.268
+Malaysia-13,Malaysia,224,415.0,36.1,1.14,1.246
+Malaysia-14,Malaysia,208,359.0,35.4,1.25,1.214
+Malaysia-15,Malaysia,207,366.0,39.0,1.315,1.241
+Malaysia-16,Malaysia,189,714.0,48.7,0.82,1.5
+Malaysia-17,Malaysia,189,606.0,50.5,0.77,1.423
+Malaysia-18,Malaysia,186,368.0,41.4,0.865,1.212
+Malaysia-19,Malaysia,228,888.0,49.3,0.73,1.578
+Malaysia-20,Malaysia,190,694.0,49.5,0.79,1.48
+Malaysia-21,Malaysia,215,397.0,41.8,0.941,1.259
+Malaysia-22,Malaysia,205,765.0,48.8,0.939,1.52
+Malaysia-23,Malaysia,238,547.0,45.3,0.693,1.362
+Malaysia-24,Malaysia,245,546.0,45.2,0.689,1.451
+Malaysia-25,Malaysia,230,494.0,44.5,0.677,1.315
+Malaysia-26,Malaysia,174,267.0,31.4,0.884,1.173
+Malaysia-27,Malaysia,226,956.0,43.2,0.811,1.538
+Malaysia-28,Malaysia,180,242.0,31.4,0.824,1.17
+Malaysia-29,Malaysia,187,169.0,29.1,0.638,1.128
+Malaysia-30,Malaysia,187,198.0,29.2,0.775,1.139
+Malaysia-31,Malaysia,180,214.0,31.9,0.664,1.152
+Malaysia-32,Malaysia,234,741.0,42.0,0.795,1.491
+Malaysia-33,Malaysia,150,274.0,39.8,1.005,1.168
+Malaysia-34,Malaysia,185,566.0,45.2,0.817,1.334
+Malaysia-35,Malaysia,189,522.0,47.8,0.73,1.365
+Malaysia-36,Malaysia,217,563.0,48.4,0.759,1.409
+Malaysia-37,Malaysia,220,692.0,53.2,0.74,1.471
+Malaysia-38,Malaysia,199,628.0,48.4,0.762,1.442
+Malaysia-39,Malaysia,204,585.0,49.1,0.765,1.401
+Malaysia-40,Malaysia,204,599.0,48.1,0.767,1.424
+Malaysia-41,Malaysia,185,425.0,41.0,1.155,1.249
+Malaysia-42,Malaysia,239,1020.0,50.4,0.73,1.712
+Malaysia-43,Malaysia,224,686.0,47.1,0.8,1.496
+Malaysia-44,Malaysia,188,404.0,42.9,0.847,1.265
+Malaysia-45,Malaysia,211,856.0,46.6,0.916,1.517
+Malaysia-46,Malaysia,231,1170.0,48.9,0.858,1.884
+Malaysia-47,Malaysia,267,993.0,48.4,1.014,1.716
+Malaysia-48,Malaysia,211,491.0,39.2,1.051,1.321
+Malaysia-49,Malaysia,216,1022.0,47.9,1.045,1.697
+Malaysia-50,Malaysia,210,1011.0,48.2,1.05,1.68
+Malaysia-51,Malaysia,280,1006.0,46.8,0.876,1.695
+Malaysia-52,Malaysia,208,990.0,43.1,0.801,1.653
+Malaysia-53,Malaysia,228,1355.0,48.8,0.877,1.843
+Malaysia-54,Malaysia,250,1440.0,50.3,0.788,1.954
+Malaysia-55,Malaysia,146,142.0,26.9,0.667,1.092
+Malaysia-56,Malaysia,235,440.0,32.5,0.756,1.282
+Malaysia-57,Malaysia,161,636.0,38.3,0.801,1.345
+Malaysia-58,Malaysia,166,683.0,38.6,0.821,1.384
+Malaysia-59,Malaysia,195,899.0,39.3,0.769,1.503
+Malaysia-60,Malaysia,192,863.0,37.4,0.764,1.455
+Malaysia-61,Malaysia,152,384.0,32.6,0.733,1.238
+Malaysia-62,Malaysia,164,544.0,37.1,0.789,1.297
+Malaysia-63,Malaysia,171,686.0,38.2,0.737,1.357
+Malaysia-64,Malaysia,169,680.0,37.0,0.818,1.352
+Malaysia-65,Malaysia,190,524.0,40.5,0.727,1.325
+Malaysia-66,Malaysia,247,761.0,33.3,0.723,1.484
+Malaysia-67,Malaysia,239,737.0,34.6,0.707,1.445
+Malaysia-68,Malaysia,173,367.0,37.5,0.627,1.23
+Malaysia-69,Malaysia,177,667.0,37.7,0.842,1.371
+Malaysia-70,Malaysia,152,285.0,26.6,0.704,1.153
+Malaysia-71,Malaysia,225,810.0,39.6,0.789,1.525
+Malaysia-72,Malaysia,127,220.0,32.3,0.79,1.13
+Malaysia-73,Malaysia,194,919.0,41.4,0.673,1.505
+Malaysia-74,Malaysia,159,341.0,37.4,0.716,1.201
+Malaysia-75,Malaysia,125,150.0,31.9,0.612,1.085
+Malaysia-76,Malaysia,209,1023.0,40.2,0.658,1.581
+Malaysia-77,Malaysia,180,577.0,31.2,0.737,1.301
+Malaysia-78,Malaysia,169,713.0,40.0,0.765,1.399
+Malaysia-79,Malaysia,167,694.0,40.0,0.765,1.399
+Malaysia-80,Malaysia,153,366.0,34.8,0.664,1.208
+Malaysia-81,Malaysia,161,344.0,28.9,0.648,1.194
+Malaysia-82,Malaysia,141,287.0,33.4,0.718,1.154
+Malaysia-83,Malaysia,166,760.0,40.0,0.758,1.429
+Malaysia-84,Malaysia,179,393.0,38.6,0.631,1.23
+Malaysia-85,Malaysia,194,1212.0,42.3,0.685,1.683
+Malaysia-86,Malaysia,186,1213.0,45.4,0.705,1.707
+Malaysia-87,Malaysia,151,345.0,34.0,0.695,1.184
+Malaysia-88,Malaysia,205,509.0,37.8,0.853,1.362
+Malaysia-89,Malaysia,180,586.0,32.2,0.628,1.287
+Malaysia-90,Malaysia,198,1019.0,40.4,1.038,1.622
+Malaysia-91,Malaysia,184,791.0,40.4,0.743,1.429
+Malaysia-92,Malaysia,193,646.0,40.0,0.964,1.408
+Malaysia-93,Malaysia,243,819.0,34.1,0.663,1.466
+Middle East (a)-1,Middle East (a),225,1507.0,39.3,0.951,1.875
+Middle East (a)-2,Middle East (a),175,898.0,32.7,0.802,1.471
+Middle East (a)-3,Middle East (a),150,898.0,32.7,0.802,1.451
+Middle East (a)-4,Middle East (a),235,1579.0,42.8,0.93,1.997
+Middle East (a)-5,Middle East (a),185,825.0,34.2,0.779,1.431
+Middle East (a)-6,Middle East (a),175,825.0,34.2,0.779,1.425
+Middle East (a)-7,Middle East (a),180,867.0,35.4,0.799,1.458
+Middle East (a)-8,Middle East (a),125,898.0,32.7,0.802,1.43
+Middle East (a)-9,Middle East (a),240,1203.0,40.2,0.925,1.747
+Middle East (a)-10,Middle East (a),175,775.0,34.4,0.783,1.413
+Middle East (a)-11,Middle East (a),175,750.0,32.0,0.8,1.387
+Middle East (a)-12,Middle East (a),220,1151.0,39.9,0.894,1.686
+Middle East (a)-13,Middle East (a),160,742.0,32.6,0.752,1.372
+Middle East (a)-14,Middle East (a),190,1579.0,42.8,0.93,1.92
+Middle East (a)-15,Middle East (a),230,1602.0,44.6,0.96,1.986
+Middle East (a)-16,Middle East (a),175,730.0,33.1,0.757,1.392
+Middle East (a)-17,Middle East (a),185,700.0,32.2,0.774,1.384
+Middle East (a)-18,Middle East (a),170,818.0,34.2,0.789,1.427
+Middle East (a)-19,Middle East (a),100,898.0,32.7,0.802,1.411
+Middle East (a)-20,Middle East (a),175,700.0,32.2,0.774,1.376
+Middle East (a)-21,Middle East (a),175,680.0,29.7,0.755,1.36
+Middle East (a)-22,Middle East (a),140,867.0,35.4,0.799,1.42
+Middle East (a)-23,Middle East (a),185,811.0,36.5,0.812,1.445
+Middle East (a)-24,Middle East (a),175,679.0,32.0,0.778,1.371
+Middle East (a)-25,Middle East (a),180,1151.0,39.9,0.894,1.636
+Middle East (a)-26,Middle East (a),175,665.0,30.8,0.766,1.34
+Middle East (a)-27,Middle East (a),160,811.0,36.5,0.812,1.421
+Middle East (a)-28,Middle East (a),175,693.0,33.2,0.774,1.406
+Middle East (a)-29,Middle East (a),140,700.0,32.2,0.774,1.352
+Middle East (a)-30,Middle East (a),100,818.0,34.2,0.789,1.365
+Middle East (a)-31,Middle East (a),145,1579.0,42.8,0.93,1.852
+Middle East (a)-32,Middle East (a),100,825.0,34.2,0.779,1.368
+Middle East (a)-33,Middle East (a),100,742.0,32.6,0.752,1.327
+Middle East (a)-34,Middle East (a),240,1143.0,39.4,0.951,1.682
+Middle East (a)-35,Middle East (a),140,811.0,36.5,0.812,1.403
+Middle East (a)-36,Middle East (a),160,1203.0,40.2,0.925,1.642
+Middle East (a)-37,Middle East (a),100,867.0,35.4,0.799,1.384
+Middle East (a)-38,Middle East (a),100,775.0,34.4,0.783,1.352
+Middle East (a)-39,Middle East (a),100,750.0,32.0,0.8,1.333
+Middle East (a)-40,Middle East (a),100,680.0,29.7,0.755,1.304
+Middle East (a)-41,Middle East (a),100,1507.0,39.3,0.951,1.718
+Middle East (a)-42,Middle East (a),100,700.0,32.2,0.774,1.323
+Middle East (a)-43,Middle East (a),200,1143.0,39.4,0.951,1.647
+Middle East (a)-44,Middle East (a),100,811.0,36.5,0.812,1.371
+Middle East (a)-45,Middle East (a),100,679.0,32.0,0.778,1.315
+Middle East (a)-46,Middle East (a),100,665.0,30.8,0.766,1.284
+Middle East (a)-47,Middle East (a),100,1579.0,42.8,0.93,1.786
+Middle East (a)-48,Middle East (a),170,602.0,33.0,0.803,1.323
+Middle East (a)-49,Middle East (a),100,693.0,33.2,0.774,1.349
+Middle East (a)-50,Middle East (a),200,746.0,36.1,0.907,1.44
+Middle East (a)-51,Middle East (a),100,1151.0,39.9,0.894,1.548
+Middle East (a)-52,Middle East (a),180,585.0,33.3,0.815,1.329
+Middle East (a)-53,Middle East (a),100,1203.0,40.2,0.925,1.576
+Middle East (a)-54,Middle East (a),175,567.0,34.5,0.782,1.318
+Middle East (a)-55,Middle East (a),200,805.0,39.1,0.929,1.479
+Middle East (a)-56,Middle East (a),175,498.0,30.1,0.798,1.279
+Middle East (a)-57,Middle East (a),160,521.0,30.1,0.801,1.274
+Middle East (a)-58,Middle East (a),100,1602.0,44.6,0.96,1.789
+Middle East (a)-59,Middle East (a),150,1143.0,39.4,0.951,1.599
+Middle East (a)-60,Middle East (a),135,521.0,30.1,0.801,1.257
+Middle East (a)-61,Middle East (a),140,585.0,33.3,0.815,1.3
+Middle East (a)-62,Middle East (a),165,469.0,28.8,0.824,1.272
+Middle East (a)-63,Middle East (a),150,746.0,36.1,0.907,1.398
+Middle East (a)-64,Middle East (a),175,580.0,38.1,0.802,1.316
+Middle East (a)-65,Middle East (a),145,421.0,21.9,0.799,1.213
+Middle East (a)-66,Middle East (a),100,602.0,33.0,0.803,1.273
+Middle East (a)-67,Middle East (a),100,1493.0,43.6,1.008,1.734
+Middle East (a)-68,Middle East (a),120,585.0,33.3,0.815,1.286
+Middle East (a)-69,Middle East (a),150,805.0,39.1,0.929,1.432
+Middle East (a)-70,Middle East (a),110,521.0,30.1,0.801,1.24
+Middle East (a)-71,Middle East (a),185,692.0,41.9,0.876,1.406
+Middle East (a)-72,Middle East (a),100,585.0,33.3,0.815,1.272
+Middle East (a)-73,Middle East (a),160,803.0,36.2,1.013,1.452
+Middle East (a)-74,Middle East (a),85,521.0,30.1,0.801,1.222
+Middle East (a)-75,Middle East (a),150,692.0,41.9,0.876,1.375
+Middle East (a)-76,Middle East (a),100,498.0,30.1,0.798,1.226
+Middle East (a)-77,Middle East (a),100,746.0,36.1,0.907,1.354
+Middle East (a)-78,Middle East (a),100,469.0,28.8,0.824,1.228
+Middle East (a)-79,Middle East (a),80,585.0,33.3,0.815,1.257
+Middle East (a)-80,Middle East (a),100,580.0,38.1,0.802,1.259
+Middle East (a)-81,Middle East (a),100,805.0,39.1,0.929,1.387
+Middle East (a)-82,Middle East (a),170,755.0,39.3,1.004,1.425
+Middle East (a)-83,Middle East (a),115,692.0,41.9,0.876,1.344
+Middle East (a)-84,Middle East (a),100,1087.0,38.0,1.056,1.533
+Middle East (a)-85,Middle East (a),80,692.0,41.9,0.876,1.313
+Middle East (a)-86,Middle East (a),100,803.0,36.2,1.013,1.397
+Middle East (a)-87,Middle East (a),165,347.0,26.1,0.933,1.203
+Middle East (a)-88,Middle East (a),125,755.0,39.3,1.004,1.387
+Middle East (a)-89,Middle East (a),180,412.0,31.0,0.973,1.28
+Middle East (a)-90,Middle East (a),150,560.0,38.6,1.002,1.327
+Middle East (a)-91,Middle East (a),185,417.0,31.2,0.98,1.267
+Middle East (a)-92,Middle East (a),150,389.0,28.2,1.002,1.226
+Middle East (a)-93,Middle East (a),100,347.0,26.1,0.933,1.165
+Middle East (a)-94,Middle East (a),160,412.0,31.0,0.973,1.259
+Middle East (a)-95,Middle East (a),160,417.0,31.2,0.98,1.25
+Middle East (a)-96,Middle East (a),160,331.0,28.4,0.921,1.21
+Middle East (a)-97,Middle East (a),80,755.0,39.3,1.004,1.347
+Middle East (a)-98,Middle East (a),130,412.0,31.0,0.973,1.238
+Middle East (a)-99,Middle East (a),155,469.0,36.5,0.96,1.291
+Middle East (a)-100,Middle East (a),130,417.0,31.2,0.98,1.229
+Middle East (a)-101,Middle East (a),160,302.0,28.9,0.931,1.188
+Middle East (a)-102,Middle East (a),80,389.0,28.2,1.002,1.177
+Middle East (a)-103,Middle East (a),130,469.0,36.5,0.96,1.246
+Middle East (a)-104,Middle East (a),100,412.0,31.0,0.973,1.216
+Middle East (a)-105,Middle East (a),100,331.0,28.4,0.921,1.156
+Middle East (a)-106,Middle East (a),100,512.0,37.0,1.01,1.262
+Middle East (a)-107,Middle East (a),100,417.0,31.2,0.98,1.208
+Middle East (a)-108,Middle East (a),74,560.0,38.6,1.002,1.269
+Middle East (a)-109,Middle East (a),190,433.0,31.2,1.188,1.268
+Middle East (a)-110,Middle East (a),185,265.0,22.8,1.058,1.18
+Middle East (a)-111,Middle East (a),100,302.0,28.9,0.931,1.152
+Middle East (a)-112,Middle East (a),150,433.0,31.2,1.188,1.245
+Middle East (a)-113,Middle East (a),160,232.0,27.2,0.989,1.152
+Middle East (a)-114,Middle East (a),175,196.0,32.1,0.942,1.141
+Middle East (a)-115,Middle East (a),100,265.0,22.8,1.058,1.132
+Middle East (a)-116,Middle East (a),100,433.0,31.2,1.188,1.215
+Middle East (a)-117,Middle East (a),80,189.0,27.9,1.031,1.102
+Middle East (a)-118,Middle East (a),100,196.0,32.1,0.942,1.097
+Middle East (a)-119,Middle East (a),165,266.0,37.3,1.192,1.22
+Middle East (a)-120,Middle East (a),145,266.0,37.3,1.192,1.191
+Middle East (a)-121,Middle East (a),160,127.0,25.1,1.025,1.114
+Middle East (a)-122,Middle East (a),155,141.0,27.5,1.072,1.125
+Middle East (a)-123,Middle East (a),105,266.0,37.3,1.192,1.163
+Middle East (a)-124,Middle East (a),120,127.0,25.1,1.025,1.096
+Middle East (a)-125,Middle East (a),130,141.0,27.5,1.072,1.11
+Middle East (a)-126,Middle East (a),220,158.0,27.1,1.308,1.169
+Middle East (a)-127,Middle East (a),205,168.0,30.5,1.367,1.173
+Middle East (a)-128,Middle East (a),170,62.0,31.6,0.875,1.045
+Middle East (a)-129,Middle East (a),160,104.0,27.4,1.126,1.098
+Middle East (a)-130,Middle East (a),165,168.0,30.5,1.367,1.148
+Middle East (a)-131,Middle East (a),185,79.0,23.5,1.146,1.099
+Middle East (a)-132,Middle East (a),205,100.0,26.0,1.247,1.124
+Middle East (a)-133,Middle East (a),125,168.0,30.5,1.367,1.125
+Middle East (a)-134,Middle East (a),160,74.0,27.4,1.093,1.078
+Middle East (a)-135,Middle East (a),145,79.0,23.5,1.146,1.08
+Middle East (a)-136,Middle East (a),120,74.0,27.4,1.093,1.059
+Middle East (a)-137,Middle East (a),155,103.0,25.4,1.335,1.108
+Middle East (a)-138,Middle East (a),190,45.0,21.8,1.123,1.079
+Middle East (a)-139,Middle East (a),205,44.0,30.2,1.05,1.093
+Middle East (a)-140,Middle East (a),160,61.0,26.2,1.272,1.083
+Middle East (a)-141,Middle East (a),160,45.0,21.8,1.123,1.065
+Middle East (a)-142,Middle East (a),140,61.0,26.2,1.272,1.066
+Middle East (a)-143,Middle East (a),165,44.0,30.2,1.05,1.072
+Middle East (a)-144,Middle East (a),190,61.0,25.4,1.356,1.09
+Middle East (a)-145,Middle East (a),155,80.0,28.5,1.297,1.091
+Middle East (a)-146,Middle East (a),130,45.0,21.8,1.123,1.051
+Middle East (a)-147,Middle East (a),100,61.0,26.2,1.272,1.047
+Middle East (a)-148,Middle East (a),125,44.0,30.2,1.05,1.052
+Middle East (a)-149,Middle East (a),160,61.0,25.4,1.356,1.075
+Middle East (a)-150,Middle East (a),160,39.0,19.4,1.251,1.061
+Middle East (a)-151,Middle East (a),130,61.0,25.4,1.356,1.059
+Middle East (a)-152,Middle East (a),190,29.0,23.6,1.185,1.075
+Middle East (a)-153,Middle East (a),120,39.0,19.4,1.251,1.045
+Middle East (a)-154,Middle East (a),160,29.0,23.6,1.185,1.061
+Middle East (a)-155,Middle East (a),100,46.0,38.9,1.105,1.039
+Middle East (a)-156,Middle East (a),200,26.0,29.2,1.182,1.083
+Middle East (a)-157,Middle East (a),130,29.0,23.6,1.185,1.047
+Middle East (a)-158,Middle East (a),100,29.0,23.6,1.185,1.032
+Middle East (a)-159,Middle East (a),160,26.0,29.2,1.182,1.062
+Middle East (a)-160,Middle East (a),120,26.0,29.2,1.182,1.041
+Middle East (b)-1,Middle East (b),160,104.0,27.5,1.126,1.098
+Middle East (b)-2,Middle East (b),100,433.0,31.1,1.188,1.215
+Middle East (b)-3,Middle East (b),153,305.0,37.0,0.918,1.223
+Middle East (b)-4,Middle East (b),244,631.0,33.4,1.047,1.489
+Middle East (b)-5,Middle East (b),100,580.0,38.2,0.802,1.259
+Middle East (b)-6,Middle East (b),240,408.0,37.8,0.856,1.393
+Middle East (b)-7,Middle East (b),239,466.0,39.0,0.972,1.36
+Middle East (b)-8,Middle East (b),220,464.0,35.6,0.836,1.291
+Middle East (b)-9,Middle East (b),232,730.0,45.6,0.68,1.674
+Middle East (b)-10,Middle East (b),180,604.0,36.6,0.669,1.331
+Middle East (b)-11,Middle East (b),185,811.0,36.6,0.812,1.445
+Middle East (b)-12,Middle East (b),193,1039.0,33.0,0.91,1.61
+Middle East (b)-13,Middle East (b),291,1172.0,52.0,0.758,2.01
+Middle East (b)-14,Middle East (b),218,1295.0,34.0,0.831,1.772
+Middle East (b)-15,Middle East (b),306,1393.0,43.8,0.9,2.027
+Middle East (b)-16,Middle East (b),193,1052.0,37.4,0.767,1.577
+Middle East (b)-17,Middle East (b),200,891.0,28.0,0.975,1.38
+Middle East (b)-18,Middle East (b),249,1452.0,47.6,1.034,1.901
+Middle East (b)-19,Middle East (b),231,1784.0,36.2,0.827,2.055
+Middle East (b)-20,Middle East (b),250,2216.0,33.6,0.909,2.16
+Middle East (b)-21,Middle East (b),288,1745.0,41.7,0.708,2.1
+Middle East (b)-22,Middle East (b),297,3020.0,45.2,0.708,2.887
+North Sea-1,North Sea,260,1409.0,42.5,0.799,1.854
+North Sea-2,North Sea,230,756.0,35.2,0.759,1.442
+North Sea-3,North Sea,245,1924.0,38.0,0.935,2.21
+North Sea-4,North Sea,230,950.0,31.7,0.98,1.589
+North Sea-5,North Sea,250,1623.0,39.2,0.761,1.918
+North Sea-6,North Sea,180,909.0,38.0,0.732,1.434
+North Sea-7,North Sea,180,1280.0,38.6,0.756,1.664
+North Sea-8,North Sea,193,1052.0,37.4,0.767,1.577
+North Sea-9,North Sea,210,1039.0,39.2,0.946,1.596
+North Sea-10,North Sea,254,2060.0,38.6,0.753,2.186
+North Sea-11,North Sea,245,1450.0,43.0,0.793,1.846
+North Sea-12,North Sea,100,181.0,37.6,1.024,1.146
+North Sea-13,North Sea,80,90.0,37.4,1.269,1.092
+North Sea-14,North Sea,155,338.0,43.0,0.998,1.204
+North Sea-15,North Sea,80,169.0,42.5,1.265,1.087
+North Sea-16,North Sea,100,200.0,38.2,1.054,1.105
+North Sea-17,North Sea,270,1361.0,37.4,0.721,1.784
+North Sea-18,North Sea,225,256.0,37.6,1.049,1.218
+North Sea-19,North Sea,280,2036.0,36.2,0.76,2.11
+North Sea-20,North Sea,270,1950.0,32.5,0.894,1.784
+North Sea-21,North Sea,250,2216.0,33.6,0.909,2.16
+North Sea-22,North Sea,254,2637.0,34.8,0.889,2.588
+North Sea-23,North Sea,210,770.0,44.7,0.729,1.45
+North Sea-24,North Sea,147,889.0,43.4,0.849,1.474
+North Sea-25,North Sea,211,459.0,22.3,0.65,1.23
+North Sea-26,North Sea,210,267.0,34.8,1.173,1.217
+North Sea-27,North Sea,230,853.0,41.7,1.158,1.515
+North Sea-28,North Sea,230,1258.0,40.9,1.033,1.755
+North Sea-29,North Sea,230,1124.0,41.5,1.023,1.68
+North Sea-30,North Sea,240,840.0,27.8,1.248,1.593
+North Sea-31,North Sea,200,891.0,28.4,0.975,1.38
+North Sea-32,North Sea,200,887.0,28.7,0.968,1.41
+North Sea-33,North Sea,235,1718.0,42.3,1.0,1.996
+North Sea-34,North Sea,223,1850.0,40.2,1.053,2.126
+North Sea-35,North Sea,200,228.0,32.7,1.276,1.162
+North Sea-36,North Sea,220,780.0,40.4,0.868,1.483
+North Sea-37,North Sea,220,620.0,29.1,0.973,1.382
+North Sea-38,North Sea,248,1344.0,48.1,0.985,1.85
+North Sea-39,North Sea,249,1452.0,47.6,1.034,1.901
+North Sea-40,North Sea,242,688.0,36.6,0.71,1.406
+North Sea-41,North Sea,253,326.0,37.2,0.863,1.326
+Pakistan-1,Pakistan,250,2249.0,56.5,1.0608,2.916
+Pakistan-2,Pakistan,248,557.0,37.2,1.1955,1.468
+Pakistan-3,Pakistan,248,486.0,37.2,1.2468,1.432
+Pakistan-4,Pakistan,248,433.0,37.2,1.2955,1.404
+Pakistan-5,Pakistan,248,381.0,37.2,1.3539,1.378
+Pakistan-6,Pakistan,248,328.0,37.2,1.4272,1.352
+Pakistan-7,Pakistan,248,273.0,37.2,1.5264,1.322
+Pakistan-8,Pakistan,248,215.0,37.2,1.6611,1.292
+Pakistan-9,Pakistan,248,144.0,37.2,1.8583,1.246
+Pakistan-10,Pakistan,248,96.0,37.2,1.981,1.214
+Pakistan-11,Pakistan,245,1340.0,29.3,1.0713,1.921
+Pakistan-12,Pakistan,188,2371.0,39.5,0.8253,2.365
+Pakistan-13,Pakistan,248,663.0,38.5,1.3205,1.522
+Pakistan-14,Pakistan,248,603.0,38.5,1.3692,1.493
+Pakistan-15,Pakistan,248,547.0,38.5,1.4241,1.465
+Pakistan-16,Pakistan,248,490.0,38.5,1.4923,1.438
+Pakistan-17,Pakistan,248,432.0,38.5,1.5775,1.409
+Pakistan-18,Pakistan,248,376.0,38.5,1.6801,1.38
+Pakistan-19,Pakistan,248,316.0,38.5,1.818,1.35
+Pakistan-20,Pakistan,248,251.0,38.5,2.0083,1.314
+Pakistan-21,Pakistan,248,192.0,38.5,2.2297,1.278
+Pakistan-22,Pakistan,248,152.0,38.5,2.412,1.248
+Pakistan-23,Pakistan,229,435.0,40.5,1.403,1.375
+Pakistan-24,Pakistan,229,379.0,40.5,1.4905,1.35
+Pakistan-25,Pakistan,229,335.0,40.5,1.5762,1.329
+Pakistan-26,Pakistan,229,288.0,40.5,1.6918,1.306
+Pakistan-27,Pakistan,229,239.0,40.5,1.8545,1.282
+Pakistan-28,Pakistan,229,182.0,40.5,2.0949,1.25
+Pakistan-29,Pakistan,229,145.0,40.5,2.3,1.227
+Pakistan-30,Pakistan,222,1321.0,29.0,1.2613,1.94
+Pakistan-31,Pakistan,222,1210.0,29.0,1.3003,1.844
+Pakistan-32,Pakistan,222,1074.0,29.0,1.3595,1.753
+Pakistan-33,Pakistan,222,937.0,29.0,1.4356,1.681
+Pakistan-34,Pakistan,222,802.0,29.0,1.5338,1.61
+Pakistan-35,Pakistan,222,670.0,29.0,1.664,1.541
+Pakistan-36,Pakistan,222,506.0,29.0,1.8954,1.467
+Pakistan-37,Pakistan,222,340.0,29.0,2.252,1.386
+Pakistan-38,Pakistan,232,550.0,39.9,1.3428,1.46
+Pakistan-39,Pakistan,232,496.0,39.9,1.3898,1.431
+Pakistan-40,Pakistan,232,446.0,39.9,1.4407,1.403
+Pakistan-41,Pakistan,232,395.0,39.9,1.5022,1.376
+Pakistan-42,Pakistan,232,342.0,39.9,1.5808,1.348
+Pakistan-43,Pakistan,232,288.0,39.9,1.6839,1.32
+Pakistan-44,Pakistan,232,228.0,39.9,1.8442,1.286
+Pakistan-45,Pakistan,232,180.0,39.9,2.037,1.253
+Pakistan-46,Pakistan,217,512.0,41.0,1.1836,1.416
+Pakistan-47,Pakistan,217,468.0,41.0,1.2194,1.391
+Pakistan-48,Pakistan,217,419.0,41.0,1.2671,1.363
+Pakistan-49,Pakistan,217,369.0,41.0,1.326,1.324
+Pakistan-50,Pakistan,217,316.0,41.0,1.4037,1.3
+Pakistan-51,Pakistan,217,259.0,41.0,1.5126,1.278
+Pakistan-52,Pakistan,217,196.0,41.0,1.6882,1.248
+Pakistan-53,Pakistan,217,145.0,41.0,1.867,1.217
+Pakistan-54,Pakistan,188,556.0,42.6,1.2595,1.394
+Pakistan-55,Pakistan,188,509.0,42.6,1.3058,1.373
+Pakistan-56,Pakistan,188,462.0,42.6,1.3614,1.354
+Pakistan-57,Pakistan,188,419.0,42.6,1.4231,1.335
+Pakistan-58,Pakistan,188,378.0,42.6,1.4938,1.318
+Pakistan-59,Pakistan,188,330.0,42.6,1.5954,1.298
+Pakistan-60,Pakistan,188,280.0,42.6,1.7311,1.275
+Pakistan-61,Pakistan,188,225.0,42.6,1.9298,1.247
+Pakistan-62,Pakistan,188,165.0,42.6,2.245,1.215
+Pakistan-63,Pakistan,296,1977.0,39.9,1.4071,2.619
+Pakistan-64,Pakistan,296,1757.0,39.9,1.4613,2.475
+Pakistan-65,Pakistan,296,1536.0,39.9,1.5337,2.331
+Pakistan-66,Pakistan,296,1340.0,39.9,1.6191,2.203
+Pakistan-67,Pakistan,296,1169.0,39.9,1.7167,2.092
+Pakistan-68,Pakistan,296,1018.0,39.9,1.8277,1.995
+Pakistan-69,Pakistan,296,884.0,39.9,1.9523,1.91
+Pakistan-70,Pakistan,296,760.0,39.9,2.0951,1.832
+Pakistan-71,Pakistan,296,628.0,39.9,2.2811,1.747
+Pakistan-72,Pakistan,296,470.0,39.9,2.5585,1.633
+Pakistan-73,Pakistan,296,379.0,39.9,2.7812,1.599
+Pakistan-74,Pakistan,296,317.0,39.9,2.98,1.504
+Pakistan-75,Pakistan,281,2496.0,31.9,1.1545,2.713
+Pakistan-76,Pakistan,281,1458.0,31.9,1.1888,1.981
+Pakistan-77,Pakistan,281,1074.0,31.9,1.441,1.777
+Pakistan-78,Pakistan,281,827.0,31.9,1.6839,1.658
+Pakistan-79,Pakistan,281,615.0,31.9,1.922,1.552
+Pakistan-80,Pakistan,281,407.0,31.9,2.5098,1.449
+Pakistan-81,Pakistan,281,248.0,31.9,3.4445,1.351
+Pakistan-82,Pakistan,237,470.0,39.4,1.5337,1.418
+Pakistan-83,Pakistan,237,433.0,39.4,1.5922,1.401
+Pakistan-84,Pakistan,237,398.0,39.4,1.6561,1.385
+Pakistan-85,Pakistan,237,362.0,39.4,1.7323,1.369
+Pakistan-86,Pakistan,237,325.0,39.4,1.8241,1.35
+Pakistan-87,Pakistan,237,285.0,39.4,1.9424,1.33
+Pakistan-88,Pakistan,237,241.0,39.4,2.0908,1.305
+Pakistan-89,Pakistan,237,190.0,39.4,2.2778,1.275
+Pakistan-90,Pakistan,237,158.0,39.4,2.4141,1.253
+Pakistan-91,Pakistan,237,130.0,39.4,2.55,1.238
+Pakistan-92,Pakistan,237,357.0,39.5,1.2435,1.349
+Pakistan-93,Pakistan,237,330.0,39.5,1.2758,1.335
+Pakistan-94,Pakistan,237,299.0,39.5,1.3184,1.318
+Pakistan-95,Pakistan,237,268.0,39.5,1.3687,1.303
+Pakistan-96,Pakistan,237,236.0,39.5,1.4307,1.287
+Pakistan-97,Pakistan,237,202.0,39.5,1.5137,1.268
+Pakistan-98,Pakistan,237,166.0,39.5,1.6281,1.248
+Pakistan-99,Pakistan,237,126.0,39.5,1.7897,1.225
+Pakistan-100,Pakistan,237,92.0,39.5,1.97,1.2
+Pakistan-101,Pakistan,254,885.0,42.2,1.6334,1.804
+Pakistan-102,Pakistan,254,821.0,42.2,1.6891,1.771
+Pakistan-103,Pakistan,254,744.0,42.2,1.7673,1.73
+Pakistan-104,Pakistan,254,666.0,42.2,1.8614,1.685
+Pakistan-105,Pakistan,254,588.0,42.2,1.9736,1.639
+Pakistan-106,Pakistan,254,505.0,42.2,2.1152,1.588
+Pakistan-107,Pakistan,254,411.0,42.2,2.2987,1.523
+Pakistan-108,Pakistan,254,333.0,42.2,2.465,1.461
+Pakistan-109,Pakistan,254,276.0,42.2,2.5868,1.411
+Pakistan-110,Pakistan,254,213.0,42.2,2.708,1.351
+Pakistan-111,Pakistan,246,635.0,38.8,1.3362,1.524
+Pakistan-112,Pakistan,246,567.0,38.8,1.3907,1.491
+Pakistan-113,Pakistan,246,515.0,38.8,1.4422,1.463
+Pakistan-114,Pakistan,246,468.0,38.8,1.4985,1.436
+Pakistan-115,Pakistan,246,414.0,38.8,1.5786,1.41
+Pakistan-116,Pakistan,246,360.0,38.8,1.6812,1.383
+Pakistan-117,Pakistan,246,302.0,38.8,1.8202,1.353
+Pakistan-118,Pakistan,246,240.0,38.8,2.01,1.319
+Pakistan-119,Pakistan,246,181.0,38.8,2.2408,1.28
+Pakistan-120,Pakistan,246,141.0,38.8,2.428,1.247
+Pakistan-121,Pakistan,255,586.0,38.1,1.4828,1.503
+Pakistan-122,Pakistan,255,517.0,38.1,1.5577,1.467
+Pakistan-123,Pakistan,255,458.0,38.1,1.6374,1.436
+Pakistan-124,Pakistan,255,403.0,38.1,1.7274,1.407
+Pakistan-125,Pakistan,255,342.0,38.1,1.8473,1.373
+Pakistan-126,Pakistan,255,280.0,38.1,1.9971,1.335
+Pakistan-127,Pakistan,255,204.0,38.1,2.2229,1.286
+Pakistan-128,Pakistan,255,156.0,38.1,2.409,1.249
+Pakistan-129,Pakistan,248,582.0,38.1,1.4367,1.511
+Pakistan-130,Pakistan,248,519.0,38.1,1.5069,1.476
+Pakistan-131,Pakistan,248,466.0,38.1,1.5795,1.449
+Pakistan-132,Pakistan,248,413.0,38.1,1.6682,1.421
+Pakistan-133,Pakistan,248,360.0,38.1,1.7782,1.392
+Pakistan-134,Pakistan,248,302.0,38.1,1.9308,1.358
+Pakistan-135,Pakistan,248,230.0,38.1,2.1583,1.312
+Pakistan-136,Pakistan,248,180.0,38.1,2.342,1.276
+Pakistan-137,Pakistan,252,936.0,43.8,1.6433,1.821
+Pakistan-138,Pakistan,252,850.0,43.8,1.7173,1.777
+Pakistan-139,Pakistan,252,768.0,43.8,1.8015,1.733
+Pakistan-140,Pakistan,252,683.0,43.8,1.905,1.685
+Pakistan-141,Pakistan,252,601.0,43.8,2.0267,1.637
+Pakistan-142,Pakistan,252,517.0,43.8,2.1753,1.584
+Pakistan-143,Pakistan,252,416.0,43.8,2.3873,1.514
+Pakistan-144,Pakistan,252,347.0,43.8,2.5466,1.459
+Pakistan-145,Pakistan,252,278.0,43.8,2.688,1.404
+Pakistan-146,Pakistan,244,542.0,37.5,1.3248,1.456
+Pakistan-147,Pakistan,244,474.0,37.5,1.3929,1.423
+Pakistan-148,Pakistan,244,423.0,37.5,1.4575,1.398
+Pakistan-149,Pakistan,244,371.0,37.5,1.5385,1.371
+Pakistan-150,Pakistan,244,318.0,37.5,1.6421,1.344
+Pakistan-151,Pakistan,244,261.0,37.5,1.7871,1.313
+Pakistan-152,Pakistan,244,199.0,37.5,1.9937,1.277
+Pakistan-153,Pakistan,244,147.0,37.5,2.209,1.241
+Pakistan-154,Pakistan,182,373.0,42.1,1.3044,1.312
+Pakistan-155,Pakistan,182,335.0,42.1,1.3583,1.296
+Pakistan-156,Pakistan,182,295.0,42.1,1.4276,1.278
+Pakistan-157,Pakistan,182,250.0,42.1,1.5269,1.258
+Pakistan-158,Pakistan,182,192.0,42.1,1.7078,1.235
+Pakistan-159,Pakistan,182,151.0,42.1,1.887,1.213
+Pakistan-160,Pakistan,255,565.0,39.2,1.7224,1.553
+Pakistan-161,Pakistan,255,512.0,39.2,1.8103,1.527
+Pakistan-162,Pakistan,255,462.0,39.2,1.9093,1.501
+Pakistan-163,Pakistan,255,410.0,39.2,2.0323,1.473
+Pakistan-164,Pakistan,255,351.0,39.2,2.2019,1.441
+Pakistan-165,Pakistan,255,294.0,39.2,2.3952,1.405
+Pakistan-166,Pakistan,255,257.0,39.2,2.531,1.378
+United Arab Emirates-1,United Arab Emirates,231,1784.0,36.2,0.827,2.055
+United Arab Emirates-2,United Arab Emirates,252,2217.0,37.4,0.825,2.493
+United Arab Emirates-3,United Arab Emirates,219,1417.0,33.6,0.861,1.858
+United Arab Emirates-4,United Arab Emirates,218,1325.0,36.6,0.844,1.816
+United Arab Emirates-5,United Arab Emirates,216,1408.0,33.9,0.838,1.801
+United Arab Emirates-6,United Arab Emirates,218,1260.0,36.6,0.851,1.711
+United Arab Emirates-7,United Arab Emirates,255,2266.0,36.8,0.849,2.422
+United Arab Emirates-8,United Arab Emirates,218,1295.0,34.0,0.831,1.772
+United Arab Emirates-9,United Arab Emirates,266,1561.0,38.0,0.851,2.048
+United Arab Emirates-10,United Arab Emirates,238,1184.0,36.4,0.798,1.779
+United Arab Emirates-11,United Arab Emirates,219,886.0,40.3,0.806,1.536
+United Arab Emirates-12,United Arab Emirates,250,1246.0,39.6,0.91,1.852
+United Arab Emirates-13,United Arab Emirates,228,1102.0,40.3,0.861,1.707
+United Arab Emirates-14,United Arab Emirates,226,1018.0,31.2,0.865,1.647
+United Arab Emirates-15,United Arab Emirates,230,1186.0,37.6,0.825,1.753
+United Arab Emirates-16,United Arab Emirates,240,1439.0,36.9,0.924,1.946
+United Arab Emirates-17,United Arab Emirates,230,1008.0,37.5,0.841,1.65
+United Arab Emirates-18,United Arab Emirates,218,1016.0,36.8,0.942,1.686
+United Arab Emirates-19,United Arab Emirates,230,941.0,36.6,1.036,1.677
+United Arab Emirates-20,United Arab Emirates,220,963.0,36.8,0.865,1.572
+United Arab Emirates-21,United Arab Emirates,229,948.2,37.2,1.061,1.619
+United Arab Emirates-22,United Arab Emirates,250,816.0,31.3,0.873,1.571
+United Arab Emirates-23,United Arab Emirates,220,889.0,39.6,0.899,1.602
+United Arab Emirates-24,United Arab Emirates,229,882.0,35.2,1.063,1.62
+United Arab Emirates-25,United Arab Emirates,243,765.0,31.8,0.923,1.556
+United Arab Emirates-26,United Arab Emirates,234,737.0,34.5,0.936,1.533
+United Arab Emirates-27,United Arab Emirates,250,523.0,35.6,0.838,1.422
+United Arab Emirates-28,United Arab Emirates,216,554.0,31.7,0.975,1.416
+United Arab Emirates-29,United Arab Emirates,244,631.0,33.5,1.047,1.489
+United Arab Emirates-30,United Arab Emirates,239,583.0,32.2,1.054,1.475
+United Arab Emirates-31,United Arab Emirates,239,537.0,29.4,0.989,1.424
+United Arab Emirates-32,United Arab Emirates,226,554.0,35.8,0.958,1.478
+United Arab Emirates-33,United Arab Emirates,212,490.0,31.7,0.959,1.342
+United Arab Emirates-34,United Arab Emirates,275,587.0,39.6,1.116,1.523
+United Arab Emirates-35,United Arab Emirates,254,390.0,36.3,0.923,1.364
+United Arab Emirates-36,United Arab Emirates,213,439.0,32.1,1.145,1.345
+United Arab Emirates-37,United Arab Emirates,215,364.0,28.4,0.987,1.29
+United Arab Emirates-38,United Arab Emirates,212,405.0,29.7,1.079,1.322
+United Arab Emirates-39,United Arab Emirates,220,457.0,36.0,1.05,1.412
+United Arab Emirates-40,United Arab Emirates,220,406.0,34.5,1.048,1.334
+United Arab Emirates-41,United Arab Emirates,190,446.0,35.4,0.98,1.335
+United Arab Emirates-42,United Arab Emirates,234,409.0,29.5,1.087,1.328
+United Arab Emirates-43,United Arab Emirates,232,408.0,30.2,1.069,1.346
+United Arab Emirates-44,United Arab Emirates,213,392.0,34.2,1.061,1.305
+United Arab Emirates-45,United Arab Emirates,234,393.0,32.0,1.09,1.34
+United Arab Emirates-46,United Arab Emirates,230,333.0,28.2,1.055,1.322
+United Arab Emirates-47,United Arab Emirates,230,343.0,30.6,1.16,1.301
+United Arab Emirates-48,United Arab Emirates,235,242.0,30.1,1.2,1.24
+United Arab Emirates-49,United Arab Emirates,216,265.0,29.4,1.144,1.252
+United Arab Emirates-50,United Arab Emirates,218,209.0,29.0,1.29,1.216
+United Arab Emirates-51,United Arab Emirates,220,181.0,35.0,1.278,1.238

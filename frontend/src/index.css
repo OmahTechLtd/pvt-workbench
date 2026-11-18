@@ -1,0 +1,189 @@
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  color: #1f2937;
+  background: #f8fafc;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 230px;
+  flex-shrink: 0;
+  background: #0b1f3a;
+  padding: 20px 12px;
+}
+
+.sidebar h2 {
+  color: white;
+  font-size: 18px;
+  margin: 0 8px 24px;
+}
+
+.sidebar a {
+  display: block;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 10px 12px;
+  border-radius: 6px;
+  margin-bottom: 4px;
+}
+
+.sidebar a.active {
+  background: #2563eb;
+  color: white;
+}
+
+.content {
+  flex: 1;
+  padding: 32px;
+  max-width: 900px;
+}
+
+h1 {
+  font-size: 26px;
+  margin: 0 0 4px;
+}
+
+.subtitle {
+  color: #64748b;
+  margin: 0 0 24px;
+}
+
+.segmented {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.seg {
+  padding: 8px 14px;
+  border: 1px solid #cbd5e1;
+  background: white;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.seg.active {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card h2 {
+  font-size: 16px;
+  margin: 0 0 14px;
+}
+
+.field {
+  display: block;
+  margin-bottom: 14px;
+}
+
+.field span {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.field input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.check {
+  display: block;
+  padding: 6px 0;
+}
+
+.primary {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.primary:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+}
+
+.hint {
+  color: #b45309;
+  font-size: 14px;
+}
+
+.error {
+  color: #b91c1c;
+}
+
+.note {
+  color: #64748b;
+  font-size: 13px;
+  margin-bottom: 0;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px 12px;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+th {
+  font-size: 13px;
+  color: #64748b;
+  background: #f1f5f9;
+}
+
+@media (max-width: 760px) {
+  .layout {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: auto;
+  }
+  .panels {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chart {
+  margin-top: 24px;
+}
