@@ -15,17 +15,16 @@ export const GROUPS = [
     title: "Estimate properties",
     blurb: "No lab report yet? Compare published correlations side by side.",
     items: [
-      { to: "/properties", label: "Oil Properties", text: "Rs, bubble point and Bo from every method that applies, plus gravity, compressibility, density and two-phase factors." },
+      { to: "/properties", label: "Oil Properties", text: "Rs, bubble point and Bo from every method that applies, plus gravity, compressibility, density and two-phase factors. Test the methods on measured data." },
       { to: "/viscosity", label: "Oil Viscosity", text: "Dead, saturated and undersaturated oil viscosity." },
       { to: "/tension", label: "Surface Tension", text: "Oil-gas interfacial tension." },
     ],
   },
   {
     step: "3",
-    title: "Check against lab data",
-    blurb: "Test the methods on measurements and check the lab report itself.",
+    title: "Check a lab report",
+    blurb: "Test a PVT lab report for consistency and put it on the basis you need.",
     items: [
-      { to: "/dataset", label: "Dataset Analysis", text: "Rank methods by error on your own measured points." },
       { to: "/lab", label: "Lab PVT Analysis", text: "Quality-check constant composition, differential and separator tests." },
     ],
   },

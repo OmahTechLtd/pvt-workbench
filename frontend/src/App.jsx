@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, NavLink, Navigate, Route, Routes, useLocation } from "react-router-dom";
 import Home from "./pages/Home.jsx";
-import Dataset from "./pages/Dataset.jsx";
 import Classification from "./pages/Classification.jsx";
 import PlusFraction from "./pages/PlusFraction.jsx";
 import PhaseDiagram from "./pages/PhaseDiagram.jsx";
@@ -92,7 +91,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/single" element={<Navigate to="/properties" replace />} />
-          <Route path="/dataset" element={<Dataset />} />
+          <Route path="/dataset" element={<Navigate to="/properties?view=data" replace />} />
           <Route path="/classification" element={<Classification />} />
           <Route path="/phase" element={<PhaseDiagram />} />
           <Route path="/fraction" element={<PlusFraction />} />

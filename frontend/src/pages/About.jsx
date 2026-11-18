@@ -32,7 +32,7 @@ export default function About() {
         <ul>
           <li>It does not replace a laboratory PVT study. Correlations estimate; a good sample measured at reservoir conditions is better.</li>
           <li>It does not tune a correlation to your crude or recommend one method yet. Today it shows how each method performs, so you can decide with evidence.</li>
-          <li>Most correlations were built on crudes from other regions. Compare them with your own measurements before relying on one, using <Link to="/dataset">Dataset Analysis</Link>.</li>
+          <li>Most correlations were built on crudes from other regions. Compare them with your own measurements before relying on one, using <Link to="/properties?view=data">Test on data</Link>.</li>
           <li>Material balance covers the straight-line methods, drive indexes, saturations and the Tracy form. Aquifer models and gravity-drainage rates are not included.</li>
           <li>It is not a reservoir simulator and it does not do compositional equation-of-state work.</li>
         </ul>
@@ -44,7 +44,7 @@ export default function About() {
           Methods and worked examples come from Ahmed, T., <em>Reservoir Engineering Handbook</em>, 5th ed., which each page cites by equation and page.
         </p>
         <p>
-          Dataset Analysis uses Ramirez-Dolores, C. (2025), <em>PVT Oil Property Data for Oilfields in Africa, Alaska, Malaysia, Middle East, North Sea, Pakistan and United Arab Emirates</em>,
+          The Test on data view uses Ramirez-Dolores, C. (2025), <em>PVT Oil Property Data for Oilfields in Africa, Alaska, Malaysia, Middle East, North Sea, Pakistan and United Arab Emirates</em>,
           Mendeley Data, <a href="https://doi.org/10.17632/6mttycsgbw.1" target="_blank" rel="noreferrer">doi.org/10.17632/6mttycsgbw.1</a>, licensed CC BY 4.0.
           The authors compiled it from published studies, so the individual measurements belong to those studies.
         </p>

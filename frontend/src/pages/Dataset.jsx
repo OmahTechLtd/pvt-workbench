@@ -23,7 +23,7 @@ const PROP_NAMES = {
 // The column that holds the measured value for each property
 const MEASURED_COLUMN = { rs: "rs_measured", pb: "p_psia", bo: "bo" };
 
-function Dataset() {
+function Dataset({ embedded = false }) {
   const [methods, setMethods] = useState(null);
   const [builtin, setBuiltin] = useState(null);
   const [loadError, setLoadError] = useState(null);
@@ -181,7 +181,7 @@ function Dataset() {
 
   return (
     <div>
-      <h1>Dataset Analysis</h1>
+      {!embedded && <h1>Dataset Analysis</h1>}
       <p className="subtitle">
         Score the correlations against many measured records and see which ones fit best.
       </p>
