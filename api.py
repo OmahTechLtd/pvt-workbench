@@ -4,6 +4,7 @@ from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from analyze import AnalyzeRequest, analyze, builtin_summary
+from recommend import RecommendRequest, recommend
 from classification import ClassifyRequest, classify_dataset, classify_endpoint, criteria
 from lab_pvt import (AdjustIn, CCEIn, DLIn, ExtrapolateIn, GPMIn, GasCondIn, NewPbIn, SepIn, compute_adjust,
                      compute_cce, compute_dl, compute_gas_condensate, compute_gpm, compute_new_pb, compute_separator,
@@ -88,6 +89,11 @@ def dataset_builtin():
 @app.post("/analyze")
 def analyze_dataset(req: AnalyzeRequest):
     return analyze(req)
+
+
+@app.post("/recommend")
+def recommend_method(req: RecommendRequest):
+    return recommend(req)
 
 
 # ---- Oil classification ----

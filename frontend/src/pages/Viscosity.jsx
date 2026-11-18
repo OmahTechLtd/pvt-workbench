@@ -183,8 +183,8 @@ function Viscosity() {
       )}
 
       {ver && (
-        <section className="card">
-          <h2>Check against a published example</h2>
+        <details className="card checks">
+          <summary>Check against a published example</summary>
           <p>Six oils from a published example. The calculated values are compared with the published results and average absolute errors (AAE).</p>
           <VerifyTable title="Dead oil" rows={ver.dead} measured={ver.measured.dead} />
           <VerifyTable title="Saturated oil (starting from the measured dead-oil viscosity)" rows={ver.saturated} measured={ver.measured.saturated} />
@@ -195,7 +195,7 @@ function Viscosity() {
               {n}
             </p>
           ))}
-        </section>
+        </details>
       )}
     </div>
   );

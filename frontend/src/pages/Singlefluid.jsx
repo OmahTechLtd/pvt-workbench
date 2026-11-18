@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Recommend from "../components/Recommend.jsx";
 import {
   Bar,
   BarChart,
@@ -256,6 +257,8 @@ function SingleFluid({ embedded = false }) {
         </p>
       )}
       {runError && <p className="error">Something went wrong: {runError}</p>}
+
+      <Recommend prop={prop} api={values.api} />
 
       {results && (
         <section className="card">

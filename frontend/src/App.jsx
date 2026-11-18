@@ -40,6 +40,8 @@ function App() {
   const [theme, setTheme] = useTheme();
   const [open, setOpen] = useState(false);
   const loc = useLocation();
+  const v = new URLSearchParams(loc.search).get("view");
+  const view = v === "other" || v === "data" ? v : "compare";
 
   useEffect(() => {
     setOpen(false);
@@ -51,7 +53,7 @@ function App() {
       <nav className={"sidebar" + (open ? " open" : "")} aria-label="Main">
         <Link to="/" className="brand">
           <strong>PVT Workbench</strong>
-          <span>Estimate. Compare. Evaluate.</span>
+          <span>OmahTech</span>
         </Link>
         <button className="menubtn" onClick={() => setOpen((o) => !o)} aria-expanded={open}>
           {open ? "Close" : "Menu"}
@@ -62,16 +64,21 @@ function App() {
               Home
             </NavLink>
           </div>
-          {GROUPS.map((g, i) => (
+          {GROUPS.map((g) => (
             <div className="navgroup" key={g.title}>
-              <h3>
-                {g.step ? <b>{g.step}</b> : null}
-                {g.title}
-              </h3>
+              <h3>{g.title}</h3>
               {g.items.map((item) => (
-                <NavLink key={item.to} to={item.to} className="navlink">
-                  {item.label}
-                </NavLink>
+                <div key={item.to}>
+                  <NavLink to={item.to} className="navlink" end={!!item.children}>
+                    {item.label}
+                  </NavLink>
+                  {item.children &&
+                    item.children.map((c) => (
+                      <Link key={c.view} to={c.to} className={"navlink sub" + (loc.pathname === "/properties" && c.view === view ? " active" : "")}>
+                        {c.label}
+                      </Link>
+                    ))}
+                </div>
               ))}
             </div>
           ))}

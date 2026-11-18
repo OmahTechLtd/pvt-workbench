@@ -1,47 +1,48 @@
-// One list drives both the sidebar and the Home page, so they cannot drift apart.
+// One list drives the sidebar and the Home page, so they cannot drift apart.
+// An item with `children` shows them as indented links under it. A child's `view` is the ?view= value of the Oil Properties page.
 export const GROUPS = [
   {
-    step: "1",
     title: "Describe the fluid",
-    blurb: "Know what you are dealing with before choosing a method.",
     items: [
-      { to: "/classification", label: "Oil Classification", text: "Black oil, volatile oil or something else, from your gas-oil ratio, gravity and colour." },
-      { to: "/fraction", label: "Plus Fraction", text: "Characterise the heavy end of a compositional analysis." },
-      { to: "/phase", label: "Phase Diagrams", text: "See where your fluid sits relative to the two-phase envelope." },
+      { to: "/classification", label: "Oil Classification", text: "Black oil, volatile oil or something else, from published limits" },
+      { to: "/fraction", label: "Plus Fraction", text: "Critical properties of the heptanes-plus fraction" },
+      { to: "/phase", label: "Phase Diagrams", text: "Pressure and temperature diagrams for the four oil types" },
     ],
   },
   {
-    step: "2",
     title: "Estimate properties",
-    blurb: "No lab report yet? Compare published correlations side by side.",
     items: [
-      { to: "/properties", label: "Oil Properties", text: "Rs, bubble point and Bo from every method that applies, plus gravity, compressibility, density and two-phase factors. Test the methods on measured data." },
-      { to: "/viscosity", label: "Oil Viscosity", text: "Dead, saturated and undersaturated oil viscosity." },
-      { to: "/tension", label: "Surface Tension", text: "Oil-gas interfacial tension." },
+      {
+        to: "/properties",
+        label: "Oil Properties",
+        text: "Rs, bubble point and Bo from every method, plus gravity, compressibility and density",
+        children: [
+          { to: "/properties", view: "compare", label: "Compare methods", text: "Rs, bubble point and Bo from every published correlation that applies" },
+          { to: "/properties?view=other", view: "other", label: "Other properties", text: "Gravity, compressibility, density and two-phase factor" },
+          { to: "/properties?view=data", view: "data", label: "Test on data", text: "Score the methods on measured oils or your own CSV" },
+        ],
+      },
+      { to: "/viscosity", label: "Oil Viscosity", text: "Dead, saturated and undersaturated oil viscosity" },
+      { to: "/tension", label: "Surface Tension", text: "Oil and gas interfacial tension" },
     ],
   },
   {
-    step: "3",
     title: "Check a lab report",
-    blurb: "Test a PVT lab report for consistency and put it on the basis you need.",
     items: [
-      { to: "/lab", label: "Lab PVT Analysis", text: "Quality-check constant composition, differential and separator tests." },
+      { to: "/lab", label: "Lab PVT Analysis", text: "Consistency checks, separator tests and adjustment to a new bubble point" },
     ],
   },
   {
-    step: "4",
     title: "Use it in the reservoir",
-    blurb: "Take the fluid properties into production history.",
     items: [
-      { to: "/balance", label: "Material Balance", text: "Oil in place, aquifer influx, gas cap and drive indexes." },
+      { to: "/balance", label: "Material Balance", text: "Oil in place, water influx, gas cap and drive indexes" },
     ],
   },
   {
     title: "Reference",
-    blurb: "",
     items: [
-      { to: "/library", label: "Method Library", text: "Every method, its source and the range it was built on." },
-      { to: "/about", label: "About", text: "Who made this, how it is checked and what it cannot do." },
+      { to: "/library", label: "Method Library", text: "Every method, its source and what it needs" },
+      { to: "/about", label: "About", text: "Who made this, how it is checked and what it cannot do" },
     ],
   },
 ];

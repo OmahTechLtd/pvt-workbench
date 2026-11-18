@@ -1,122 +1,116 @@
-/* PVT Workbench design tokens. Light mode is cream and ink with amber as the one accent.
-   Dark mode follows the computer setting unless the user picks a theme with the toggle (data-theme on <html>). */
+/* PVT Workbench. A flat, ruled, datasheet style. No cards, no shadows, square corners, numbers in a monospace face.
+   One accent (green). Dark mode follows the computer unless the user picks a theme (data-theme on <html>). */
 
 :root {
   color-scheme: light;
-  --bg: #faf6ee;
-  --card: #fffdf9;
-  --card-2: #f4eee2;
-  --border: #e6dcc9;
-  --text: #1c2233;
-  --muted: #6a6558;
-  --accent: #b45309;
-  --accent-strong: #92400e;
-  --accent-soft: #fbecd0;
+  --bg: #ffffff;
+  --panel: #f3f5f4;
+  --field: #ffffff;
+  --rule: #d3d9d6;
+  --rule-strong: #14201b;
+  --text: #14201b;
+  --muted: #59655f;
+  --accent: #0b6b45;
+  --accent-strong: #08532f;
+  --accent-soft: #e2f1e9;
   --on-accent: #ffffff;
-  --ok: #15803d;
-  --ok-soft: #dcf3e3;
-  --warn: #b45309;
-  --bad: #b91c1c;
-  --bad-soft: #fbe0de;
-  --sidebar: #111a2b;
-  --sidebar-text: #c7cddb;
-  --sidebar-muted: #7f8aa3;
-  --shadow: 0 1px 2px rgba(28, 34, 51, 0.06), 0 4px 14px rgba(28, 34, 51, 0.05);
-  --serif: Georgia, "Iowan Old Style", "Palatino Linotype", "Book Antiqua", serif;
-  --sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --c1: #2563eb;
-  --c2: #d97706;
-  --c3: #16a34a;
-  --c4: #9333ea;
-  --c5: #0f766e;
-  --red: #dc2626;
+  --ok: #0b6b45;
+  --ok-soft: #e2f1e9;
+  --warn: #8a5300;
+  --bad: #b3261e;
+  --bad-soft: #fbe4e2;
+  --side-bg: #eef1ef;
+  --sans: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --c1: #2563a8;
+  --c2: #cf6a17;
+  --c3: #2f8f5b;
+  --c4: #8a4fb0;
+  --c5: #138a8a;
+  --red: #c62828;
   --plot-bg: #ffffff;
-  --plot-line: #9ca3af;
-  --plot-line-text: #6b7280;
-  --plot-text: #374151;
-  --plot-ink: #111827;
-  --plot-region: #eff6ff;
-  --blue-text: #1d4ed8;
-  --dew: #b45309;
-  --dew-text: #92400e;
+  --plot-line: #9aa5a0;
+  --plot-line-text: #66726c;
+  --plot-text: #36423c;
+  --plot-ink: #14201b;
+  --plot-region: #e9f0f8;
+  --blue-text: #1b4f87;
+  --dew: #b4530f;
+  --dew-text: #8a3f0a;
 }
 
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
     color-scheme: dark;
-    --bg: #0d1424;
-    --card: #151e33;
-    --card-2: #1b2640;
-    --border: #28345a;
-    --text: #e9e6dd;
-    --muted: #9ba5ba;
-    --accent: #f2a93b;
-    --accent-strong: #ffc266;
-    --accent-soft: #3a2c12;
-    --on-accent: #1a1405;
-    --ok: #5fd08a;
-    --ok-soft: #123222;
-    --warn: #f2a93b;
-    --bad: #ff8b84;
-    --bad-soft: #3a1618;
-    --sidebar: #0a101d;
-    --sidebar-text: #c7cddb;
-    --sidebar-muted: #7f8aa3;
-    --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 4px 14px rgba(0, 0, 0, 0.25);
-    --c1: #6ea0ff;
-    --c2: #f2a93b;
-    --c3: #5fd08a;
-    --c4: #c39bff;
-    --c5: #4fd1c5;
-    --red: #ff6b6b;
-    --plot-bg: #0d1424;
-    --plot-line: #4a5878;
-    --plot-line-text: #9ba5ba;
-    --plot-text: #c9d0e0;
-    --plot-ink: #e9e6dd;
-    --plot-region: #1a2a4d;
-    --blue-text: #8fb4ff;
-    --dew: #f2a93b;
-    --dew-text: #ffc266;
+    --bg: #0f1412;
+    --panel: #171d1a;
+    --field: #0b0f0d;
+    --rule: #2b3531;
+    --rule-strong: #e6ebe8;
+    --text: #e6ebe8;
+    --muted: #94a29b;
+    --accent: #3fb27f;
+    --accent-strong: #66cb9d;
+    --accent-soft: #14281f;
+    --on-accent: #06140e;
+    --ok: #66cb9d;
+    --ok-soft: #14281f;
+    --warn: #e0a64a;
+    --bad: #ff8a80;
+    --bad-soft: #351a18;
+    --side-bg: #121715;
+    --c1: #6aa3e0;
+    --c2: #ee9a4d;
+    --c3: #5fc58d;
+    --c4: #bf93e0;
+    --c5: #4cc3c3;
+    --red: #ff7b72;
+    --plot-bg: #0f1412;
+    --plot-line: #4b5a53;
+    --plot-line-text: #94a29b;
+    --plot-text: #c5d0ca;
+    --plot-ink: #e6ebe8;
+    --plot-region: #17283b;
+    --blue-text: #8fb8ea;
+    --dew: #ee9a4d;
+    --dew-text: #f5b678;
   }
 }
 
 :root[data-theme="dark"] {
   color-scheme: dark;
-  --bg: #0d1424;
-  --card: #151e33;
-  --card-2: #1b2640;
-  --border: #28345a;
-  --text: #e9e6dd;
-  --muted: #9ba5ba;
-  --accent: #f2a93b;
-  --accent-strong: #ffc266;
-  --accent-soft: #3a2c12;
-  --on-accent: #1a1405;
-  --ok: #5fd08a;
-  --ok-soft: #123222;
-  --warn: #f2a93b;
-  --bad: #ff8b84;
-  --bad-soft: #3a1618;
-  --sidebar: #0a101d;
-  --sidebar-text: #c7cddb;
-  --sidebar-muted: #7f8aa3;
-  --shadow: 0 1px 2px rgba(0, 0, 0, 0.35), 0 4px 14px rgba(0, 0, 0, 0.25);
-  --c1: #6ea0ff;
-  --c2: #f2a93b;
-  --c3: #5fd08a;
-  --c4: #c39bff;
-  --c5: #4fd1c5;
-  --red: #ff6b6b;
-  --plot-bg: #0d1424;
-  --plot-line: #4a5878;
-  --plot-line-text: #9ba5ba;
-  --plot-text: #c9d0e0;
-  --plot-ink: #e9e6dd;
-  --plot-region: #1a2a4d;
-  --blue-text: #8fb4ff;
-  --dew: #f2a93b;
-  --dew-text: #ffc266;
+  --bg: #0f1412;
+  --panel: #171d1a;
+  --field: #0b0f0d;
+  --rule: #2b3531;
+  --rule-strong: #e6ebe8;
+  --text: #e6ebe8;
+  --muted: #94a29b;
+  --accent: #3fb27f;
+  --accent-strong: #66cb9d;
+  --accent-soft: #14281f;
+  --on-accent: #06140e;
+  --ok: #66cb9d;
+  --ok-soft: #14281f;
+  --warn: #e0a64a;
+  --bad: #ff8a80;
+  --bad-soft: #351a18;
+  --side-bg: #121715;
+  --c1: #6aa3e0;
+  --c2: #ee9a4d;
+  --c3: #5fc58d;
+  --c4: #bf93e0;
+  --c5: #4cc3c3;
+  --red: #ff7b72;
+  --plot-bg: #0f1412;
+  --plot-line: #4b5a53;
+  --plot-line-text: #94a29b;
+  --plot-text: #c5d0ca;
+  --plot-ink: #e6ebe8;
+  --plot-region: #17283b;
+  --blue-text: #8fb8ea;
+  --dew: #ee9a4d;
+  --dew-text: #f5b678;
 }
 
 * {
@@ -126,6 +120,7 @@
 body {
   margin: 0;
   font-family: var(--sans);
+  font-size: 15px;
   color: var(--text);
   background: var(--bg);
   line-height: 1.5;
@@ -143,10 +138,11 @@ a {
 }
 
 .sidebar {
-  width: 248px;
+  width: 236px;
   flex-shrink: 0;
-  background: var(--sidebar);
-  padding: 22px 12px 18px;
+  background: var(--side-bg);
+  border-right: 1px solid var(--rule);
+  padding: 20px 0 16px;
   display: flex;
   flex-direction: column;
   position: sticky;
@@ -158,93 +154,105 @@ a {
 .brand {
   display: block;
   text-decoration: none;
-  margin: 0 8px 22px;
+  color: var(--text);
+  padding: 0 18px 16px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
 }
 
 .brand strong {
   display: block;
-  font-family: var(--serif);
-  font-size: 21px;
-  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
   letter-spacing: 0.2px;
 }
 
 .brand span {
   font-size: 12px;
-  color: var(--sidebar-muted);
+  color: var(--muted);
 }
 
 .navgroup {
-  margin-bottom: 14px;
+  margin: 14px 0 0;
 }
 
 .navgroup h3 {
+  font-family: var(--sans);
   font-size: 11px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--sidebar-muted);
-  margin: 0 12px 6px;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  margin: 0 18px 4px;
   font-weight: 600;
-}
-
-.navgroup h3 b {
-  color: var(--accent);
-  margin-right: 6px;
 }
 
 .sidebar a.navlink {
   display: block;
-  color: var(--sidebar-text);
+  color: var(--text);
   text-decoration: none;
-  padding: 7px 12px;
-  border-radius: 6px;
-  margin-bottom: 2px;
+  padding: 5px 18px 5px 15px;
+  border-left: 3px solid transparent;
   font-size: 14px;
 }
 
+.sidebar a.navlink.sub {
+  padding-left: 31px;
+  font-size: 13px;
+  color: var(--muted);
+}
+
 .sidebar a.navlink:hover {
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--panel);
 }
 
 .sidebar a.navlink.active {
-  background: var(--accent);
-  color: var(--on-accent);
-  font-weight: 600;
+  border-left-color: var(--accent);
+  font-weight: 650;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.sidebar a.navlink.sub.active {
+  color: var(--accent);
 }
 
 .sidebar-foot {
   margin-top: auto;
-  padding: 14px 8px 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 14px 18px 0;
+  border-top: 1px solid var(--rule);
 }
 
 .sidebar-foot small {
   display: block;
-  color: var(--sidebar-muted);
+  color: var(--muted);
   font-size: 11px;
   margin-bottom: 6px;
 }
 
 .themeswitch {
   display: flex;
-  gap: 4px;
+  border: 1px solid var(--rule);
 }
 
 .themeswitch button {
   flex: 1;
   background: transparent;
-  color: var(--sidebar-text);
-  border: 1px solid rgba(255, 255, 255, 0.16);
-  border-radius: 6px;
+  color: var(--muted);
+  border: none;
+  border-right: 1px solid var(--rule);
   padding: 5px 0;
   font-size: 12px;
+  font-family: inherit;
   cursor: pointer;
 }
 
+.themeswitch button:last-child {
+  border-right: none;
+}
+
 .themeswitch button.on {
-  background: var(--accent);
-  border-color: var(--accent);
-  color: var(--on-accent);
+  background: var(--text);
+  color: var(--bg);
   font-weight: 600;
 }
 
@@ -255,95 +263,128 @@ a {
 .content {
   flex: 1;
   min-width: 0;
-  padding: 36px 40px 60px;
-  max-width: 1060px;
+  padding: 30px 40px 56px;
+  max-width: 1100px;
 }
 
 h1 {
-  font-family: var(--serif);
+  font-family: var(--sans);
   font-weight: 700;
-  font-size: 30px;
-  margin: 0 0 6px;
-  letter-spacing: -0.2px;
+  font-size: 24px;
+  margin: 0 0 14px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--rule-strong);
+  letter-spacing: -0.1px;
 }
 
 h2,
 h3 {
-  font-family: var(--serif);
+  font-family: var(--sans);
+  font-weight: 650;
+}
+
+h2 {
+  font-size: 16px;
 }
 
 h3 {
-  font-size: 17px;
-  margin: 22px 0 8px;
+  font-size: 14px;
+  margin: 20px 0 6px;
 }
 
 .subtitle {
   color: var(--muted);
-  margin: 0 0 24px;
+  margin: 0 0 18px;
   max-width: 760px;
 }
 
-/* Controls */
+/* Tabs */
 
 .segmented {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 20px;
+  gap: 0;
+  margin-bottom: 18px;
+  border-bottom: 1px solid var(--rule);
 }
 
 .seg {
-  padding: 8px 14px;
-  border: 1px solid var(--border);
-  background: var(--card);
-  color: var(--text);
-  border-radius: 8px;
+  padding: 7px 14px;
+  border: none;
+  border-bottom: 3px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  color: var(--muted);
   cursor: pointer;
   font-size: 14px;
   font-family: inherit;
 }
 
 .seg:hover {
-  border-color: var(--accent);
+  color: var(--text);
 }
 
 .seg.active {
-  background: var(--accent);
+  color: var(--text);
+  border-bottom-color: var(--accent);
+  font-weight: 650;
+}
+
+/* Buttons that are not tabs: inside .dtbar, next to a primary, or in a paragraph */
+p > .seg,
+.dtbar .seg,
+.btnrow .seg {
+  border: 1px solid var(--rule);
+  margin-bottom: 0;
+  color: var(--text);
+}
+
+p > .seg:hover,
+.dtbar .seg:hover,
+.btnrow .seg:hover {
   border-color: var(--accent);
-  color: var(--on-accent);
-  font-weight: 600;
 }
 
 .panels {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 4px 24px;
+  gap: 0 32px;
 }
 
+/* A section is a ruled block, not a box */
 .card {
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 22px 24px;
+  border-top: 1px solid var(--rule);
+  padding: 16px 0 6px;
   margin-bottom: 22px;
-  box-shadow: var(--shadow);
 }
 
 .card h2 {
-  font-size: 19px;
-  margin: 0 0 14px;
+  margin: 0 0 12px;
+}
+
+/* Inputs inside a two-panel page flow in two columns so the page is shorter. Anything else spans the full width. */
+.panels > .card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 16px;
+  align-content: start;
+}
+
+.panels > .card > :not(.field) {
+  grid-column: 1 / -1;
 }
 
 .field {
   display: block;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .field > span {
   display: block;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  margin-bottom: 5px;
+  color: var(--muted);
+  margin-bottom: 3px;
 }
 
 .field input[type="number"],
@@ -355,13 +396,18 @@ textarea,
 input[type="number"],
 input[type="text"] {
   width: 100%;
-  padding: 8px 10px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-size: 15px;
+  padding: 7px 9px;
+  border: 1px solid var(--rule);
+  border-radius: 2px;
+  font-size: 14px;
   font-family: inherit;
-  background: var(--bg);
+  background: var(--field);
   color: var(--text);
+}
+
+input[type="number"] {
+  font-family: var(--mono);
+  font-size: 13.5px;
 }
 
 .field select,
@@ -375,35 +421,37 @@ select:focus,
 textarea:focus,
 button:focus-visible {
   outline: 2px solid var(--accent);
-  outline-offset: 1px;
-  border-color: var(--accent);
+  outline-offset: 0;
 }
 
 input[type="checkbox"] {
   accent-color: var(--accent);
-  width: 18px;
-  height: 18px;
+  width: 16px;
+  height: 16px;
+  vertical-align: -3px;
+  margin-right: 6px;
 }
 
 .check {
   display: block;
-  padding: 6px 0;
+  padding: 4px 0;
 }
 
 .primary {
   background: var(--accent);
   color: var(--on-accent);
-  border: none;
-  padding: 10px 22px;
-  border-radius: 8px;
-  font-size: 15px;
-  font-weight: 600;
+  border: 1px solid var(--accent);
+  padding: 8px 20px;
+  border-radius: 2px;
+  font-size: 14px;
+  font-weight: 650;
   font-family: inherit;
   cursor: pointer;
 }
 
 .primary:hover {
   background: var(--accent-strong);
+  border-color: var(--accent-strong);
 }
 
 .primary:disabled {
@@ -419,13 +467,13 @@ input[type="checkbox"] {
 .error {
   color: var(--bad);
   background: var(--bad-soft);
-  padding: 10px 14px;
-  border-radius: 8px;
+  padding: 8px 12px;
+  border-radius: 2px;
 }
 
 .note {
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12.5px;
   margin-bottom: 0;
 }
 
@@ -433,27 +481,30 @@ input[type="checkbox"] {
   color: var(--muted);
 }
 
-/* Tables */
+/* Tables look like a datasheet. Numbers line up. */
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 13.5px;
+  font-variant-numeric: tabular-nums;
 }
 
 th,
 td {
   text-align: left;
-  padding: 9px 12px;
-  border-bottom: 1px solid var(--border);
+  padding: 6px 10px;
+  border-bottom: 1px solid var(--rule);
 }
 
 th {
-  font-size: 12px;
-  text-transform: none;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
   color: var(--muted);
-  background: var(--card-2);
-  font-weight: 600;
+  font-weight: 650;
+  border-bottom: 2px solid var(--rule-strong);
+  background: transparent;
 }
 
 .tablewrap {
@@ -462,19 +513,20 @@ th {
 
 .badge {
   display: inline-block;
-  padding: 2px 9px;
-  border-radius: 999px;
+  padding: 1px 7px;
+  border-radius: 2px;
+  font-family: var(--sans);
   font-size: 12px;
   font-weight: 600;
+  border: 1px solid currentColor;
+  background: transparent;
 }
 
 .badge.ok {
-  background: var(--ok-soft);
   color: var(--ok);
 }
 
 .badge.off {
-  background: var(--bad-soft);
   color: var(--bad);
 }
 
@@ -486,41 +538,44 @@ th {
 
 .dt > .dtlabel {
   display: block;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 600;
-  margin-bottom: 6px;
+  color: var(--muted);
+  margin-bottom: 3px;
 }
 
 .dt table {
-  background: var(--bg);
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  border-collapse: separate;
-  border-spacing: 0;
-  overflow: hidden;
+  background: var(--field);
+  border: 1px solid var(--rule);
 }
 
 .dt th {
   vertical-align: bottom;
-  padding: 8px 8px;
+  padding: 6px 8px;
   white-space: nowrap;
+  background: var(--panel);
+  border-bottom: 1px solid var(--rule-strong);
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 12.5px;
 }
 
 .dt th small {
   display: block;
   font-weight: 400;
   color: var(--muted);
+  font-size: 11.5px;
 }
 
 .dt td {
   padding: 0;
-  border-bottom: 1px solid var(--border);
-  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--rule);
+  border-right: 1px solid var(--rule);
 }
 
 .dt td:last-child {
   border-right: none;
-  width: 34px;
+  width: 32px;
   text-align: center;
 }
 
@@ -529,15 +584,15 @@ th {
   border: none;
   border-radius: 0;
   background: transparent;
-  padding: 8px 8px;
-  font-size: 14px;
-  font-variant-numeric: tabular-nums;
+  padding: 6px 8px;
+  font-size: 13px;
+  font-family: var(--mono);
 }
 
 .dt td input:focus {
   outline: 2px solid var(--accent);
   outline-offset: -2px;
-  background: var(--card);
+  background: var(--bg);
 }
 
 .dt td input.bad {
@@ -545,11 +600,12 @@ th {
 }
 
 .dt .rowno {
-  width: 32px;
+  width: 30px;
   text-align: center;
   color: var(--muted);
-  font-size: 12px;
-  background: var(--card-2);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  background: var(--panel);
   padding: 0 6px;
 }
 
@@ -558,8 +614,8 @@ th {
   border: none;
   color: var(--muted);
   cursor: pointer;
-  font-size: 16px;
-  padding: 6px;
+  font-size: 15px;
+  padding: 4px 6px;
 }
 
 .dt .del:hover {
@@ -569,45 +625,71 @@ th {
 .dtbar {
   display: flex;
   gap: 8px;
-  margin-top: 8px;
+  margin-top: 6px;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .dtbar .seg {
-  padding: 5px 12px;
+  padding: 3px 10px;
   font-size: 13px;
 }
 
-/* Details */
+/* Disclosure blocks, used for the long checks tables and background text */
+
+details {
+  border-top: 1px solid var(--rule);
+  margin: 0 0 10px;
+  padding: 8px 0;
+}
 
 details > summary {
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 650;
+  list-style: none;
 }
 
-details {
-  margin-bottom: 10px;
+details > summary::before {
+  content: "+";
+  display: inline-block;
+  width: 18px;
+  font-family: var(--mono);
+  color: var(--accent);
+}
+
+details[open] > summary::before {
+  content: "\2212";
+}
+
+details > summary::-webkit-details-marker {
+  display: none;
+}
+
+details > :not(summary) {
+  margin-top: 10px;
 }
 
 /* Charts */
 
 .chart {
-  margin-top: 24px;
+  margin-top: 18px;
 }
 
 .recharts-text,
 .recharts-cartesian-axis-tick-value {
   fill: var(--muted);
+  font-family: var(--mono);
+  font-size: 11.5px;
 }
 
 .recharts-cartesian-grid line {
-  stroke: var(--border);
+  stroke: var(--rule);
 }
 
 .recharts-default-tooltip {
-  background: var(--card) !important;
-  border: 1px solid var(--border) !important;
+  background: var(--bg) !important;
+  border: 1px solid var(--rule) !important;
+  border-radius: 2px !important;
   color: var(--text);
 }
 
@@ -615,83 +697,79 @@ details {
   color: var(--text) !important;
 }
 
-/* Home */
+/* Home. A plain index, not tiles. */
 
-.hero {
-  padding: 8px 0 6px;
+.index {
+  border-top: 2px solid var(--rule-strong);
+  margin: 0 0 26px;
 }
 
-.hero h1 {
-  font-size: 42px;
-  line-height: 1.1;
-}
-
-.hero .tag {
-  font-family: var(--serif);
-  font-size: 20px;
-  color: var(--accent);
-  margin: 0 0 14px;
-}
-
-.steps {
+.index a.row {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template-columns: minmax(180px, 1fr) minmax(0, 2fr) 24px;
   gap: 16px;
-  margin: 22px 0 28px;
-}
-
-.step {
-  display: block;
+  align-items: baseline;
+  padding: 9px 4px;
+  border-bottom: 1px solid var(--rule);
   text-decoration: none;
   color: var(--text);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 18px 18px 16px;
-  box-shadow: var(--shadow);
 }
 
-.step:hover {
-  border-color: var(--accent);
+.index a.row:hover {
+  background: var(--panel);
 }
 
-.step .n {
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  line-height: 28px;
-  text-align: center;
-  border-radius: 50%;
-  background: var(--accent-soft);
-  color: var(--accent);
-  font-weight: 700;
-  margin-bottom: 8px;
+.index a.row strong {
+  font-weight: 650;
 }
 
-.step strong {
-  display: block;
-  font-family: var(--serif);
-  font-size: 17px;
-  margin-bottom: 4px;
-}
-
-.step p {
-  margin: 0 0 8px;
+.index a.row span {
   color: var(--muted);
   font-size: 14px;
 }
 
-.step small {
+.index a.row i {
+  font-style: normal;
   color: var(--accent);
-  font-weight: 600;
+  text-align: right;
 }
 
-.callout {
-  background: var(--accent-soft);
-  border-left: 4px solid var(--accent);
-  border-radius: 8px;
-  padding: 12px 16px;
-  margin: 0 0 18px;
+.index .head {
+  padding: 14px 4px 3px;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  font-weight: 650;
+  border-bottom: 1px solid var(--rule);
+}
+
+.sectionlabel {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--muted);
+  font-weight: 650;
+  margin: 24px 0 6px;
+}
+
+/* Evidence line for the method recommendation */
+
+.verdict {
+  border-top: 2px solid var(--rule-strong);
+  border-bottom: 1px solid var(--rule);
+  padding: 10px 0;
+  margin: 12px 0;
+}
+
+.verdict .big {
+  font-size: 17px;
+  font-weight: 700;
+}
+
+.verdict .big em {
+  font-style: normal;
+  color: var(--accent);
 }
 
 @media (max-width: 900px) {
@@ -701,45 +779,58 @@ details {
   .sidebar {
     width: auto;
     height: auto;
-    position: static;
-    flex-direction: column;
-    padding: 12px 14px;
+    position: relative;
+    border-right: none;
+    border-bottom: 1px solid var(--rule);
+    padding: 12px 0;
   }
   .sidebar .brand {
+    border-bottom: none;
     margin-bottom: 0;
+    padding-bottom: 0;
   }
   .menubtn {
     display: block;
     position: absolute;
     right: 14px;
-    top: 14px;
+    top: 12px;
     background: transparent;
-    color: #fff;
-    border: 1px solid rgba(255, 255, 255, 0.25);
-    border-radius: 6px;
-    padding: 5px 12px;
+    color: var(--text);
+    border: 1px solid var(--rule);
+    border-radius: 2px;
+    padding: 4px 12px;
     font-size: 14px;
-  }
-  .sidebar {
-    position: relative;
+    font-family: inherit;
   }
   .sidebar .navwrap {
     display: none;
-    margin-top: 14px;
+    margin-top: 12px;
   }
   .sidebar.open .navwrap {
     display: block;
   }
   .content {
-    padding: 22px 16px 48px;
+    padding: 20px 16px 44px;
   }
   .panels {
     grid-template-columns: 1fr;
   }
-  .hero h1 {
-    font-size: 32px;
+  .panels > .card {
+    grid-template-columns: 1fr;
   }
-  /* Wide result tables scroll sideways inside the card instead of widening the page. */
+  .index a.row {
+    grid-template-columns: 1fr 20px;
+    row-gap: 2px;
+  }
+  .index a.row span {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .index a.row i {
+    grid-column: 2;
+    grid-row: 1;
+  }
+  /* Wide result tables scroll sideways inside the page instead of widening it. */
   main table {
     display: block;
     max-width: 100%;
@@ -748,54 +839,5 @@ details {
   main table th,
   main table td {
     white-space: nowrap;
-  }
-}
-
-/* Top-level view switch, used where one page holds two large areas. */
-.viewswitch {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 12px;
-  margin-bottom: 22px;
-}
-
-.viewswitch button {
-  text-align: left;
-  font-family: inherit;
-  color: var(--text);
-  background: var(--card);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 14px 16px;
-  cursor: pointer;
-}
-
-.viewswitch button strong {
-  display: block;
-  font-family: var(--serif);
-  font-size: 17px;
-  margin-bottom: 2px;
-}
-
-.viewswitch button span {
-  display: block;
-  font-size: 13px;
-  color: var(--muted);
-}
-
-.viewswitch button:hover {
-  border-color: var(--accent);
-}
-
-.viewswitch button.on {
-  border-color: var(--accent);
-  border-width: 2px;
-  padding: 13px 15px;
-  background: var(--accent-soft);
-}
-
-@media (max-width: 900px) {
-  .viewswitch {
-    grid-template-columns: 1fr;
   }
 }

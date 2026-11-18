@@ -31,7 +31,7 @@ export default function About() {
         <h2>What it does not do</h2>
         <ul>
           <li>It does not replace a laboratory PVT study. Correlations estimate; a good sample measured at reservoir conditions is better.</li>
-          <li>It does not tune a correlation to your crude or recommend one method yet. Today it shows how each method performs, so you can decide with evidence.</li>
+          <li>It does not tune a correlation to your crude. For Bo it ranks the methods on measured oils of similar gravity and says how strong the evidence is. For Rs and bubble point there is no measured data in the workbench yet, so rank them on your own data in Test on data.</li>
           <li>Most correlations were built on crudes from other regions. Compare them with your own measurements before relying on one, using <Link to="/properties?view=data">Test on data</Link>.</li>
           <li>Material balance covers the straight-line methods, drive indexes, saturations and the Tracy form. Aquifer models and gravity-drainage rates are not included.</li>
           <li>It is not a reservoir simulator and it does not do compositional equation-of-state work.</li>
