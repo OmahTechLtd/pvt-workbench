@@ -5,6 +5,9 @@ import Dataset from "./pages/Dataset.jsx";
 import Classification from "./pages/Classification.jsx";
 import PlusFraction from "./pages/PlusFraction.jsx";
 import PhaseDiagram from "./pages/PhaseDiagram.jsx";
+import OilProperties from "./pages/OilProperties.jsx";
+import Viscosity from "./pages/Viscosity.jsx";
+import SurfaceTension from "./pages/SurfaceTension.jsx";
 import Placeholder from "./pages/Placeholder.jsx";
 
 const NAV = [
@@ -14,6 +17,9 @@ const NAV = [
   { to: "/classification", label: "Oil Classification" },
   { to: "/phase", label: "Phase Diagrams" },
   { to: "/fraction", label: "Plus Fraction" },
+  { to: "/properties", label: "Oil Properties" },
+  { to: "/viscosity", label: "Oil Viscosity" },
+  { to: "/tension", label: "Surface Tension" },
   { to: "/library", label: "Method Library" },
   { to: "/about", label: "About" },
 ];
@@ -37,6 +43,9 @@ function App() {
           <Route path="/classification" element={<Classification />} />
           <Route path="/phase" element={<PhaseDiagram />} />
           <Route path="/fraction" element={<PlusFraction />} />
+          <Route path="/properties" element={<OilProperties />} />
+          <Route path="/viscosity" element={<Viscosity />} />
+          <Route path="/tension" element={<SurfaceTension />} />
           <Route path="/library" element={<Placeholder title="Method Library" />} />
           <Route path="/about" element={<Placeholder title="About" />} />
         </Routes>
