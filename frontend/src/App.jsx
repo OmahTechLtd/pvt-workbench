@@ -4,6 +4,7 @@ import SingleFluid from "./pages/Singlefluid.jsx";
 import Dataset from "./pages/Dataset.jsx";
 import Classification from "./pages/Classification.jsx";
 import PlusFraction from "./pages/PlusFraction.jsx";
+import PhaseDiagram from "./pages/PhaseDiagram.jsx";
 import Placeholder from "./pages/Placeholder.jsx";
 
 const NAV = [
@@ -11,6 +12,7 @@ const NAV = [
   { to: "/single", label: "Single Fluid Analysis" },
   { to: "/dataset", label: "Dataset Analysis" },
   { to: "/classification", label: "Oil Classification" },
+  { to: "/phase", label: "Phase Diagrams" },
   { to: "/fraction", label: "Plus Fraction" },
   { to: "/library", label: "Method Library" },
   { to: "/about", label: "About" },
@@ -33,6 +35,7 @@ function App() {
           <Route path="/single" element={<SingleFluid />} />
           <Route path="/dataset" element={<Dataset />} />
           <Route path="/classification" element={<Classification />} />
+          <Route path="/phase" element={<PhaseDiagram />} />
           <Route path="/fraction" element={<PlusFraction />} />
           <Route path="/library" element={<Placeholder title="Method Library" />} />
           <Route path="/about" element={<Placeholder title="About" />} />
