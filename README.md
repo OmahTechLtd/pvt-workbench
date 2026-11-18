@@ -24,6 +24,11 @@ Each property is estimated with five methods, which gives 15 implementations in 
 
 The Vasquez-Beggs methods accept optional separator pressure and temperature. When both are given, gas gravity is corrected to the 100 psig reference separator condition. When they are missing, the unadjusted gas gravity is used.
 
+Two modules from Chapter 1 of the same book sit beside the correlations.
+
+- **Oil classification.** Applies the printed limits for ordinary black oil, low-shrinkage oil, volatile oil and near-critical oil to a fluid, shows which limits it passes, and classifies the reservoir as undersaturated, saturated or gas-cap from initial and bubble-point pressure. It can also classify every oil in the public dataset and show how each Bo method performs inside each class.
+- **Plus fraction characterization.** Estimates boiling point, critical temperature, critical pressure and critical volume of a heptanes-plus fraction (Riazi and Daubert), the acentric factor (Edmister) and the critical compressibility factor (four methods and the real gas equation).
+
 ## Project status
 
 Working now
@@ -32,12 +37,15 @@ Working now
 - A FastAPI service that lists the methods and runs calculations
 - A React page for single fluid analysis, with input boxes built from each method's required inputs, an optional measured value, an error column, a reference line and a bar chart
 - A script that converts a public PVT dataset into the workbench format
+- Dataset analysis, which scores the correlations against the public dataset (Bo) or an uploaded CSV (Rs, Pb or Bo)
+- Oil classification and plus fraction characterization from Chapter 1
 
 Still being built
 
-- Dataset analysis, starting with Bo
 - Method library, showing each method's source and verification record
 - About page
+- Laboratory PVT analysis from Chapter 3
+- Material balance
 
 The original Streamlit prototype (`app.py`, `plots.py`, `compare.py`) is still in the repository.
 
@@ -61,6 +69,29 @@ Two places needed a different treatment to reproduce the book's own answers.
 
 - **Glaso bubble-point pressure (Eq. 2-79).** The printed equation shows the squared term as (pb*)^2. The code uses [log(pb*)]^2, which reproduces the book's answers and follows Glaso's original form.
 - **Oil 4 in Example 2-16.** The table prints a temperature of 237 °F. The book's solutions for Standing, Marhoun and Vasquez-Beggs reproduce with 214 °F, so 214 °F is used.
+
+### Chapter 1 modules
+
+Plus fraction characterization is checked against Example 1-1 (M = 150, specific gravity 0.78). `check_chapter1.py` runs the checks.
+
+| Quantity | Book | This tool | Result |
+|---|---|---|---|
+| Boiling point, Tb (°R) | 825.26 | 825.26 | Matches |
+| Critical pressure, pc (psia) | 320.3 | 320.3 | Matches |
+| Critical temperature, Tc (°R) | 1139.4 | 1139.8 | Differs by 0.04%, see below |
+| Critical volume, Vc (ft³/lb) | 0.06035 | 0.06363 | Does not match |
+| Acentric factor | 0.5067 | 0.5067 from the book's printed Tc, pc and Tb | Matches |
+
+Two differences from the printed text.
+
+- **Tc.** The worked line in Example 1-1 prints the constant a as 544.2, while Table 1-4 prints 544.4. With 544.2 the code returns 1139.4, which is the book's answer. The code uses the Table 1-4 value, so it returns 1139.8. This also moves the acentric factor from 0.5067 to 0.5048 when it is calculated from this tool's own Tc.
+- **Vc.** The constants printed in Table 1-4 give 0.0636 ft³/lb. The book prints 0.06035. No combination of the printed constants was found that gives 0.06035. Table 1-1 lists 0.0626 to 0.0640 ft³/lb for C8 to C20, so 0.0636 looks consistent with the book's own table. The cause is not identified.
+
+The book prints the Nath equation for the critical compressibility factor (Eq. 1-8) without an acentric factor term. It is coded as 0.2918 − 0.0928ω, in the same form as the other three methods. This reading has not been checked against the original paper.
+
+Oil classification applies the limits on pages 3 to 8 as written. They are typical values, not sharp cut-offs, and they leave gaps. No class covers a gas-oil ratio between 700 and 2,000 scf/STB. Ranges written as "between" are treated as inclusive.
+
+Applied to the public dataset (885 oils after removing duplicates, using measured Rs at the bubble point as the gas-oil ratio), 399 oils fall in ordinary black oil, 61 in low-shrinkage oil, 0 in volatile oil and 5 in near-critical oil. 420 oils (47.5%) fall in no class. 21 oils have a gas-oil ratio of 2,000 scf/STB or more, and none of them has Bo below 2.0, so none meets the printed limits for volatile oil. Near-critical oil could not be confirmed on composition because the dataset has no heptanes-plus content.
 
 ## Data
 
@@ -117,6 +148,10 @@ To rebuild the dataset file, place the workbook at `data/PVTData.xlsx` and run `
 | `rs_correlations.py`, `pb_correlations.py`, `bo_correlations.py` | The correlations. Each function takes plain numbers. |
 | `registry.py` | Method registry with inputs, units, source and verification status |
 | `metrics.py` | Error measures |
+| `analyze.py` | Dataset analysis |
+| `classification.py` | Oil and reservoir classification from Chapter 1 |
+| `plus_fraction.py` | Plus fraction characterization from Chapter 1 |
+| `check_chapter1.py` | Checks for the Chapter 1 modules |
 | `api.py` | FastAPI service |
 | `prepare_dataset.py` | Converts the public workbook into the workbench format |
 | `data/` | Worked example data and the converted dataset |
