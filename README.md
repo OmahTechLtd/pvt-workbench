@@ -40,6 +40,7 @@ The Vasquez-Beggs methods accept optional separator pressure and temperature. Wh
 
 - **Oil classification.** Applies published limits for ordinary black oil, low-shrinkage oil, volatile oil and near-critical oil, shows which limits a fluid passes, and classifies the reservoir as undersaturated, saturated or gas-cap from initial and bubble-point pressure. It can also classify every oil in the public dataset and show how each Bo method performs inside each class.
 - **Phase diagrams.** Schematic pressure-temperature diagrams for the four oil types, with the reservoir temperature line, initial pressure, bubble point and quality lines, plus a liquid-shrinkage chart. They are not computed from a composition and carry no numeric axes.
+- **Laboratory PVT analysis.** Constant composition expansion (Y-function smoothing, density, compressibility), differential liberation, separator tests with the optimum separator pressure, adjustment of differential data to separator conditions (Bo and Rs for material balance), correction to a new bubble point, and gas condensate tests (plant products, z-factor, two-phase z-factor, liquid dropout). Each page states its pressure basis and loads a published example or a practice data set.
 - **Plus fraction characterization.** Boiling point, critical temperature, critical pressure and critical volume of a heptanes-plus fraction (Riazi and Daubert), the acentric factor (Edmister) and the critical compressibility factor (four methods and the real gas equation).
 
 ## Project status
@@ -51,13 +52,13 @@ Working now
 - A page for each feature, including single fluid analysis with a reference line, an error column and a bar chart
 - Dataset analysis, which scores the correlations against the public dataset (Bo) or an uploaded CSV (Rs, Pb or Bo)
 - A script that converts a public PVT dataset into the workbench format
+- Laboratory PVT analysis, with its own checks table
 - Checks against published worked examples, shown on the pages where they apply
 
 Still being built
 
 - Method library, showing each method's source and verification record
 - About page
-- Laboratory PVT analysis
 - Material balance
 - Page order and grouping in the sidebar
 
@@ -184,6 +185,7 @@ To rebuild the dataset file, place the workbook at `data/PVTData.xlsx` and run `
 | `metrics.py` | Error measures |
 | `analyze.py` | Dataset analysis |
 | `oil_properties.py` | Gravity, compressibility, Bo above the bubble point, density and total formation volume factor |
+| `lab_pvt.py` | Laboratory PVT analysis: constant composition, differential liberation, separator tests, adjustment to separator conditions, new bubble point, gas condensate |
 | `viscosity.py` | Dead, saturated and undersaturated oil viscosity |
 | `surface_tension.py` | Surface tension of a hydrocarbon mixture |
 | `classification.py` | Oil and reservoir classification |

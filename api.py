@@ -5,6 +5,9 @@ from pydantic import BaseModel
 
 from analyze import AnalyzeRequest, analyze, builtin_summary
 from classification import ClassifyRequest, classify_dataset, classify_endpoint, criteria
+from lab_pvt import (AdjustIn, CCEIn, DLIn, ExtrapolateIn, GPMIn, GasCondIn, NewPbIn, SepIn, compute_adjust,
+                     compute_cce, compute_dl, compute_gas_condensate, compute_gpm, compute_new_pb, compute_separator,
+                     estimate_new_pb_value, example_data as lab_examples, lab_checks)
 from oil_properties import (Inputs, compute_bo_above_pb, compute_compressibility, compute_density, compute_gravity,
                             compute_total_fvf, property_checks)
 from plus_fraction import FractionRequest, fraction_characterize, verification as fraction_checks
@@ -167,3 +170,55 @@ def tension_component_list():
 @app.post("/tension/compute")
 def tension(i: TensionIn):
     return compute_tension(i)
+
+
+# ---- Laboratory PVT analysis ----
+
+@app.post("/lab/cce")
+def lab_cce(i: CCEIn):
+    return compute_cce(i)
+
+
+@app.post("/lab/dl")
+def lab_dl(i: DLIn):
+    return compute_dl(i)
+
+
+@app.post("/lab/adjust")
+def lab_adjust(i: AdjustIn):
+    return compute_adjust(i)
+
+
+@app.post("/lab/separator")
+def lab_separator(i: SepIn):
+    return compute_separator(i)
+
+
+@app.post("/lab/new_pb")
+def lab_new_pb(i: NewPbIn):
+    return compute_new_pb(i)
+
+
+@app.post("/lab/new_pb/estimate")
+def lab_new_pb_estimate(i: ExtrapolateIn):
+    return estimate_new_pb_value(i)
+
+
+@app.post("/lab/gpm")
+def lab_gpm(i: GPMIn):
+    return compute_gpm(i)
+
+
+@app.post("/lab/gas_condensate")
+def lab_gas_condensate(i: GasCondIn):
+    return compute_gas_condensate(i)
+
+
+@app.get("/lab/examples")
+def lab_example_data():
+    return lab_examples()
+
+
+@app.get("/lab/verification")
+def lab_verification():
+    return lab_checks()
