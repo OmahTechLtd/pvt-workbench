@@ -4,6 +4,8 @@ from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel
 from registry import REGISTRIES, run_method
 from analyze import router as analyze_router
+from classification import router as classification_router
+from plus_fraction import router as plus_fraction_router
 
 app = FastAPI(title="Oil Properties Workbench API")
 app.add_middleware(
@@ -13,6 +15,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 app.include_router(analyze_router)
+app.include_router(classification_router)
+app.include_router(plus_fraction_router)
 
 class CalcRequest(BaseModel):
     prop: str

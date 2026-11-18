@@ -1,12 +1,17 @@
 import { NavLink, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home.jsx";
 import SingleFluid from "./pages/Singlefluid.jsx";
+import Dataset from "./pages/Dataset.jsx";
+import Classification from "./pages/Classification.jsx";
+import PlusFraction from "./pages/PlusFraction.jsx";
 import Placeholder from "./pages/Placeholder.jsx";
 
 const NAV = [
   { to: "/", label: "Home" },
   { to: "/single", label: "Single Fluid Analysis" },
   { to: "/dataset", label: "Dataset Analysis" },
+  { to: "/classification", label: "Oil Classification" },
+  { to: "/fraction", label: "Plus Fraction" },
   { to: "/library", label: "Method Library" },
   { to: "/about", label: "About" },
 ];
@@ -26,7 +31,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/single" element={<SingleFluid />} />
-          <Route path="/dataset" element={<Placeholder title="Dataset Analysis" />} />
+          <Route path="/dataset" element={<Dataset />} />
+          <Route path="/classification" element={<Classification />} />
+          <Route path="/fraction" element={<PlusFraction />} />
           <Route path="/library" element={<Placeholder title="Method Library" />} />
           <Route path="/about" element={<Placeholder title="About" />} />
         </Routes>
