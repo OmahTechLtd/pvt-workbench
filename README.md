@@ -27,6 +27,7 @@ The Vasquez-Beggs methods accept optional separator pressure and temperature. Wh
 Two modules from Chapter 1 of the same book sit beside the correlations.
 
 - **Oil classification.** Applies the printed limits for ordinary black oil, low-shrinkage oil, volatile oil and near-critical oil to a fluid, shows which limits it passes, and classifies the reservoir as undersaturated, saturated or gas-cap from initial and bubble-point pressure. It can also classify every oil in the public dataset and show how each Bo method performs inside each class.
+- **Phase diagrams.** Schematic pressure-temperature diagrams for the four oil types, with the reservoir temperature line, initial pressure, bubble point and quality lines, plus a liquid-shrinkage chart. They illustrate the descriptions on pages 3 to 8 of the book. They are not computed from a composition and carry no numeric axes.
 - **Plus fraction characterization.** Estimates boiling point, critical temperature, critical pressure and critical volume of a heptanes-plus fraction (Riazi and Daubert), the acentric factor (Edmister) and the critical compressibility factor (four methods and the real gas equation).
 
 ## Project status
@@ -152,6 +153,7 @@ To rebuild the dataset file, place the workbook at `data/PVTData.xlsx` and run `
 | `classification.py` | Oil and reservoir classification from Chapter 1 |
 | `plus_fraction.py` | Plus fraction characterization from Chapter 1 |
 | `check_chapter1.py` | Checks for the Chapter 1 modules |
+| `frontend/src/pages/PhaseDiagram.jsx` | Schematic phase diagrams |
 | `api.py` | FastAPI service |
 | `prepare_dataset.py` | Converts the public workbook into the workbench format |
 | `data/` | Worked example data and the converted dataset |
