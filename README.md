@@ -64,7 +64,6 @@ Still being built
 
 - A method recommendation per region and oil type, with the evidence behind it
 - A current-fluid carry-over so a fluid entered once is used on every page
-- Valid ranges for each method in the library (the registry does not hold them yet)
 
 The original Streamlit prototype (`app.py`, `plots.py`, `compare.py`) is still in the repository.
 
