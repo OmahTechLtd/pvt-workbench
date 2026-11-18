@@ -1,6 +1,4 @@
 import { useEffect, useMemo, useState } from "react";
-import { Link } from "react-router-dom";
-import { GROUPS } from "../nav.js";
 
 const API = "http://127.0.0.1:8000";
 
@@ -53,13 +51,12 @@ export default function Library() {
       <h1>Method Library</h1>
       <p className="subtitle">
         {total ? `${total} published correlations` : "The published correlations"} behind the property calculators. Each one is coded from its source and
-        reproduces the worked example printed there. Use Oil Properties to run them side by side and its Test on data view to see which fits your own data.
+        reproduces the worked example printed there. Run them side by side on the Rs, Pb and Bo pages, and use the Test on data tab there to see which fits your own data.
       </p>
 
-      <div className="callout">
-        <strong>A correlation is only as good as the oil it was built on.</strong> Most of these were fitted to North Sea, US and Middle East crudes.
-        Check them against your own lab data before relying on any one of them.
-      </div>
+      <p className="subtitle" style={{ marginTop: -8 }}>
+        Most of these correlations were fitted to crudes from the US, the North Sea and the Middle East. Check them against your own lab data before relying on any one of them.
+      </p>
 
       <div className="segmented">
         <button className={"seg" + (prop === "all" ? " active" : "")} onClick={() => setProp("all")}>All properties</button>
@@ -83,7 +80,7 @@ export default function Library() {
             <p className="muted">No method matches “{q}”.</p>
           ) : (
             <div className="tablewrap">
-              <table>
+              <table className="libtable">
                 <thead>
                   <tr>
                     <th>Method</th>
@@ -112,16 +109,9 @@ export default function Library() {
         </section>
       ))}
 
-      <h3>Everything else in the workbench</h3>
-      <p className="muted">Viscosity, surface tension, lab checks and material balance carry their own source line and checks table on the page itself.</p>
-      <div className="steps">
-        {GROUPS.filter((g) => g.step).flatMap((g) => g.items).map((i) => (
-          <Link key={i.to} to={i.to} className="step">
-            <strong>{i.label}</strong>
-            <p>{i.text}</p>
-          </Link>
-        ))}
-      </div>
+      <p className="note">
+        Viscosity, surface tension, lab checks and material balance carry their own source line and checks table on the page itself.
+      </p>
     </div>
   );
 }

@@ -1,5 +1,4 @@
 // One list drives the sidebar and the Home page, so they cannot drift apart.
-// An item with `children` shows them as indented links under it. A child's `view` is the ?view= value of the Oil Properties page.
 export const GROUPS = [
   {
     title: "Describe the fluid",
@@ -10,20 +9,18 @@ export const GROUPS = [
     ],
   },
   {
-    title: "Estimate properties",
+    title: "Oil properties",
     items: [
-      {
-        to: "/properties",
-        label: "Oil Properties",
-        text: "Rs, bubble point and Bo from every method, plus gravity, compressibility and density",
-        children: [
-          { to: "/properties", view: "compare", label: "Compare methods", text: "Rs, bubble point and Bo from every published correlation that applies" },
-          { to: "/properties?view=other", view: "other", label: "Other properties", text: "Gravity, compressibility, density and two-phase factor" },
-          { to: "/properties?view=data", view: "data", label: "Test on data", text: "Score the methods on measured oils or your own CSV" },
-        ],
-      },
-      { to: "/viscosity", label: "Oil Viscosity", text: "Dead, saturated and undersaturated oil viscosity" },
-      { to: "/tension", label: "Surface Tension", text: "Oil and gas interfacial tension" },
+      { to: "/properties/gravity", label: "Oil gravity", text: "Specific gravity and API gravity from stock-tank density" },
+      { to: "/properties/gasgravity", label: "Solution gas gravity", text: "Gas gravity from separator data" },
+      { to: "/properties/rs", label: "Gas solubility, Rs", text: "Compare the published correlations, or test them on measured data" },
+      { to: "/properties/pb", label: "Bubble-point pressure, Pb", text: "Compare the published correlations, or test them on measured data" },
+      { to: "/properties/bo", label: "Formation volume factor, Bo", text: "Saturated and undersaturated oil, plus a test on measured data" },
+      { to: "/properties/co", label: "Compressibility", text: "Isothermal compressibility above and below the bubble point" },
+      { to: "/properties/rho", label: "Oil density", text: "Density at and above the bubble point" },
+      { to: "/properties/bt", label: "Total formation volume factor", text: "Two-phase factor below the bubble point" },
+      { to: "/properties/viscosity", label: "Viscosity", text: "Dead, saturated and undersaturated oil viscosity" },
+      { to: "/properties/tension", label: "Surface tension", text: "Oil and gas interfacial tension" },
     ],
   },
   {

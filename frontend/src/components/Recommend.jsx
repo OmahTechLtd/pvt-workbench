@@ -52,7 +52,7 @@ export default function Recommend({ prop, api }) {
       <section className="card">
         <h2>Which method suits oils like this one?</h2>
         <p className="muted">
-          The workbench holds no measured Rs or bubble point data to rank these methods on yet. Upload your own measurements in the Test on data view to rank them on your oils.
+          The workbench holds no measured Rs or bubble point data to rank these methods on yet. Upload your own measurements on the Test on data tab to rank them on your oils.
         </p>
       </section>
     );

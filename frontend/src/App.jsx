@@ -4,11 +4,9 @@ import Home from "./pages/Home.jsx";
 import Classification from "./pages/Classification.jsx";
 import PlusFraction from "./pages/PlusFraction.jsx";
 import PhaseDiagram from "./pages/PhaseDiagram.jsx";
-import Properties from "./pages/Properties.jsx";
-import Viscosity from "./pages/Viscosity.jsx";
+import Property, { PropertiesRedirect } from "./pages/Property.jsx";
 import LabPVT from "./pages/LabPVT.jsx";
 import MaterialBalance from "./pages/MaterialBalance.jsx";
-import SurfaceTension from "./pages/SurfaceTension.jsx";
 import Library from "./pages/Library.jsx";
 import About from "./pages/About.jsx";
 import { GROUPS } from "./nav.js";
@@ -40,8 +38,6 @@ function App() {
   const [theme, setTheme] = useTheme();
   const [open, setOpen] = useState(false);
   const loc = useLocation();
-  const v = new URLSearchParams(loc.search).get("view");
-  const view = v === "other" || v === "data" ? v : "compare";
 
   useEffect(() => {
     setOpen(false);
@@ -68,17 +64,9 @@ function App() {
             <div className="navgroup" key={g.title}>
               <h3>{g.title}</h3>
               {g.items.map((item) => (
-                <div key={item.to}>
-                  <NavLink to={item.to} className="navlink" end={!!item.children}>
-                    {item.label}
-                  </NavLink>
-                  {item.children &&
-                    item.children.map((c) => (
-                      <Link key={c.view} to={c.to} className={"navlink sub" + (loc.pathname === "/properties" && c.view === view ? " active" : "")}>
-                        {c.label}
-                      </Link>
-                    ))}
-                </div>
+                <NavLink key={item.to} to={item.to} className="navlink">
+                  {item.label}
+                </NavLink>
               ))}
             </div>
           ))}
@@ -97,16 +85,17 @@ function App() {
       <main className="content">
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/single" element={<Navigate to="/properties" replace />} />
-          <Route path="/dataset" element={<Navigate to="/properties?view=data" replace />} />
+          <Route path="/single" element={<Navigate to="/properties/rs" replace />} />
+          <Route path="/dataset" element={<Navigate to="/properties/bo" replace />} />
           <Route path="/classification" element={<Classification />} />
           <Route path="/phase" element={<PhaseDiagram />} />
           <Route path="/fraction" element={<PlusFraction />} />
-          <Route path="/properties" element={<Properties />} />
-          <Route path="/viscosity" element={<Viscosity />} />
+          <Route path="/properties" element={<PropertiesRedirect />} />
+          <Route path="/properties/:key" element={<Property />} />
+          <Route path="/viscosity" element={<Navigate to="/properties/viscosity" replace />} />
           <Route path="/lab" element={<LabPVT />} />
           <Route path="/balance" element={<MaterialBalance />} />
-          <Route path="/tension" element={<SurfaceTension />} />
+          <Route path="/tension" element={<Navigate to="/properties/tension" replace />} />
           <Route path="/library" element={<Library />} />
           <Route path="/about" element={<About />} />
         </Routes>

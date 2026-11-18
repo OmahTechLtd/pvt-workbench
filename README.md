@@ -50,19 +50,20 @@ Working now
 
 - A calculation engine in Python for the bubble-point correlations and the other oil properties above
 - One FastAPI service (`api.py`) that holds every route
-- A page for each feature, including oil properties, which compares correlations on one fluid with a reference line, an error column and a bar chart
-- Dataset analysis (the Test on data view of the Oil Properties page), which scores the correlations against the public dataset (Bo) or an uploaded CSV (Rs, Pb or Bo)
+- One page for each oil property (gravity, solution gas gravity, Rs, Pb, Bo, compressibility, density, total formation volume factor, viscosity, surface tension). Rs, Pb and Bo compare correlations on one fluid with a reference line, an error column and a bar chart
+- A Test on data tab on the Rs, Pb and Bo pages, which scores the correlations against the public dataset (Bo) or an uploaded CSV (Rs, Pb or Bo)
 - A script that converts a public PVT dataset into the workbench format
 - Laboratory PVT analysis, with its own checks table
 - Material balance, with its own checks table
 - Checks against published worked examples, shown on the pages where they apply
 - A workflow-ordered sidebar (describe the fluid, estimate properties, check a lab report, use it in the reservoir), a Home page that routes by what the user has, a Method Library built from the API, and an About page
 - Light and dark themes (Auto follows the computer, the choice is remembered in the browser)
+- A method recommendation for Bo. It finds measured oils of similar gravity in the built-in dataset, ranks the correlations on them, and reports the best fit with the number of oils and an evidence level (strong from 100 oils, moderate from 30, weak from 10, none below that). The levels are this tool's own rule of thumb. Methods within half a point of average error are reported as tied.
 - One data-entry table for every block of numbers, with a column per quantity, units in the headers, optional columns marked, and paste from Excel
 
 Still being built
 
-- A method recommendation per region and oil type, with the evidence behind it
+- The method recommendation for Rs and bubble point, which needs measured data the workbench does not hold yet, and recommendations by oil type
 - A current-fluid carry-over so a fluid entered once is used on every page
 
 The original Streamlit prototype (`app.py`, `plots.py`, `compare.py`) is still in the repository.
@@ -195,6 +196,7 @@ To rebuild the dataset file, place the workbook at `data/PVTData.xlsx` and run `
 | `classification.py` | Oil and reservoir classification |
 | `plus_fraction.py` | Plus fraction characterization |
 | `check_classification_fraction.py` | Checks for classification and plus fraction characterization |
+| `recommend.py` | Method recommendation for Bo from measured oils of similar gravity |
 | `prepare_dataset.py` | Converts the public workbook into the workbench format |
 | `data/` | Worked example data and the converted dataset |
 | `frontend/` | React application built with Vite and Recharts. One page per feature in `src/pages/`. `src/nav.js` holds the sidebar groups that Home also uses. `src/components/DataTable.jsx` is the shared data-entry table. Colours and both themes are defined once in `src/index.css`. |

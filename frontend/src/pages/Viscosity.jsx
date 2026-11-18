@@ -94,7 +94,7 @@ function VerifyTable({ title, rows, measured }) {
   );
 }
 
-function Viscosity() {
+function Viscosity({ embedded = false }) {
   const [v, setV] = useState(Object.fromEntries(FIELDS.map(([k]) => [k, ""])));
   const [res, setRes] = useState(null);
   const [ver, setVer] = useState(null);
@@ -127,7 +127,7 @@ function Viscosity() {
 
   return (
     <div>
-      <h1>Oil Viscosity</h1>
+      {!embedded && <h1>Oil Viscosity</h1>}
       <p className="subtitle">
         Dead-oil, saturated-oil and undersaturated-oil viscosity from published correlations. Fill in what you have and each step
         runs when its inputs are there. Each later step starts from every result of the step before it, plus your measured value if you give one.

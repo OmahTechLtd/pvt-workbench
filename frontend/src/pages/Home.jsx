@@ -2,54 +2,48 @@ import { Link } from "react-router-dom";
 import { GROUPS } from "../nav.js";
 
 const STARTS = [
-  { to: "/properties", title: "I have gravity, gas-oil ratio and temperature", text: "Estimate Rs, bubble point and Bo with every method that applies, side by side." },
-  { to: "/lab", title: "I have a PVT lab report", text: "Check the report for consistency and adjust it to a new bubble point or separator conditions." },
-  { to: "/balance", title: "I have production history", text: "Find the oil in place and see which drive is pushing the reservoir." },
+  { to: "/properties/rs", title: "Gravity, gas-oil ratio and temperature", text: "Estimate Rs, bubble point and Bo with every method that applies, side by side." },
+  { to: "/lab", title: "A PVT lab report", text: "Check it for consistency and adjust it to a new bubble point or separator conditions." },
+  { to: "/balance", title: "Production history", text: "Find the oil in place and see which drive is pushing the reservoir." },
 ];
+
+function Row({ to, title, text }) {
+  return (
+    <Link to={to} className="row">
+      <strong>{title}</strong>
+      <span>{text}</span>
+      <i>&rarr;</i>
+    </Link>
+  );
+}
 
 export default function Home() {
   return (
     <div>
-      <section className="hero">
-        <p className="tag">Estimate. Compare. Evaluate.</p>
-        <h1>PVT Workbench</h1>
-        <p className="subtitle" style={{ fontSize: 17 }}>
-          Published oil PVT correlations, coded from their sources and checked against the worked examples printed there. Compare them on your own fluid,
-          check a lab report, and carry the result into material balance.
-        </p>
-      </section>
+      <h1>PVT Workbench</h1>
+      <p className="subtitle">
+        Published oil PVT correlations, coded from their sources and checked against the worked examples printed there. Compare them on your own
+        fluid, check a lab report, and carry the result into material balance.
+      </p>
 
-      <h3>Where are you starting from?</h3>
-      <div className="steps">
+      <div className="sectionlabel">Start from what you have</div>
+      <div className="index">
         {STARTS.map((s) => (
-          <Link to={s.to} className="step" key={s.to}>
-            <strong>{s.title}</strong>
-            <p>{s.text}</p>
-            <small>Open →</small>
-          </Link>
+          <Row key={s.to} {...s} />
         ))}
       </div>
 
-      <h3>The path through the workbench</h3>
-      <p className="muted">Work down the list, or jump to the step you need. Each page says where its method comes from and shows its own checks at the bottom.</p>
-      <div className="steps">
-        {GROUPS.filter((g) => g.step).map((g) => (
-          <div className="step" key={g.title} style={{ cursor: "default" }}>
-            <span className="n">{g.step}</span>
-            <strong>{g.title}</strong>
-            <p>{g.blurb}</p>
+      <div className="sectionlabel">Everything in the workbench</div>
+      <div className="index">
+        {GROUPS.map((g) => (
+          <div key={g.title}>
+            <div className="head">{g.title}</div>
             {g.items.map((i) => (
-              <div key={i.to} style={{ marginTop: 6 }}>
-                <Link to={i.to}>{i.label}</Link>
-              </div>
+              <Row key={i.to} to={i.to} title={i.label} text={i.text} />
             ))}
           </div>
         ))}
       </div>
-
-      <p className="note">
-        New here? <Link to="/library">The Method Library</Link> lists every correlation and where it comes from, and <Link to="/about">About</Link> explains how the checks work and what the tool does not do.
-      </p>
     </div>
   );
 }

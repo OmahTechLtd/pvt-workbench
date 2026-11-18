@@ -23,13 +23,13 @@ const PROP_NAMES = {
 // The column that holds the measured value for each property
 const MEASURED_COLUMN = { rs: "rs_measured", pb: "p_psia", bo: "bo" };
 
-function Dataset({ embedded = false }) {
+function Dataset({ embedded = false, fixedProp = null }) {
   const [methods, setMethods] = useState(null);
   const [builtin, setBuiltin] = useState(null);
   const [loadError, setLoadError] = useState(null);
 
-  const [source, setSource] = useState("builtin");
-  const [prop, setProp] = useState("bo");
+  const [source, setSource] = useState(fixedProp && fixedProp !== "bo" ? "upload" : "builtin");
+  const [prop, setProp] = useState(fixedProp || "bo");
   const [selected, setSelected] = useState([]);
   const [regions, setRegions] = useState([]);
   const [excludeDuplicates, setExcludeDuplicates] = useState(true);
@@ -55,7 +55,7 @@ function Dataset({ embedded = false }) {
       .then(([m, b]) => {
         setMethods(m);
         setBuiltin(b);
-        setSelected(m.bo.map((x) => x.key));
+        setSelected(m[fixedProp || "bo"].map((x) => x.key));
         setRegions(b.regions.map((x) => x.name));
       })
       .catch((err) => setLoadError(err.message));
@@ -186,13 +186,16 @@ function Dataset({ embedded = false }) {
         Score the correlations against many measured records and see which ones fit best.
       </p>
 
+      {(!fixedProp || fixedProp === "bo") && (
       <div className="segmented">
-        <button
-          className={source === "builtin" ? "seg active" : "seg"}
-          onClick={() => changeSource("builtin")}
-        >
-          Built-in dataset
-        </button>
+        {(!fixedProp || fixedProp === "bo") && (
+          <button
+            className={source === "builtin" ? "seg active" : "seg"}
+            onClick={() => changeSource("builtin")}
+          >
+            Built-in dataset
+          </button>
+        )}
         <button
           className={source === "upload" ? "seg active" : "seg"}
           onClick={() => changeSource("upload")}
@@ -200,8 +203,9 @@ function Dataset({ embedded = false }) {
           Upload a CSV
         </button>
       </div>
+      )}
 
-      {source === "upload" && (
+      {source === "upload" && !fixedProp && (
         <div className="segmented">
           {Object.keys(PROP_NAMES).map((p) => (
             <button

@@ -17,7 +17,7 @@ const EXAMPLE = {
   ],
 };
 
-function SurfaceTension() {
+function SurfaceTension({ embedded = false }) {
   const [components, setComponents] = useState([]);
   const [rows, setRows] = useState([["C1", "", ""]]);
   const [rhoO, setRhoO] = useState("");
@@ -69,7 +69,7 @@ function SurfaceTension() {
 
   return (
     <div>
-      <h1>Surface Tension</h1>
+      {!embedded && <h1>Surface Tension</h1>}
       <p className="subtitle">
         Surface tension of a crude oil in equilibrium with its gas, from the oil and gas compositions and densities (Sugden correlation in the form
         of Katz et al., Ahmed, Eq. 2-124).

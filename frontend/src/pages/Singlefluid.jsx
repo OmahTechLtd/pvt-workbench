@@ -33,10 +33,10 @@ const PROP_NAMES = {
   bo: "Oil formation volume factor (Bo)",
 };
 
-function SingleFluid({ embedded = false }) {
+function SingleFluid({ embedded = false, fixedProp = null }) {
   const [methods, setMethods] = useState(null);
   const [error, setError] = useState(null);
-  const [prop, setProp] = useState("rs");
+  const [prop, setProp] = useState(fixedProp || "rs");
   const [selected, setSelected] = useState([]);
   const [values, setValues] = useState({});
   const [measured, setMeasured] = useState({});
@@ -52,7 +52,7 @@ function SingleFluid({ embedded = false }) {
       })
       .then((data) => {
         setMethods(data);
-        setSelected(data.rs.map((m) => m.key));
+        setSelected(data[fixedProp || "rs"].map((m) => m.key));
       })
       .catch((err) => setError(err.message));
   }, []);
@@ -149,12 +149,11 @@ function SingleFluid({ embedded = false }) {
   return (
     <div>
       {!embedded && <h1>Single Fluid Analysis</h1>}
-      {!embedded && (
-        <p className="subtitle">
-          Enter fluid properties, select methods and compare predictions.
-        </p>
-      )}
+      <p className="subtitle">
+        Enter fluid properties, select methods and compare predictions.
+      </p>
 
+      {!fixedProp && (
       <div className="segmented">
         {Object.keys(methods).map((p) => (
           <button
@@ -166,6 +165,7 @@ function SingleFluid({ embedded = false }) {
           </button>
         ))}
       </div>
+      )}
 
       <div className="panels">
         <section className="card">

@@ -6,16 +6,27 @@ const API = "http://127.0.0.1:8000";
 const TABS = [
   {
     key: "gravity",
-    label: "Gravity",
+    label: "Oil gravity",
     url: "/props/gravity",
-    intro: "Oil gravity from the stock-tank density, and the solution gas gravity from separator data (Eq. 2-66 to 2-68).",
+    intro: "Oil specific gravity from the stock-tank density, and oil gravity in °API (Eq. 2-66 and 2-67).",
     fields: [
       ["rho_o_sc", "Stock-tank oil density (lb/ft³)"],
       ["api", "Or oil gravity (°API) to get specific gravity"],
     ],
+    example: { rho_o_sc: "53" },
+    exampleLabel: "Use Example 2-16",
+    match: /^Gravity/,
+  },
+  {
+    key: "gasgravity",
+    label: "Solution gas gravity",
+    url: "/props/gravity",
+    intro: "Specific gravity of the solution gas from separator data (Eq. 2-68).",
+    fields: [],
     lists: true,
-    example: { rho_o_sc: "53", sep: "724,0.743\n202,0.956\n58,1.296" },
-    exampleLabel: "Use Examples 2-16 and 2-17",
+    example: { sep: "724,0.743\n202,0.956\n58,1.296" },
+    exampleLabel: "Use Example 2-17",
+    match: /^Gravity/,
   },
   {
     key: "co",
@@ -39,6 +50,7 @@ const TABS = [
     ],
     example: { rsb: "751", t_f: "250", api: "47.1", gamma_g: "0.851", gamma_gs: "0.873", p: "1665", pb: "2392", rs: "515", bo: "1.393", bg: "0.001936" },
     exampleLabel: "Use Example 2-32",
+    match: /^(Undersaturated oil compressibility|Compressibility)/,
   },
   {
     key: "bo",
@@ -59,6 +71,7 @@ const TABS = [
     ],
     example: { bob: "1.528", p: "5015", pb: "2392", rsb: "751", t_f: "250", api: "47.1", gamma_g: "0.851", gamma_gs: "0.873", measured: "1.457" },
     exampleLabel: "Use Example 2-33",
+    match: /^Oil formation volume factor above/,
   },
   {
     key: "rho",
@@ -80,6 +93,7 @@ const TABS = [
     ],
     example: { api: "47.1", rs: "751", gamma_g: "0.851", t_f: "250", bo: "1.528", measured: "38.13" },
     exampleLabel: "Use oil 1 from Example 2-34",
+    match: /^Oil density/,
   },
   {
     key: "bt",
@@ -101,6 +115,7 @@ const TABS = [
     ],
     example: { rs: "444", rsb: "603", t_f: "140", gamma_o: "0.843", gamma_g: "0.6744", p: "2000", bo: "1.1752", z: "0.81" },
     exampleLabel: "Use Example 2-35",
+    match: /^Total formation/,
   },
 ];
 
@@ -139,8 +154,8 @@ function Verification({ sections }) {
   ));
 }
 
-function OilProperties({ embedded = false }) {
-  const [tab, setTab] = useState(TABS[0]);
+function OilProperties({ embedded = false, only = null }) {
+  const [tab, setTab] = useState(TABS.find((t) => t.key === only) || TABS[0]);
   const [vals, setVals] = useState({});
   const [sepText, setSepText] = useState("");
   const [res, setRes] = useState(null);
@@ -193,8 +208,9 @@ function OilProperties({ embedded = false }) {
   return (
     <div>
       {!embedded && <h1>Oil Properties</h1>}
-      {!embedded && <p className="subtitle">Gravity, compressibility, formation volume factor, density and total formation volume factor, each checked against published worked examples further down the page.</p>}
+      {!only && <p className="subtitle">Gravity, compressibility, formation volume factor above the bubble point, density and total formation volume factor.</p>}
 
+      {!only && (
       <div className="segmented">
         {TABS.map((t) => (
           <button key={t.key} className={t.key === tab.key ? "seg active" : "seg"} onClick={() => pick(t)}>
@@ -202,9 +218,10 @@ function OilProperties({ embedded = false }) {
           </button>
         ))}
       </div>
+      )}
 
       <section className="card">
-        <h2>{tab.label}</h2>
+        {!only && <h2>{tab.label}</h2>}
         <p>{tab.intro}</p>
         {tab.fields.map(([k, label]) => (
           <label className="field" key={k}>
@@ -276,12 +293,12 @@ function OilProperties({ embedded = false }) {
         </section>
       )}
 
-      {ver && (
-        <>
-          <h2 style={{ marginTop: 32 }}>Checks against published examples</h2>
+      {ver && ver.filter((x) => !only || tab.match.test(x.title)).length > 0 && (
+        <details className="card checks">
+          <summary>Checks against published examples</summary>
           <p className="note">Each table compares this tool with the printed result. Where a published example disagrees with itself, the note says what was used.</p>
-          <Verification sections={ver} />
-        </>
+          <Verification sections={ver.filter((x) => !only || tab.match.test(x.title))} />
+        </details>
       )}
     </div>
   );
